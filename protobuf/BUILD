@@ -1,0 +1,33 @@
+cc_library(
+    name = "naki3d-protobuf",
+    srcs = [
+        "commands.pb.cc",
+        "connection.pb.cc",
+        "event.pb.cc",
+        "handtracking.pb.cc",
+        "keyboard.pb.cc",
+        "mediapipe.pb.cc",
+        "mouse.pb.cc",
+        "realsense.pb.cc",
+        "sensor.pb.cc",
+        "types.pb.cc",
+        "wrappers.pb.cc",
+    ],
+    hdrs = [
+        "commands.pb.h",
+        "connection.pb.h",
+        "event.pb.h",
+        "handtracking.pb.h",
+        "keyboard.pb.h",
+        "mediapipe.pb.h",
+        "mouse.pb.h",
+        "realsense.pb.h",
+        "sensor.pb.h",
+        "types.pb.h",
+        "wrappers.pb.h",
+    ],
+    visibility = ["//visibility:public"],
+    deps = [
+    ],
+    alwayslink = 1,
+)
