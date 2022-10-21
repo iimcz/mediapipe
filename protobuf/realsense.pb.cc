@@ -14,106 +14,102 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_types_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Vector3_types_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace naki3d {
 namespace common {
 namespace protocol {
-class GestureDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GestureData> _instance;
-} _GestureData_default_instance_;
-class HandMovementDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<HandMovementData> _instance;
-} _HandMovementData_default_instance_;
-class BestUserChangedDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<BestUserChangedData> _instance;
-} _BestUserChangedData_default_instance_;
+PROTOBUF_CONSTEXPR GestureData::GestureData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_.user_id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct GestureDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR GestureDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~GestureDataDefaultTypeInternal() {}
+  union {
+    GestureData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 GestureDataDefaultTypeInternal _GestureData_default_instance_;
+PROTOBUF_CONSTEXPR HandMovementData::HandMovementData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.proj_position_)*/nullptr
+  , /*decltype(_impl_.hand_)*/0
+  , /*decltype(_impl_.user_id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct HandMovementDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR HandMovementDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~HandMovementDataDefaultTypeInternal() {}
+  union {
+    HandMovementData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HandMovementDataDefaultTypeInternal _HandMovementData_default_instance_;
+PROTOBUF_CONSTEXPR BestUserChangedData::BestUserChangedData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.best_user_id_)*/0
+  , /*decltype(_impl_.user_count_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct BestUserChangedDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR BestUserChangedDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~BestUserChangedDataDefaultTypeInternal() {}
+  union {
+    BestUserChangedData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 BestUserChangedDataDefaultTypeInternal _BestUserChangedData_default_instance_;
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
-static void InitDefaultsscc_info_BestUserChangedData_realsense_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_realsense_2eproto[3];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_realsense_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_realsense_2eproto = nullptr;
 
-  {
-    void* ptr = &::naki3d::common::protocol::_BestUserChangedData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::BestUserChangedData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::BestUserChangedData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BestUserChangedData_realsense_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_BestUserChangedData_realsense_2eproto}, {}};
-
-static void InitDefaultsscc_info_GestureData_realsense_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_GestureData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::GestureData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::GestureData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GestureData_realsense_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GestureData_realsense_2eproto}, {}};
-
-static void InitDefaultsscc_info_HandMovementData_realsense_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_HandMovementData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::HandMovementData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::HandMovementData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_HandMovementData_realsense_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_HandMovementData_realsense_2eproto}, {
-      &scc_info_Vector3_types_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_realsense_2eproto[3];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_realsense_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_realsense_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_realsense_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_realsense_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::GestureData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::GestureData, type_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::GestureData, user_id_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::GestureData, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::GestureData, _impl_.user_id_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandMovementData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandMovementData, hand_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandMovementData, proj_position_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandMovementData, user_id_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandMovementData, _impl_.hand_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandMovementData, _impl_.proj_position_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandMovementData, _impl_.user_id_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::BestUserChangedData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::BestUserChangedData, best_user_id_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::BestUserChangedData, user_count_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::BestUserChangedData, _impl_.best_user_id_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::BestUserChangedData, _impl_.user_count_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::naki3d::common::protocol::GestureData)},
-  { 7, -1, sizeof(::naki3d::common::protocol::HandMovementData)},
-  { 15, -1, sizeof(::naki3d::common::protocol::BestUserChangedData)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::naki3d::common::protocol::GestureData)},
+  { 8, -1, -1, sizeof(::naki3d::common::protocol::HandMovementData)},
+  { 17, -1, -1, sizeof(::naki3d::common::protocol::BestUserChangedData)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_GestureData_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_HandMovementData_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_BestUserChangedData_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::naki3d::common::protocol::_GestureData_default_instance_._instance,
+  &::naki3d::common::protocol::_HandMovementData_default_instance_._instance,
+  &::naki3d::common::protocol::_BestUserChangedData_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_realsense_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -128,161 +124,163 @@ const char descriptor_table_protodef_realsense_2eproto[] PROTOBUF_SECTION_VARIAB
   "edData\022\024\n\014best_user_id\030\001 \001(\005\022\022\n\nuser_cou"
   "nt\030\002 \001(\005b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_realsense_2eproto_deps[2] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_realsense_2eproto_deps[2] = {
   &::descriptor_table_handtracking_2eproto,
   &::descriptor_table_types_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_realsense_2eproto_sccs[3] = {
-  &scc_info_BestUserChangedData_realsense_2eproto.base,
-  &scc_info_GestureData_realsense_2eproto.base,
-  &scc_info_HandMovementData_realsense_2eproto.base,
+static ::_pbi::once_flag descriptor_table_realsense_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_realsense_2eproto = {
+    false, false, 376, descriptor_table_protodef_realsense_2eproto,
+    "realsense.proto",
+    &descriptor_table_realsense_2eproto_once, descriptor_table_realsense_2eproto_deps, 2, 3,
+    schemas, file_default_instances, TableStruct_realsense_2eproto::offsets,
+    file_level_metadata_realsense_2eproto, file_level_enum_descriptors_realsense_2eproto,
+    file_level_service_descriptors_realsense_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_realsense_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_realsense_2eproto = {
-  false, false, descriptor_table_protodef_realsense_2eproto, "realsense.proto", 376,
-  &descriptor_table_realsense_2eproto_once, descriptor_table_realsense_2eproto_sccs, descriptor_table_realsense_2eproto_deps, 3, 2,
-  schemas, file_default_instances, TableStruct_realsense_2eproto::offsets,
-  file_level_metadata_realsense_2eproto, 3, file_level_enum_descriptors_realsense_2eproto, file_level_service_descriptors_realsense_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_realsense_2eproto_getter() {
+  return &descriptor_table_realsense_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_realsense_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_realsense_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_realsense_2eproto(&descriptor_table_realsense_2eproto);
 namespace naki3d {
 namespace common {
 namespace protocol {
 
 // ===================================================================
 
-void GestureData::InitAsDefaultInstance() {
-}
 class GestureData::_Internal {
  public:
 };
 
-GestureData::GestureData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+GestureData::GestureData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.GestureData)
 }
 GestureData::GestureData(const GestureData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  GestureData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.type_){}
+    , decltype(_impl_.user_id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&type_, &from.type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&user_id_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(user_id_));
+  ::memcpy(&_impl_.type_, &from._impl_.type_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.user_id_) -
+    reinterpret_cast<char*>(&_impl_.type_)) + sizeof(_impl_.user_id_));
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.GestureData)
 }
 
-void GestureData::SharedCtor() {
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&user_id_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(user_id_));
+inline void GestureData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.type_){0}
+    , decltype(_impl_.user_id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 GestureData::~GestureData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.GestureData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void GestureData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void GestureData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void GestureData::ArenaDtor(void* object) {
-  GestureData* _this = reinterpret_cast< GestureData* >(object);
-  (void)_this;
-}
-void GestureData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void GestureData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const GestureData& GestureData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GestureData_realsense_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GestureData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.GestureData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&user_id_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(user_id_));
+  ::memset(&_impl_.type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.user_id_) -
+      reinterpret_cast<char*>(&_impl_.type_)) + sizeof(_impl_.user_id_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* GestureData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* GestureData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.HandGestureType type = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_type(static_cast<::naki3d::common::protocol::HandGestureType>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 user_id = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          user_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.user_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* GestureData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* GestureData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.GestureData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.HandGestureType type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       1, this->_internal_type(), target);
   }
 
   // int32 user_id = 2;
-  if (this->user_id() != 0) {
+  if (this->_internal_user_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_user_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_user_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.GestureData)
@@ -293,67 +291,46 @@ size_t GestureData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.GestureData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.HandGestureType type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   // int32 user_id = 2;
-  if (this->user_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_user_id());
+  if (this->_internal_user_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_user_id());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void GestureData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.GestureData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const GestureData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<GestureData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.GestureData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.GestureData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData GestureData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    GestureData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*GestureData::GetClassData() const { return &_class_data_; }
 
-void GestureData::MergeFrom(const GestureData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.GestureData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void GestureData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<GestureData*>(&to_msg);
+  auto& from = static_cast<const GestureData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.GestureData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-  if (from.user_id() != 0) {
-    _internal_set_user_id(from._internal_user_id());
+  if (from._internal_user_id() != 0) {
+    _this->_internal_set_user_id(from._internal_user_id());
   }
-}
-
-void GestureData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.GestureData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void GestureData::CopyFrom(const GestureData& from) {
@@ -369,26 +346,23 @@ bool GestureData::IsInitialized() const {
 
 void GestureData::InternalSwap(GestureData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(GestureData, user_id_)
-      + sizeof(GestureData::user_id_)
-      - PROTOBUF_FIELD_OFFSET(GestureData, type_)>(
-          reinterpret_cast<char*>(&type_),
-          reinterpret_cast<char*>(&other->type_));
+      PROTOBUF_FIELD_OFFSET(GestureData, _impl_.user_id_)
+      + sizeof(GestureData::_impl_.user_id_)
+      - PROTOBUF_FIELD_OFFSET(GestureData, _impl_.type_)>(
+          reinterpret_cast<char*>(&_impl_.type_),
+          reinterpret_cast<char*>(&other->_impl_.type_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata GestureData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_realsense_2eproto_getter, &descriptor_table_realsense_2eproto_once,
+      file_level_metadata_realsense_2eproto[0]);
 }
-
 
 // ===================================================================
 
-void HandMovementData::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_HandMovementData_default_instance_._instance.get_mutable()->proj_position_ = const_cast< ::naki3d::common::protocol::Vector3*>(
-      ::naki3d::common::protocol::Vector3::internal_default_instance());
-}
 class HandMovementData::_Internal {
  public:
   static const ::naki3d::common::protocol::Vector3& proj_position(const HandMovementData* msg);
@@ -396,164 +370,167 @@ class HandMovementData::_Internal {
 
 const ::naki3d::common::protocol::Vector3&
 HandMovementData::_Internal::proj_position(const HandMovementData* msg) {
-  return *msg->proj_position_;
+  return *msg->_impl_.proj_position_;
 }
 void HandMovementData::clear_proj_position() {
-  if (GetArena() == nullptr && proj_position_ != nullptr) {
-    delete proj_position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.proj_position_ != nullptr) {
+    delete _impl_.proj_position_;
   }
-  proj_position_ = nullptr;
+  _impl_.proj_position_ = nullptr;
 }
-HandMovementData::HandMovementData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+HandMovementData::HandMovementData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.HandMovementData)
 }
 HandMovementData::HandMovementData(const HandMovementData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  HandMovementData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.proj_position_){nullptr}
+    , decltype(_impl_.hand_){}
+    , decltype(_impl_.user_id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_proj_position()) {
-    proj_position_ = new ::naki3d::common::protocol::Vector3(*from.proj_position_);
-  } else {
-    proj_position_ = nullptr;
+    _this->_impl_.proj_position_ = new ::naki3d::common::protocol::Vector3(*from._impl_.proj_position_);
   }
-  ::memcpy(&hand_, &from.hand_,
-    static_cast<size_t>(reinterpret_cast<char*>(&user_id_) -
-    reinterpret_cast<char*>(&hand_)) + sizeof(user_id_));
+  ::memcpy(&_impl_.hand_, &from._impl_.hand_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.user_id_) -
+    reinterpret_cast<char*>(&_impl_.hand_)) + sizeof(_impl_.user_id_));
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.HandMovementData)
 }
 
-void HandMovementData::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_HandMovementData_realsense_2eproto.base);
-  ::memset(&proj_position_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&user_id_) -
-      reinterpret_cast<char*>(&proj_position_)) + sizeof(user_id_));
+inline void HandMovementData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.proj_position_){nullptr}
+    , decltype(_impl_.hand_){0}
+    , decltype(_impl_.user_id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 HandMovementData::~HandMovementData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.HandMovementData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void HandMovementData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete proj_position_;
+inline void HandMovementData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.proj_position_;
 }
 
-void HandMovementData::ArenaDtor(void* object) {
-  HandMovementData* _this = reinterpret_cast< HandMovementData* >(object);
-  (void)_this;
-}
-void HandMovementData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void HandMovementData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const HandMovementData& HandMovementData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_HandMovementData_realsense_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void HandMovementData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.HandMovementData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && proj_position_ != nullptr) {
-    delete proj_position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.proj_position_ != nullptr) {
+    delete _impl_.proj_position_;
   }
-  proj_position_ = nullptr;
-  ::memset(&hand_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&user_id_) -
-      reinterpret_cast<char*>(&hand_)) + sizeof(user_id_));
+  _impl_.proj_position_ = nullptr;
+  ::memset(&_impl_.hand_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.user_id_) -
+      reinterpret_cast<char*>(&_impl_.hand_)) + sizeof(_impl_.user_id_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* HandMovementData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* HandMovementData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.HandSide hand = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_hand(static_cast<::naki3d::common::protocol::HandSide>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.Vector3 proj_position = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_proj_position(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 user_id = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          user_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 24)) {
+          _impl_.user_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* HandMovementData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* HandMovementData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.HandMovementData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.HandSide hand = 1;
-  if (this->hand() != 0) {
+  if (this->_internal_hand() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       1, this->_internal_hand(), target);
   }
 
   // .naki3d.common.protocol.Vector3 proj_position = 2;
-  if (this->has_proj_position()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_proj_position()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::proj_position(this), target, stream);
+      InternalWriteMessage(2, _Internal::proj_position(this),
+        _Internal::proj_position(this).GetCachedSize(), target, stream);
   }
 
   // int32 user_id = 3;
-  if (this->user_id() != 0) {
+  if (this->_internal_user_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(3, this->_internal_user_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(3, this->_internal_user_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.HandMovementData)
@@ -564,77 +541,57 @@ size_t HandMovementData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.HandMovementData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.Vector3 proj_position = 2;
-  if (this->has_proj_position()) {
+  if (this->_internal_has_proj_position()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *proj_position_);
+        *_impl_.proj_position_);
   }
 
   // .naki3d.common.protocol.HandSide hand = 1;
-  if (this->hand() != 0) {
+  if (this->_internal_hand() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_hand());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_hand());
   }
 
   // int32 user_id = 3;
-  if (this->user_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_user_id());
+  if (this->_internal_user_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_user_id());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void HandMovementData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.HandMovementData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const HandMovementData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<HandMovementData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.HandMovementData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.HandMovementData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData HandMovementData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    HandMovementData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*HandMovementData::GetClassData() const { return &_class_data_; }
 
-void HandMovementData::MergeFrom(const HandMovementData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.HandMovementData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void HandMovementData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<HandMovementData*>(&to_msg);
+  auto& from = static_cast<const HandMovementData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.HandMovementData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_proj_position()) {
-    _internal_mutable_proj_position()->::naki3d::common::protocol::Vector3::MergeFrom(from._internal_proj_position());
+  if (from._internal_has_proj_position()) {
+    _this->_internal_mutable_proj_position()->::naki3d::common::protocol::Vector3::MergeFrom(
+        from._internal_proj_position());
   }
-  if (from.hand() != 0) {
-    _internal_set_hand(from._internal_hand());
+  if (from._internal_hand() != 0) {
+    _this->_internal_set_hand(from._internal_hand());
   }
-  if (from.user_id() != 0) {
-    _internal_set_user_id(from._internal_user_id());
+  if (from._internal_user_id() != 0) {
+    _this->_internal_set_user_id(from._internal_user_id());
   }
-}
-
-void HandMovementData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.HandMovementData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void HandMovementData::CopyFrom(const HandMovementData& from) {
@@ -650,150 +607,153 @@ bool HandMovementData::IsInitialized() const {
 
 void HandMovementData::InternalSwap(HandMovementData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(HandMovementData, user_id_)
-      + sizeof(HandMovementData::user_id_)
-      - PROTOBUF_FIELD_OFFSET(HandMovementData, proj_position_)>(
-          reinterpret_cast<char*>(&proj_position_),
-          reinterpret_cast<char*>(&other->proj_position_));
+      PROTOBUF_FIELD_OFFSET(HandMovementData, _impl_.user_id_)
+      + sizeof(HandMovementData::_impl_.user_id_)
+      - PROTOBUF_FIELD_OFFSET(HandMovementData, _impl_.proj_position_)>(
+          reinterpret_cast<char*>(&_impl_.proj_position_),
+          reinterpret_cast<char*>(&other->_impl_.proj_position_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata HandMovementData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_realsense_2eproto_getter, &descriptor_table_realsense_2eproto_once,
+      file_level_metadata_realsense_2eproto[1]);
 }
-
 
 // ===================================================================
 
-void BestUserChangedData::InitAsDefaultInstance() {
-}
 class BestUserChangedData::_Internal {
  public:
 };
 
-BestUserChangedData::BestUserChangedData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+BestUserChangedData::BestUserChangedData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.BestUserChangedData)
 }
 BestUserChangedData::BestUserChangedData(const BestUserChangedData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  BestUserChangedData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.best_user_id_){}
+    , decltype(_impl_.user_count_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&best_user_id_, &from.best_user_id_,
-    static_cast<size_t>(reinterpret_cast<char*>(&user_count_) -
-    reinterpret_cast<char*>(&best_user_id_)) + sizeof(user_count_));
+  ::memcpy(&_impl_.best_user_id_, &from._impl_.best_user_id_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.user_count_) -
+    reinterpret_cast<char*>(&_impl_.best_user_id_)) + sizeof(_impl_.user_count_));
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.BestUserChangedData)
 }
 
-void BestUserChangedData::SharedCtor() {
-  ::memset(&best_user_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&user_count_) -
-      reinterpret_cast<char*>(&best_user_id_)) + sizeof(user_count_));
+inline void BestUserChangedData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.best_user_id_){0}
+    , decltype(_impl_.user_count_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 BestUserChangedData::~BestUserChangedData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.BestUserChangedData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void BestUserChangedData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void BestUserChangedData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void BestUserChangedData::ArenaDtor(void* object) {
-  BestUserChangedData* _this = reinterpret_cast< BestUserChangedData* >(object);
-  (void)_this;
-}
-void BestUserChangedData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void BestUserChangedData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const BestUserChangedData& BestUserChangedData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_BestUserChangedData_realsense_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void BestUserChangedData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.BestUserChangedData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&best_user_id_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&user_count_) -
-      reinterpret_cast<char*>(&best_user_id_)) + sizeof(user_count_));
+  ::memset(&_impl_.best_user_id_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.user_count_) -
+      reinterpret_cast<char*>(&_impl_.best_user_id_)) + sizeof(_impl_.user_count_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* BestUserChangedData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* BestUserChangedData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // int32 best_user_id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          best_user_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.best_user_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 user_count = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          user_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.user_count_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* BestUserChangedData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* BestUserChangedData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.BestUserChangedData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // int32 best_user_id = 1;
-  if (this->best_user_id() != 0) {
+  if (this->_internal_best_user_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(1, this->_internal_best_user_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(1, this->_internal_best_user_id(), target);
   }
 
   // int32 user_count = 2;
-  if (this->user_count() != 0) {
+  if (this->_internal_user_count() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_user_count(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_user_count(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.BestUserChangedData)
@@ -804,68 +764,45 @@ size_t BestUserChangedData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.BestUserChangedData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // int32 best_user_id = 1;
-  if (this->best_user_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_best_user_id());
+  if (this->_internal_best_user_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_best_user_id());
   }
 
   // int32 user_count = 2;
-  if (this->user_count() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_user_count());
+  if (this->_internal_user_count() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_user_count());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void BestUserChangedData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.BestUserChangedData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const BestUserChangedData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<BestUserChangedData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.BestUserChangedData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.BestUserChangedData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData BestUserChangedData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    BestUserChangedData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*BestUserChangedData::GetClassData() const { return &_class_data_; }
 
-void BestUserChangedData::MergeFrom(const BestUserChangedData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.BestUserChangedData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void BestUserChangedData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<BestUserChangedData*>(&to_msg);
+  auto& from = static_cast<const BestUserChangedData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.BestUserChangedData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.best_user_id() != 0) {
-    _internal_set_best_user_id(from._internal_best_user_id());
+  if (from._internal_best_user_id() != 0) {
+    _this->_internal_set_best_user_id(from._internal_best_user_id());
   }
-  if (from.user_count() != 0) {
-    _internal_set_user_count(from._internal_user_count());
+  if (from._internal_user_count() != 0) {
+    _this->_internal_set_user_count(from._internal_user_count());
   }
-}
-
-void BestUserChangedData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.BestUserChangedData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void BestUserChangedData::CopyFrom(const BestUserChangedData& from) {
@@ -881,32 +818,36 @@ bool BestUserChangedData::IsInitialized() const {
 
 void BestUserChangedData::InternalSwap(BestUserChangedData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(BestUserChangedData, user_count_)
-      + sizeof(BestUserChangedData::user_count_)
-      - PROTOBUF_FIELD_OFFSET(BestUserChangedData, best_user_id_)>(
-          reinterpret_cast<char*>(&best_user_id_),
-          reinterpret_cast<char*>(&other->best_user_id_));
+      PROTOBUF_FIELD_OFFSET(BestUserChangedData, _impl_.user_count_)
+      + sizeof(BestUserChangedData::_impl_.user_count_)
+      - PROTOBUF_FIELD_OFFSET(BestUserChangedData, _impl_.best_user_id_)>(
+          reinterpret_cast<char*>(&_impl_.best_user_id_),
+          reinterpret_cast<char*>(&other->_impl_.best_user_id_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata BestUserChangedData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_realsense_2eproto_getter, &descriptor_table_realsense_2eproto_once,
+      file_level_metadata_realsense_2eproto[2]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::GestureData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::GestureData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::GestureData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::GestureData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::GestureData >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::HandMovementData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::HandMovementData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::HandMovementData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::HandMovementData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::HandMovementData >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::BestUserChangedData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::BestUserChangedData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::BestUserChangedData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::BestUserChangedData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::BestUserChangedData >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

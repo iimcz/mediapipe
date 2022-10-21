@@ -14,104 +14,98 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_types_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Vector2_types_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace naki3d {
 namespace common {
 namespace protocol {
-class MouseMoveDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<MouseMoveData> _instance;
-} _MouseMoveData_default_instance_;
-class MouseButtonDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<MouseButtonData> _instance;
-} _MouseButtonData_default_instance_;
-class MouseScrollDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<MouseScrollData> _instance;
-} _MouseScrollData_default_instance_;
+PROTOBUF_CONSTEXPR MouseMoveData::MouseMoveData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.absolute_)*/nullptr
+  , /*decltype(_impl_.relative_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct MouseMoveDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MouseMoveDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MouseMoveDataDefaultTypeInternal() {}
+  union {
+    MouseMoveData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MouseMoveDataDefaultTypeInternal _MouseMoveData_default_instance_;
+PROTOBUF_CONSTEXPR MouseButtonData::MouseButtonData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_.button_id_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct MouseButtonDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MouseButtonDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MouseButtonDataDefaultTypeInternal() {}
+  union {
+    MouseButtonData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MouseButtonDataDefaultTypeInternal _MouseButtonData_default_instance_;
+PROTOBUF_CONSTEXPR MouseScrollData::MouseScrollData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct MouseScrollDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MouseScrollDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MouseScrollDataDefaultTypeInternal() {}
+  union {
+    MouseScrollData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MouseScrollDataDefaultTypeInternal _MouseScrollData_default_instance_;
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
-static void InitDefaultsscc_info_MouseButtonData_mouse_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_mouse_2eproto[3];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_mouse_2eproto[2];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_mouse_2eproto = nullptr;
 
-  {
-    void* ptr = &::naki3d::common::protocol::_MouseButtonData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::MouseButtonData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::MouseButtonData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MouseButtonData_mouse_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_MouseButtonData_mouse_2eproto}, {}};
-
-static void InitDefaultsscc_info_MouseMoveData_mouse_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_MouseMoveData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::MouseMoveData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::MouseMoveData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_MouseMoveData_mouse_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_MouseMoveData_mouse_2eproto}, {
-      &scc_info_Vector2_types_2eproto.base,}};
-
-static void InitDefaultsscc_info_MouseScrollData_mouse_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_MouseScrollData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::MouseScrollData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::MouseScrollData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MouseScrollData_mouse_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_MouseScrollData_mouse_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_mouse_2eproto[3];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_mouse_2eproto[2];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_mouse_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_mouse_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_mouse_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseMoveData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseMoveData, absolute_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseMoveData, relative_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseMoveData, _impl_.absolute_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseMoveData, _impl_.relative_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseButtonData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseButtonData, type_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseButtonData, button_id_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseButtonData, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseButtonData, _impl_.button_id_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseScrollData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseScrollData, type_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MouseScrollData, _impl_.type_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::naki3d::common::protocol::MouseMoveData)},
-  { 7, -1, sizeof(::naki3d::common::protocol::MouseButtonData)},
-  { 14, -1, sizeof(::naki3d::common::protocol::MouseScrollData)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::naki3d::common::protocol::MouseMoveData)},
+  { 8, -1, -1, sizeof(::naki3d::common::protocol::MouseButtonData)},
+  { 16, -1, -1, sizeof(::naki3d::common::protocol::MouseScrollData)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_MouseMoveData_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_MouseButtonData_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_MouseScrollData_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::naki3d::common::protocol::_MouseMoveData_default_instance_._instance,
+  &::naki3d::common::protocol::_MouseButtonData_default_instance_._instance,
+  &::naki3d::common::protocol::_MouseScrollData_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_mouse_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -128,24 +122,24 @@ const char descriptor_table_protodef_mouse_2eproto[] PROTOBUF_SECTION_VARIABLE(p
   "llType\022\r\n\tSCROLL_UP\020\000\022\017\n\013SCROLL_DOWN\020\001b\006"
   "proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_mouse_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_mouse_2eproto_deps[1] = {
   &::descriptor_table_types_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_mouse_2eproto_sccs[3] = {
-  &scc_info_MouseButtonData_mouse_2eproto.base,
-  &scc_info_MouseMoveData_mouse_2eproto.base,
-  &scc_info_MouseScrollData_mouse_2eproto.base,
+static ::_pbi::once_flag descriptor_table_mouse_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_mouse_2eproto = {
+    false, false, 446, descriptor_table_protodef_mouse_2eproto,
+    "mouse.proto",
+    &descriptor_table_mouse_2eproto_once, descriptor_table_mouse_2eproto_deps, 1, 3,
+    schemas, file_default_instances, TableStruct_mouse_2eproto::offsets,
+    file_level_metadata_mouse_2eproto, file_level_enum_descriptors_mouse_2eproto,
+    file_level_service_descriptors_mouse_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_mouse_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_mouse_2eproto = {
-  false, false, descriptor_table_protodef_mouse_2eproto, "mouse.proto", 446,
-  &descriptor_table_mouse_2eproto_once, descriptor_table_mouse_2eproto_sccs, descriptor_table_mouse_2eproto_deps, 3, 1,
-  schemas, file_default_instances, TableStruct_mouse_2eproto::offsets,
-  file_level_metadata_mouse_2eproto, 3, file_level_enum_descriptors_mouse_2eproto, file_level_service_descriptors_mouse_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_mouse_2eproto_getter() {
+  return &descriptor_table_mouse_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_mouse_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_mouse_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_mouse_2eproto(&descriptor_table_mouse_2eproto);
 namespace naki3d {
 namespace common {
 namespace protocol {
@@ -180,12 +174,6 @@ bool MouseScrollType_IsValid(int value) {
 
 // ===================================================================
 
-void MouseMoveData::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_MouseMoveData_default_instance_._instance.get_mutable()->absolute_ = const_cast< ::naki3d::common::protocol::Vector2*>(
-      ::naki3d::common::protocol::Vector2::internal_default_instance());
-  ::naki3d::common::protocol::_MouseMoveData_default_instance_._instance.get_mutable()->relative_ = const_cast< ::naki3d::common::protocol::Vector2*>(
-      ::naki3d::common::protocol::Vector2::internal_default_instance());
-}
 class MouseMoveData::_Internal {
  public:
   static const ::naki3d::common::protocol::Vector2& absolute(const MouseMoveData* msg);
@@ -194,165 +182,162 @@ class MouseMoveData::_Internal {
 
 const ::naki3d::common::protocol::Vector2&
 MouseMoveData::_Internal::absolute(const MouseMoveData* msg) {
-  return *msg->absolute_;
+  return *msg->_impl_.absolute_;
 }
 const ::naki3d::common::protocol::Vector2&
 MouseMoveData::_Internal::relative(const MouseMoveData* msg) {
-  return *msg->relative_;
+  return *msg->_impl_.relative_;
 }
 void MouseMoveData::clear_absolute() {
-  if (GetArena() == nullptr && absolute_ != nullptr) {
-    delete absolute_;
+  if (GetArenaForAllocation() == nullptr && _impl_.absolute_ != nullptr) {
+    delete _impl_.absolute_;
   }
-  absolute_ = nullptr;
+  _impl_.absolute_ = nullptr;
 }
 void MouseMoveData::clear_relative() {
-  if (GetArena() == nullptr && relative_ != nullptr) {
-    delete relative_;
+  if (GetArenaForAllocation() == nullptr && _impl_.relative_ != nullptr) {
+    delete _impl_.relative_;
   }
-  relative_ = nullptr;
+  _impl_.relative_ = nullptr;
 }
-MouseMoveData::MouseMoveData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+MouseMoveData::MouseMoveData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.MouseMoveData)
 }
 MouseMoveData::MouseMoveData(const MouseMoveData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MouseMoveData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.absolute_){nullptr}
+    , decltype(_impl_.relative_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_absolute()) {
-    absolute_ = new ::naki3d::common::protocol::Vector2(*from.absolute_);
-  } else {
-    absolute_ = nullptr;
+    _this->_impl_.absolute_ = new ::naki3d::common::protocol::Vector2(*from._impl_.absolute_);
   }
   if (from._internal_has_relative()) {
-    relative_ = new ::naki3d::common::protocol::Vector2(*from.relative_);
-  } else {
-    relative_ = nullptr;
+    _this->_impl_.relative_ = new ::naki3d::common::protocol::Vector2(*from._impl_.relative_);
   }
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.MouseMoveData)
 }
 
-void MouseMoveData::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_MouseMoveData_mouse_2eproto.base);
-  ::memset(&absolute_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&relative_) -
-      reinterpret_cast<char*>(&absolute_)) + sizeof(relative_));
+inline void MouseMoveData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.absolute_){nullptr}
+    , decltype(_impl_.relative_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 MouseMoveData::~MouseMoveData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.MouseMoveData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void MouseMoveData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete absolute_;
-  if (this != internal_default_instance()) delete relative_;
+inline void MouseMoveData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.absolute_;
+  if (this != internal_default_instance()) delete _impl_.relative_;
 }
 
-void MouseMoveData::ArenaDtor(void* object) {
-  MouseMoveData* _this = reinterpret_cast< MouseMoveData* >(object);
-  (void)_this;
-}
-void MouseMoveData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void MouseMoveData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const MouseMoveData& MouseMoveData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_MouseMoveData_mouse_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void MouseMoveData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.MouseMoveData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && absolute_ != nullptr) {
-    delete absolute_;
+  if (GetArenaForAllocation() == nullptr && _impl_.absolute_ != nullptr) {
+    delete _impl_.absolute_;
   }
-  absolute_ = nullptr;
-  if (GetArena() == nullptr && relative_ != nullptr) {
-    delete relative_;
+  _impl_.absolute_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.relative_ != nullptr) {
+    delete _impl_.relative_;
   }
-  relative_ = nullptr;
+  _impl_.relative_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* MouseMoveData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* MouseMoveData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.Vector2 absolute = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_absolute(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.Vector2 relative = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_relative(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* MouseMoveData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* MouseMoveData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.MouseMoveData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.Vector2 absolute = 1;
-  if (this->has_absolute()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_absolute()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::absolute(this), target, stream);
+      InternalWriteMessage(1, _Internal::absolute(this),
+        _Internal::absolute(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.Vector2 relative = 2;
-  if (this->has_relative()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_relative()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::relative(this), target, stream);
+      InternalWriteMessage(2, _Internal::relative(this),
+        _Internal::relative(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.MouseMoveData)
@@ -363,68 +348,51 @@ size_t MouseMoveData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.MouseMoveData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.Vector2 absolute = 1;
-  if (this->has_absolute()) {
+  if (this->_internal_has_absolute()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *absolute_);
+        *_impl_.absolute_);
   }
 
   // .naki3d.common.protocol.Vector2 relative = 2;
-  if (this->has_relative()) {
+  if (this->_internal_has_relative()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *relative_);
+        *_impl_.relative_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void MouseMoveData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.MouseMoveData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const MouseMoveData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<MouseMoveData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.MouseMoveData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.MouseMoveData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MouseMoveData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MouseMoveData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MouseMoveData::GetClassData() const { return &_class_data_; }
 
-void MouseMoveData::MergeFrom(const MouseMoveData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.MouseMoveData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void MouseMoveData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MouseMoveData*>(&to_msg);
+  auto& from = static_cast<const MouseMoveData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.MouseMoveData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_absolute()) {
-    _internal_mutable_absolute()->::naki3d::common::protocol::Vector2::MergeFrom(from._internal_absolute());
+  if (from._internal_has_absolute()) {
+    _this->_internal_mutable_absolute()->::naki3d::common::protocol::Vector2::MergeFrom(
+        from._internal_absolute());
   }
-  if (from.has_relative()) {
-    _internal_mutable_relative()->::naki3d::common::protocol::Vector2::MergeFrom(from._internal_relative());
+  if (from._internal_has_relative()) {
+    _this->_internal_mutable_relative()->::naki3d::common::protocol::Vector2::MergeFrom(
+        from._internal_relative());
   }
-}
-
-void MouseMoveData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.MouseMoveData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void MouseMoveData::CopyFrom(const MouseMoveData& from) {
@@ -440,152 +408,155 @@ bool MouseMoveData::IsInitialized() const {
 
 void MouseMoveData::InternalSwap(MouseMoveData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(MouseMoveData, relative_)
-      + sizeof(MouseMoveData::relative_)
-      - PROTOBUF_FIELD_OFFSET(MouseMoveData, absolute_)>(
-          reinterpret_cast<char*>(&absolute_),
-          reinterpret_cast<char*>(&other->absolute_));
+      PROTOBUF_FIELD_OFFSET(MouseMoveData, _impl_.relative_)
+      + sizeof(MouseMoveData::_impl_.relative_)
+      - PROTOBUF_FIELD_OFFSET(MouseMoveData, _impl_.absolute_)>(
+          reinterpret_cast<char*>(&_impl_.absolute_),
+          reinterpret_cast<char*>(&other->_impl_.absolute_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata MouseMoveData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_mouse_2eproto_getter, &descriptor_table_mouse_2eproto_once,
+      file_level_metadata_mouse_2eproto[0]);
 }
-
 
 // ===================================================================
 
-void MouseButtonData::InitAsDefaultInstance() {
-}
 class MouseButtonData::_Internal {
  public:
 };
 
-MouseButtonData::MouseButtonData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+MouseButtonData::MouseButtonData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.MouseButtonData)
 }
 MouseButtonData::MouseButtonData(const MouseButtonData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MouseButtonData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.type_){}
+    , decltype(_impl_.button_id_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&type_, &from.type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&button_id_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(button_id_));
+  ::memcpy(&_impl_.type_, &from._impl_.type_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.button_id_) -
+    reinterpret_cast<char*>(&_impl_.type_)) + sizeof(_impl_.button_id_));
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.MouseButtonData)
 }
 
-void MouseButtonData::SharedCtor() {
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&button_id_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(button_id_));
+inline void MouseButtonData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.type_){0}
+    , decltype(_impl_.button_id_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 MouseButtonData::~MouseButtonData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.MouseButtonData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void MouseButtonData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void MouseButtonData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void MouseButtonData::ArenaDtor(void* object) {
-  MouseButtonData* _this = reinterpret_cast< MouseButtonData* >(object);
-  (void)_this;
-}
-void MouseButtonData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void MouseButtonData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const MouseButtonData& MouseButtonData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_MouseButtonData_mouse_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void MouseButtonData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.MouseButtonData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&button_id_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(button_id_));
+  ::memset(&_impl_.type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.button_id_) -
+      reinterpret_cast<char*>(&_impl_.type_)) + sizeof(_impl_.button_id_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* MouseButtonData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* MouseButtonData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.MouseActionType type = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_type(static_cast<::naki3d::common::protocol::MouseActionType>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 button_id = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          button_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.button_id_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* MouseButtonData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* MouseButtonData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.MouseButtonData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.MouseActionType type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       1, this->_internal_type(), target);
   }
 
   // int32 button_id = 2;
-  if (this->button_id() != 0) {
+  if (this->_internal_button_id() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_button_id(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_button_id(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.MouseButtonData)
@@ -596,67 +567,46 @@ size_t MouseButtonData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.MouseButtonData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.MouseActionType type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   // int32 button_id = 2;
-  if (this->button_id() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_button_id());
+  if (this->_internal_button_id() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_button_id());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void MouseButtonData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.MouseButtonData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const MouseButtonData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<MouseButtonData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.MouseButtonData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.MouseButtonData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MouseButtonData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MouseButtonData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MouseButtonData::GetClassData() const { return &_class_data_; }
 
-void MouseButtonData::MergeFrom(const MouseButtonData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.MouseButtonData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void MouseButtonData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MouseButtonData*>(&to_msg);
+  auto& from = static_cast<const MouseButtonData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.MouseButtonData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-  if (from.button_id() != 0) {
-    _internal_set_button_id(from._internal_button_id());
+  if (from._internal_button_id() != 0) {
+    _this->_internal_set_button_id(from._internal_button_id());
   }
-}
-
-void MouseButtonData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.MouseButtonData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void MouseButtonData::CopyFrom(const MouseButtonData& from) {
@@ -672,133 +622,135 @@ bool MouseButtonData::IsInitialized() const {
 
 void MouseButtonData::InternalSwap(MouseButtonData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(MouseButtonData, button_id_)
-      + sizeof(MouseButtonData::button_id_)
-      - PROTOBUF_FIELD_OFFSET(MouseButtonData, type_)>(
-          reinterpret_cast<char*>(&type_),
-          reinterpret_cast<char*>(&other->type_));
+      PROTOBUF_FIELD_OFFSET(MouseButtonData, _impl_.button_id_)
+      + sizeof(MouseButtonData::_impl_.button_id_)
+      - PROTOBUF_FIELD_OFFSET(MouseButtonData, _impl_.type_)>(
+          reinterpret_cast<char*>(&_impl_.type_),
+          reinterpret_cast<char*>(&other->_impl_.type_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata MouseButtonData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_mouse_2eproto_getter, &descriptor_table_mouse_2eproto_once,
+      file_level_metadata_mouse_2eproto[1]);
 }
-
 
 // ===================================================================
 
-void MouseScrollData::InitAsDefaultInstance() {
-}
 class MouseScrollData::_Internal {
  public:
 };
 
-MouseScrollData::MouseScrollData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+MouseScrollData::MouseScrollData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.MouseScrollData)
 }
 MouseScrollData::MouseScrollData(const MouseScrollData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MouseScrollData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.type_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  type_ = from.type_;
+  _this->_impl_.type_ = from._impl_.type_;
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.MouseScrollData)
 }
 
-void MouseScrollData::SharedCtor() {
-  type_ = 0;
+inline void MouseScrollData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.type_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 MouseScrollData::~MouseScrollData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.MouseScrollData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void MouseScrollData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void MouseScrollData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void MouseScrollData::ArenaDtor(void* object) {
-  MouseScrollData* _this = reinterpret_cast< MouseScrollData* >(object);
-  (void)_this;
-}
-void MouseScrollData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void MouseScrollData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const MouseScrollData& MouseScrollData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_MouseScrollData_mouse_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void MouseScrollData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.MouseScrollData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  type_ = 0;
+  _impl_.type_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* MouseScrollData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* MouseScrollData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.MouseScrollType type = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_type(static_cast<::naki3d::common::protocol::MouseScrollType>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* MouseScrollData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* MouseScrollData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.MouseScrollData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.MouseScrollType type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       1, this->_internal_type(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.MouseScrollData)
@@ -809,57 +761,38 @@ size_t MouseScrollData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.MouseScrollData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.MouseScrollType type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void MouseScrollData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.MouseScrollData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const MouseScrollData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<MouseScrollData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.MouseScrollData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.MouseScrollData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MouseScrollData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MouseScrollData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MouseScrollData::GetClassData() const { return &_class_data_; }
 
-void MouseScrollData::MergeFrom(const MouseScrollData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.MouseScrollData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void MouseScrollData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MouseScrollData*>(&to_msg);
+  auto& from = static_cast<const MouseScrollData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.MouseScrollData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-}
-
-void MouseScrollData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.MouseScrollData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void MouseScrollData::CopyFrom(const MouseScrollData& from) {
@@ -875,27 +808,31 @@ bool MouseScrollData::IsInitialized() const {
 
 void MouseScrollData::InternalSwap(MouseScrollData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(type_, other->type_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.type_, other->_impl_.type_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata MouseScrollData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_mouse_2eproto_getter, &descriptor_table_mouse_2eproto_once,
+      file_level_metadata_mouse_2eproto[2]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::MouseMoveData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::MouseMoveData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::MouseMoveData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::MouseMoveData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::MouseMoveData >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::MouseButtonData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::MouseButtonData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::MouseButtonData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::MouseButtonData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::MouseButtonData >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::MouseScrollData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::MouseScrollData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::MouseScrollData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::MouseScrollData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::MouseScrollData >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

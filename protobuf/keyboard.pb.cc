@@ -14,49 +14,52 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace naki3d {
 namespace common {
 namespace protocol {
-class KeyboardUpdateDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<KeyboardUpdateData> _instance;
-} _KeyboardUpdateData_default_instance_;
+PROTOBUF_CONSTEXPR KeyboardUpdateData::KeyboardUpdateData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_.keycode_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct KeyboardUpdateDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR KeyboardUpdateDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~KeyboardUpdateDataDefaultTypeInternal() {}
+  union {
+    KeyboardUpdateData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 KeyboardUpdateDataDefaultTypeInternal _KeyboardUpdateData_default_instance_;
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
-static void InitDefaultsscc_info_KeyboardUpdateData_keyboard_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_keyboard_2eproto[1];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_keyboard_2eproto[1];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_keyboard_2eproto = nullptr;
 
-  {
-    void* ptr = &::naki3d::common::protocol::_KeyboardUpdateData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::KeyboardUpdateData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::KeyboardUpdateData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_KeyboardUpdateData_keyboard_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_KeyboardUpdateData_keyboard_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_keyboard_2eproto[1];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_keyboard_2eproto[1];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_keyboard_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_keyboard_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_keyboard_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::KeyboardUpdateData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::KeyboardUpdateData, type_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::KeyboardUpdateData, keycode_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::KeyboardUpdateData, _impl_.type_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::KeyboardUpdateData, _impl_.keycode_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::naki3d::common::protocol::KeyboardUpdateData)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::naki3d::common::protocol::KeyboardUpdateData)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_KeyboardUpdateData_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::naki3d::common::protocol::_KeyboardUpdateData_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_keyboard_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -66,21 +69,21 @@ const char descriptor_table_protodef_keyboard_2eproto[] PROTOBUF_SECTION_VARIABL
   "eycode\030\002 \001(\005*)\n\rKeyActionType\022\n\n\006KEY_UP\020"
   "\000\022\014\n\010KEY_DOWN\020\001b\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_keyboard_2eproto_deps[1] = {
+static ::_pbi::once_flag descriptor_table_keyboard_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_keyboard_2eproto = {
+    false, false, 183, descriptor_table_protodef_keyboard_2eproto,
+    "keyboard.proto",
+    &descriptor_table_keyboard_2eproto_once, nullptr, 0, 1,
+    schemas, file_default_instances, TableStruct_keyboard_2eproto::offsets,
+    file_level_metadata_keyboard_2eproto, file_level_enum_descriptors_keyboard_2eproto,
+    file_level_service_descriptors_keyboard_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_keyboard_2eproto_sccs[1] = {
-  &scc_info_KeyboardUpdateData_keyboard_2eproto.base,
-};
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_keyboard_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_keyboard_2eproto = {
-  false, false, descriptor_table_protodef_keyboard_2eproto, "keyboard.proto", 183,
-  &descriptor_table_keyboard_2eproto_once, descriptor_table_keyboard_2eproto_sccs, descriptor_table_keyboard_2eproto_deps, 1, 0,
-  schemas, file_default_instances, TableStruct_keyboard_2eproto::offsets,
-  file_level_metadata_keyboard_2eproto, 1, file_level_enum_descriptors_keyboard_2eproto, file_level_service_descriptors_keyboard_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_keyboard_2eproto_getter() {
+  return &descriptor_table_keyboard_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_keyboard_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_keyboard_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_keyboard_2eproto(&descriptor_table_keyboard_2eproto);
 namespace naki3d {
 namespace common {
 namespace protocol {
@@ -101,136 +104,138 @@ bool KeyActionType_IsValid(int value) {
 
 // ===================================================================
 
-void KeyboardUpdateData::InitAsDefaultInstance() {
-}
 class KeyboardUpdateData::_Internal {
  public:
 };
 
-KeyboardUpdateData::KeyboardUpdateData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+KeyboardUpdateData::KeyboardUpdateData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.KeyboardUpdateData)
 }
 KeyboardUpdateData::KeyboardUpdateData(const KeyboardUpdateData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  KeyboardUpdateData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.type_){}
+    , decltype(_impl_.keycode_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::memcpy(&type_, &from.type_,
-    static_cast<size_t>(reinterpret_cast<char*>(&keycode_) -
-    reinterpret_cast<char*>(&type_)) + sizeof(keycode_));
+  ::memcpy(&_impl_.type_, &from._impl_.type_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.keycode_) -
+    reinterpret_cast<char*>(&_impl_.type_)) + sizeof(_impl_.keycode_));
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.KeyboardUpdateData)
 }
 
-void KeyboardUpdateData::SharedCtor() {
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keycode_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(keycode_));
+inline void KeyboardUpdateData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.type_){0}
+    , decltype(_impl_.keycode_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 KeyboardUpdateData::~KeyboardUpdateData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.KeyboardUpdateData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void KeyboardUpdateData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void KeyboardUpdateData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void KeyboardUpdateData::ArenaDtor(void* object) {
-  KeyboardUpdateData* _this = reinterpret_cast< KeyboardUpdateData* >(object);
-  (void)_this;
-}
-void KeyboardUpdateData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void KeyboardUpdateData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const KeyboardUpdateData& KeyboardUpdateData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_KeyboardUpdateData_keyboard_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void KeyboardUpdateData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.KeyboardUpdateData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  ::memset(&type_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&keycode_) -
-      reinterpret_cast<char*>(&type_)) + sizeof(keycode_));
+  ::memset(&_impl_.type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.keycode_) -
+      reinterpret_cast<char*>(&_impl_.type_)) + sizeof(_impl_.keycode_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* KeyboardUpdateData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* KeyboardUpdateData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.KeyActionType type = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_type(static_cast<::naki3d::common::protocol::KeyActionType>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // int32 keycode = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          keycode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.keycode_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint32(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* KeyboardUpdateData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* KeyboardUpdateData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.KeyboardUpdateData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.KeyActionType type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       1, this->_internal_type(), target);
   }
 
   // int32 keycode = 2;
-  if (this->keycode() != 0) {
+  if (this->_internal_keycode() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt32ToArray(2, this->_internal_keycode(), target);
+    target = ::_pbi::WireFormatLite::WriteInt32ToArray(2, this->_internal_keycode(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.KeyboardUpdateData)
@@ -241,67 +246,46 @@ size_t KeyboardUpdateData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.KeyboardUpdateData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.KeyActionType type = 1;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
   // int32 keycode = 2;
-  if (this->keycode() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int32Size(
-        this->_internal_keycode());
+  if (this->_internal_keycode() != 0) {
+    total_size += ::_pbi::WireFormatLite::Int32SizePlusOne(this->_internal_keycode());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void KeyboardUpdateData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.KeyboardUpdateData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const KeyboardUpdateData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<KeyboardUpdateData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.KeyboardUpdateData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.KeyboardUpdateData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData KeyboardUpdateData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    KeyboardUpdateData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*KeyboardUpdateData::GetClassData() const { return &_class_data_; }
 
-void KeyboardUpdateData::MergeFrom(const KeyboardUpdateData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.KeyboardUpdateData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void KeyboardUpdateData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<KeyboardUpdateData*>(&to_msg);
+  auto& from = static_cast<const KeyboardUpdateData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.KeyboardUpdateData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-  if (from.keycode() != 0) {
-    _internal_set_keycode(from._internal_keycode());
+  if (from._internal_keycode() != 0) {
+    _this->_internal_set_keycode(from._internal_keycode());
   }
-}
-
-void KeyboardUpdateData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.KeyboardUpdateData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void KeyboardUpdateData::CopyFrom(const KeyboardUpdateData& from) {
@@ -317,26 +301,28 @@ bool KeyboardUpdateData::IsInitialized() const {
 
 void KeyboardUpdateData::InternalSwap(KeyboardUpdateData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(KeyboardUpdateData, keycode_)
-      + sizeof(KeyboardUpdateData::keycode_)
-      - PROTOBUF_FIELD_OFFSET(KeyboardUpdateData, type_)>(
-          reinterpret_cast<char*>(&type_),
-          reinterpret_cast<char*>(&other->type_));
+      PROTOBUF_FIELD_OFFSET(KeyboardUpdateData, _impl_.keycode_)
+      + sizeof(KeyboardUpdateData::_impl_.keycode_)
+      - PROTOBUF_FIELD_OFFSET(KeyboardUpdateData, _impl_.type_)>(
+          reinterpret_cast<char*>(&_impl_.type_),
+          reinterpret_cast<char*>(&other->_impl_.type_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata KeyboardUpdateData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_keyboard_2eproto_getter, &descriptor_table_keyboard_2eproto_once,
+      file_level_metadata_keyboard_2eproto[0]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::KeyboardUpdateData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::KeyboardUpdateData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::KeyboardUpdateData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::KeyboardUpdateData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::KeyboardUpdateData >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

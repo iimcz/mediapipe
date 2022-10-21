@@ -14,207 +14,149 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_realsense_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BestUserChangedData_realsense_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_sensor_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CECMessage_sensor_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commands_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ClearPackage_commands_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_connection_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeviceDescriptor_connection_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_connection_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_EncryptionInfo_connection_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_event_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_EventData_event_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_realsense_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GestureData_realsense_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_realsense_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_HandMovementData_realsense_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_keyboard_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_KeyboardUpdateData_keyboard_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_sensor_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LightLevelData_sensor_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_commands_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LoadPackage_commands_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_mediapipe_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_MediapipeHandTrackingData_mediapipe_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_mouse_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MouseButtonData_mouse_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_mouse_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_MouseMoveData_mouse_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_mouse_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MouseScrollData_mouse_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_connection_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Ping_connection_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_sensor_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PirMovementData_sensor_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_sensor_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SensorListRequest_sensor_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_sensor_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UltrasonicDistanceData_sensor_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace naki3d {
 namespace common {
 namespace protocol {
-class ServerMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ServerMessage> _instance;
-  const ::naki3d::common::protocol::EncryptionInfo* encryption_info_;
-  const ::naki3d::common::protocol::LoadPackage* load_package_;
-  const ::naki3d::common::protocol::ClearPackage* clear_package_;
-} _ServerMessage_default_instance_;
-class DeviceMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeviceMessage> _instance;
-  const ::naki3d::common::protocol::DeviceDescriptor* device_descriptor_;
-  const ::naki3d::common::protocol::Ping* ping_;
-} _DeviceMessage_default_instance_;
-class SensorMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SensorMessage> _instance;
-  const ::naki3d::common::protocol::MediapipeHandTrackingData* handtracking_;
-  const ::naki3d::common::protocol::GestureData* gesture_;
-  const ::naki3d::common::protocol::HandMovementData* hand_movement_;
-  const ::naki3d::common::protocol::BestUserChangedData* best_user_changed_;
-  const ::naki3d::common::protocol::KeyboardUpdateData* keyboard_update_;
-  const ::naki3d::common::protocol::MouseMoveData* mouse_move_;
-  const ::naki3d::common::protocol::MouseButtonData* mouse_button_;
-  const ::naki3d::common::protocol::MouseScrollData* mouse_scroll_;
-  const ::naki3d::common::protocol::UltrasonicDistanceData* ultrasonic_distance_;
-  const ::naki3d::common::protocol::LightLevelData* light_level_;
-  const ::naki3d::common::protocol::EventData* event_;
-  const ::naki3d::common::protocol::PirMovementData* pir_movement_;
-} _SensorMessage_default_instance_;
-class SensorControlMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SensorControlMessage> _instance;
-  const ::naki3d::common::protocol::SensorListRequest* sensor_list_;
-  const ::naki3d::common::protocol::CECMessage* cec_message_;
-} _SensorControlMessage_default_instance_;
+PROTOBUF_CONSTEXPR ServerMessage::ServerMessage(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.connection_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.message_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_._oneof_case_)*/{}} {}
+struct ServerMessageDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR ServerMessageDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~ServerMessageDefaultTypeInternal() {}
+  union {
+    ServerMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 ServerMessageDefaultTypeInternal _ServerMessage_default_instance_;
+PROTOBUF_CONSTEXPR DeviceMessage::DeviceMessage(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.connection_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.message_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_._oneof_case_)*/{}} {}
+struct DeviceMessageDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR DeviceMessageDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~DeviceMessageDefaultTypeInternal() {}
+  union {
+    DeviceMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 DeviceMessageDefaultTypeInternal _DeviceMessage_default_instance_;
+PROTOBUF_CONSTEXPR SensorMessage::SensorMessage(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.sensor_id_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.timestamp_)*/uint64_t{0u}
+  , /*decltype(_impl_.data_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_._oneof_case_)*/{}} {}
+struct SensorMessageDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SensorMessageDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SensorMessageDefaultTypeInternal() {}
+  union {
+    SensorMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SensorMessageDefaultTypeInternal _SensorMessage_default_instance_;
+PROTOBUF_CONSTEXPR SensorControlMessage::SensorControlMessage(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.hostname_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.message_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}
+  , /*decltype(_impl_._oneof_case_)*/{}} {}
+struct SensorControlMessageDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SensorControlMessageDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SensorControlMessageDefaultTypeInternal() {}
+  union {
+    SensorControlMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SensorControlMessageDefaultTypeInternal _SensorControlMessage_default_instance_;
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
-static void InitDefaultsscc_info_DeviceMessage_wrappers_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_wrappers_2eproto[4];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_wrappers_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_wrappers_2eproto = nullptr;
 
-  {
-    void* ptr = &::naki3d::common::protocol::_DeviceMessage_default_instance_;
-    new (ptr) ::naki3d::common::protocol::DeviceMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::DeviceMessage::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_DeviceMessage_wrappers_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_DeviceMessage_wrappers_2eproto}, {
-      &scc_info_DeviceDescriptor_connection_2eproto.base,
-      &scc_info_Ping_connection_2eproto.base,}};
-
-static void InitDefaultsscc_info_SensorControlMessage_wrappers_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_SensorControlMessage_default_instance_;
-    new (ptr) ::naki3d::common::protocol::SensorControlMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::SensorControlMessage::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_SensorControlMessage_wrappers_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_SensorControlMessage_wrappers_2eproto}, {
-      &scc_info_SensorListRequest_sensor_2eproto.base,
-      &scc_info_CECMessage_sensor_2eproto.base,}};
-
-static void InitDefaultsscc_info_SensorMessage_wrappers_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_SensorMessage_default_instance_;
-    new (ptr) ::naki3d::common::protocol::SensorMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::SensorMessage::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<12> scc_info_SensorMessage_wrappers_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 12, 0, InitDefaultsscc_info_SensorMessage_wrappers_2eproto}, {
-      &scc_info_MediapipeHandTrackingData_mediapipe_2eproto.base,
-      &scc_info_GestureData_realsense_2eproto.base,
-      &scc_info_HandMovementData_realsense_2eproto.base,
-      &scc_info_BestUserChangedData_realsense_2eproto.base,
-      &scc_info_KeyboardUpdateData_keyboard_2eproto.base,
-      &scc_info_MouseMoveData_mouse_2eproto.base,
-      &scc_info_MouseButtonData_mouse_2eproto.base,
-      &scc_info_MouseScrollData_mouse_2eproto.base,
-      &scc_info_UltrasonicDistanceData_sensor_2eproto.base,
-      &scc_info_LightLevelData_sensor_2eproto.base,
-      &scc_info_EventData_event_2eproto.base,
-      &scc_info_PirMovementData_sensor_2eproto.base,}};
-
-static void InitDefaultsscc_info_ServerMessage_wrappers_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_ServerMessage_default_instance_;
-    new (ptr) ::naki3d::common::protocol::ServerMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::ServerMessage::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ServerMessage_wrappers_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_ServerMessage_wrappers_2eproto}, {
-      &scc_info_EncryptionInfo_connection_2eproto.base,
-      &scc_info_LoadPackage_commands_2eproto.base,
-      &scc_info_ClearPackage_commands_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_wrappers_2eproto[4];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_wrappers_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_wrappers_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_wrappers_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_wrappers_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::ServerMessage, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::ServerMessage, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::ServerMessage, _impl_._oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::ServerMessage, connection_id_),
-  offsetof(::naki3d::common::protocol::ServerMessageDefaultTypeInternal, encryption_info_),
-  offsetof(::naki3d::common::protocol::ServerMessageDefaultTypeInternal, load_package_),
-  offsetof(::naki3d::common::protocol::ServerMessageDefaultTypeInternal, clear_package_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::ServerMessage, message_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::ServerMessage, _impl_.connection_id_),
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::ServerMessage, _impl_.message_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::DeviceMessage, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::DeviceMessage, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::DeviceMessage, _impl_._oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::DeviceMessage, connection_id_),
-  offsetof(::naki3d::common::protocol::DeviceMessageDefaultTypeInternal, device_descriptor_),
-  offsetof(::naki3d::common::protocol::DeviceMessageDefaultTypeInternal, ping_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::DeviceMessage, message_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::DeviceMessage, _impl_.connection_id_),
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::DeviceMessage, _impl_.message_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, _impl_._oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, sensor_id_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, timestamp_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, handtracking_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, gesture_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, hand_movement_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, best_user_changed_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, keyboard_update_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, mouse_move_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, mouse_button_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, mouse_scroll_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, ultrasonic_distance_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, light_level_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, event_),
-  offsetof(::naki3d::common::protocol::SensorMessageDefaultTypeInternal, pir_movement_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, data_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, _impl_.sensor_id_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, _impl_.timestamp_),
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorMessage, _impl_.data_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorControlMessage, _internal_metadata_),
   ~0u,  // no _extensions_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorControlMessage, _oneof_case_[0]),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorControlMessage, _impl_._oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorControlMessage, hostname_),
-  offsetof(::naki3d::common::protocol::SensorControlMessageDefaultTypeInternal, sensor_list_),
-  offsetof(::naki3d::common::protocol::SensorControlMessageDefaultTypeInternal, cec_message_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorControlMessage, message_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorControlMessage, _impl_.hostname_),
+  ::_pbi::kInvalidFieldOffsetTag,
+  ::_pbi::kInvalidFieldOffsetTag,
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorControlMessage, _impl_.message_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::naki3d::common::protocol::ServerMessage)},
-  { 10, -1, sizeof(::naki3d::common::protocol::DeviceMessage)},
-  { 19, -1, sizeof(::naki3d::common::protocol::SensorMessage)},
-  { 39, -1, sizeof(::naki3d::common::protocol::SensorControlMessage)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::naki3d::common::protocol::ServerMessage)},
+  { 11, -1, -1, sizeof(::naki3d::common::protocol::DeviceMessage)},
+  { 21, -1, -1, sizeof(::naki3d::common::protocol::SensorMessage)},
+  { 42, -1, -1, sizeof(::naki3d::common::protocol::SensorControlMessage)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_ServerMessage_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_DeviceMessage_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_SensorMessage_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_SensorControlMessage_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::naki3d::common::protocol::_ServerMessage_default_instance_._instance,
+  &::naki3d::common::protocol::_DeviceMessage_default_instance_._instance,
+  &::naki3d::common::protocol::_SensorMessage_default_instance_._instance,
+  &::naki3d::common::protocol::_SensorControlMessage_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_wrappers_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -260,7 +202,7 @@ const char descriptor_table_protodef_wrappers_2eproto[] PROTOBUF_SECTION_VARIABL
   "\001(\0132\".naki3d.common.protocol.CECMessageH"
   "\000B\t\n\007messageb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_wrappers_2eproto_deps[8] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_wrappers_2eproto_deps[8] = {
   &::descriptor_table_commands_2eproto,
   &::descriptor_table_connection_2eproto,
   &::descriptor_table_event_2eproto,
@@ -270,36 +212,27 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_realsense_2eproto,
   &::descriptor_table_sensor_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_wrappers_2eproto_sccs[4] = {
-  &scc_info_DeviceMessage_wrappers_2eproto.base,
-  &scc_info_SensorControlMessage_wrappers_2eproto.base,
-  &scc_info_SensorMessage_wrappers_2eproto.base,
-  &scc_info_ServerMessage_wrappers_2eproto.base,
+static ::_pbi::once_flag descriptor_table_wrappers_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_wrappers_2eproto = {
+    false, false, 1620, descriptor_table_protodef_wrappers_2eproto,
+    "wrappers.proto",
+    &descriptor_table_wrappers_2eproto_once, descriptor_table_wrappers_2eproto_deps, 8, 4,
+    schemas, file_default_instances, TableStruct_wrappers_2eproto::offsets,
+    file_level_metadata_wrappers_2eproto, file_level_enum_descriptors_wrappers_2eproto,
+    file_level_service_descriptors_wrappers_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_wrappers_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_wrappers_2eproto = {
-  false, false, descriptor_table_protodef_wrappers_2eproto, "wrappers.proto", 1620,
-  &descriptor_table_wrappers_2eproto_once, descriptor_table_wrappers_2eproto_sccs, descriptor_table_wrappers_2eproto_deps, 4, 8,
-  schemas, file_default_instances, TableStruct_wrappers_2eproto::offsets,
-  file_level_metadata_wrappers_2eproto, 4, file_level_enum_descriptors_wrappers_2eproto, file_level_service_descriptors_wrappers_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_wrappers_2eproto_getter() {
+  return &descriptor_table_wrappers_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_wrappers_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_wrappers_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_wrappers_2eproto(&descriptor_table_wrappers_2eproto);
 namespace naki3d {
 namespace common {
 namespace protocol {
 
 // ===================================================================
 
-void ServerMessage::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_ServerMessage_default_instance_.encryption_info_ = const_cast< ::naki3d::common::protocol::EncryptionInfo*>(
-      ::naki3d::common::protocol::EncryptionInfo::internal_default_instance());
-  ::naki3d::common::protocol::_ServerMessage_default_instance_.load_package_ = const_cast< ::naki3d::common::protocol::LoadPackage*>(
-      ::naki3d::common::protocol::LoadPackage::internal_default_instance());
-  ::naki3d::common::protocol::_ServerMessage_default_instance_.clear_package_ = const_cast< ::naki3d::common::protocol::ClearPackage*>(
-      ::naki3d::common::protocol::ClearPackage::internal_default_instance());
-}
 class ServerMessage::_Internal {
  public:
   static const ::naki3d::common::protocol::EncryptionInfo& encryption_info(const ServerMessage* msg);
@@ -309,111 +242,127 @@ class ServerMessage::_Internal {
 
 const ::naki3d::common::protocol::EncryptionInfo&
 ServerMessage::_Internal::encryption_info(const ServerMessage* msg) {
-  return *msg->message_.encryption_info_;
+  return *msg->_impl_.message_.encryption_info_;
 }
 const ::naki3d::common::protocol::LoadPackage&
 ServerMessage::_Internal::load_package(const ServerMessage* msg) {
-  return *msg->message_.load_package_;
+  return *msg->_impl_.message_.load_package_;
 }
 const ::naki3d::common::protocol::ClearPackage&
 ServerMessage::_Internal::clear_package(const ServerMessage* msg) {
-  return *msg->message_.clear_package_;
+  return *msg->_impl_.message_.clear_package_;
 }
 void ServerMessage::set_allocated_encryption_info(::naki3d::common::protocol::EncryptionInfo* encryption_info) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_message();
   if (encryption_info) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(encryption_info)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(encryption_info));
     if (message_arena != submessage_arena) {
       encryption_info = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, encryption_info, submessage_arena);
     }
     set_has_encryption_info();
-    message_.encryption_info_ = encryption_info;
+    _impl_.message_.encryption_info_ = encryption_info;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.ServerMessage.encryption_info)
 }
 void ServerMessage::clear_encryption_info() {
   if (_internal_has_encryption_info()) {
-    if (GetArena() == nullptr) {
-      delete message_.encryption_info_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.message_.encryption_info_;
     }
     clear_has_message();
   }
 }
 void ServerMessage::set_allocated_load_package(::naki3d::common::protocol::LoadPackage* load_package) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_message();
   if (load_package) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(load_package)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(load_package));
     if (message_arena != submessage_arena) {
       load_package = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, load_package, submessage_arena);
     }
     set_has_load_package();
-    message_.load_package_ = load_package;
+    _impl_.message_.load_package_ = load_package;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.ServerMessage.load_package)
 }
 void ServerMessage::clear_load_package() {
   if (_internal_has_load_package()) {
-    if (GetArena() == nullptr) {
-      delete message_.load_package_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.message_.load_package_;
     }
     clear_has_message();
   }
 }
 void ServerMessage::set_allocated_clear_package(::naki3d::common::protocol::ClearPackage* clear_package) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_message();
   if (clear_package) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(clear_package)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(clear_package));
     if (message_arena != submessage_arena) {
       clear_package = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, clear_package, submessage_arena);
     }
     set_has_clear_package();
-    message_.clear_package_ = clear_package;
+    _impl_.message_.clear_package_ = clear_package;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.ServerMessage.clear_package)
 }
 void ServerMessage::clear_clear_package() {
   if (_internal_has_clear_package()) {
-    if (GetArena() == nullptr) {
-      delete message_.clear_package_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.message_.clear_package_;
     }
     clear_has_message();
   }
 }
-ServerMessage::ServerMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+ServerMessage::ServerMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.ServerMessage)
 }
 ServerMessage::ServerMessage(const ServerMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  ServerMessage* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.connection_id_){}
+    , decltype(_impl_.message_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  connection_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.connection_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.connection_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_connection_id().empty()) {
-    connection_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_connection_id(),
-      GetArena());
+    _this->_impl_.connection_id_.Set(from._internal_connection_id(), 
+      _this->GetArenaForAllocation());
   }
   clear_has_message();
   switch (from.message_case()) {
     case kEncryptionInfo: {
-      _internal_mutable_encryption_info()->::naki3d::common::protocol::EncryptionInfo::MergeFrom(from._internal_encryption_info());
+      _this->_internal_mutable_encryption_info()->::naki3d::common::protocol::EncryptionInfo::MergeFrom(
+          from._internal_encryption_info());
       break;
     }
     case kLoadPackage: {
-      _internal_mutable_load_package()->::naki3d::common::protocol::LoadPackage::MergeFrom(from._internal_load_package());
+      _this->_internal_mutable_load_package()->::naki3d::common::protocol::LoadPackage::MergeFrom(
+          from._internal_load_package());
       break;
     }
     case kClearPackage: {
-      _internal_mutable_clear_package()->::naki3d::common::protocol::ClearPackage::MergeFrom(from._internal_clear_package());
+      _this->_internal_mutable_clear_package()->::naki3d::common::protocol::ClearPackage::MergeFrom(
+          from._internal_clear_package());
       break;
     }
     case MESSAGE_NOT_SET: {
@@ -423,59 +372,62 @@ ServerMessage::ServerMessage(const ServerMessage& from)
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.ServerMessage)
 }
 
-void ServerMessage::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ServerMessage_wrappers_2eproto.base);
-  connection_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void ServerMessage::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.connection_id_){}
+    , decltype(_impl_.message_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}
+  };
+  _impl_.connection_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.connection_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   clear_has_message();
 }
 
 ServerMessage::~ServerMessage() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.ServerMessage)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void ServerMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  connection_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void ServerMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.connection_id_.Destroy();
   if (has_message()) {
     clear_message();
   }
 }
 
-void ServerMessage::ArenaDtor(void* object) {
-  ServerMessage* _this = reinterpret_cast< ServerMessage* >(object);
-  (void)_this;
-}
-void ServerMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void ServerMessage::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const ServerMessage& ServerMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ServerMessage_wrappers_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ServerMessage::clear_message() {
 // @@protoc_insertion_point(one_of_clear_start:naki3d.common.protocol.ServerMessage)
   switch (message_case()) {
     case kEncryptionInfo: {
-      if (GetArena() == nullptr) {
-        delete message_.encryption_info_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.message_.encryption_info_;
       }
       break;
     }
     case kLoadPackage: {
-      if (GetArena() == nullptr) {
-        delete message_.load_package_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.message_.load_package_;
       }
       break;
     }
     case kClearPackage: {
-      if (GetArena() == nullptr) {
-        delete message_.clear_package_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.message_.clear_package_;
       }
       break;
     }
@@ -483,89 +435,92 @@ void ServerMessage::clear_message() {
       break;
     }
   }
-  _oneof_case_[0] = MESSAGE_NOT_SET;
+  _impl_._oneof_case_[0] = MESSAGE_NOT_SET;
 }
 
 
 void ServerMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.ServerMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  connection_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _impl_.connection_id_.ClearToEmpty();
   clear_message();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* ServerMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* ServerMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string connection_id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_connection_id();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "naki3d.common.protocol.ServerMessage.connection_id"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "naki3d.common.protocol.ServerMessage.connection_id"));
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.EncryptionInfo encryption_info = 16;
       case 16:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_encryption_info(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.LoadPackage load_package = 17;
       case 17:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_load_package(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.ClearPackage clear_package = 18;
       case 18:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 146)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
           ptr = ctx->ParseMessage(_internal_mutable_clear_package(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* ServerMessage::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* ServerMessage::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.ServerMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string connection_id = 1;
-  if (this->connection_id().size() > 0) {
+  if (!this->_internal_connection_id().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_connection_id().data(), static_cast<int>(this->_internal_connection_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -576,30 +531,27 @@ failure:
 
   // .naki3d.common.protocol.EncryptionInfo encryption_info = 16;
   if (_internal_has_encryption_info()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        16, _Internal::encryption_info(this), target, stream);
+      InternalWriteMessage(16, _Internal::encryption_info(this),
+        _Internal::encryption_info(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.LoadPackage load_package = 17;
   if (_internal_has_load_package()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        17, _Internal::load_package(this), target, stream);
+      InternalWriteMessage(17, _Internal::load_package(this),
+        _Internal::load_package(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.ClearPackage clear_package = 18;
   if (_internal_has_clear_package()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        18, _Internal::clear_package(this), target, stream);
+      InternalWriteMessage(18, _Internal::clear_package(this),
+        _Internal::clear_package(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.ServerMessage)
@@ -610,12 +562,12 @@ size_t ServerMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.ServerMessage)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string connection_id = 1;
-  if (this->connection_id().size() > 0) {
+  if (!this->_internal_connection_id().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_connection_id());
@@ -626,85 +578,69 @@ size_t ServerMessage::ByteSizeLong() const {
     case kEncryptionInfo: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *message_.encryption_info_);
+          *_impl_.message_.encryption_info_);
       break;
     }
     // .naki3d.common.protocol.LoadPackage load_package = 17;
     case kLoadPackage: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *message_.load_package_);
+          *_impl_.message_.load_package_);
       break;
     }
     // .naki3d.common.protocol.ClearPackage clear_package = 18;
     case kClearPackage: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *message_.clear_package_);
+          *_impl_.message_.clear_package_);
       break;
     }
     case MESSAGE_NOT_SET: {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void ServerMessage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.ServerMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  const ServerMessage* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ServerMessage>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.ServerMessage)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.ServerMessage)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData ServerMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    ServerMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*ServerMessage::GetClassData() const { return &_class_data_; }
 
-void ServerMessage::MergeFrom(const ServerMessage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.ServerMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void ServerMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<ServerMessage*>(&to_msg);
+  auto& from = static_cast<const ServerMessage&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.ServerMessage)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.connection_id().size() > 0) {
-    _internal_set_connection_id(from._internal_connection_id());
+  if (!from._internal_connection_id().empty()) {
+    _this->_internal_set_connection_id(from._internal_connection_id());
   }
   switch (from.message_case()) {
     case kEncryptionInfo: {
-      _internal_mutable_encryption_info()->::naki3d::common::protocol::EncryptionInfo::MergeFrom(from._internal_encryption_info());
+      _this->_internal_mutable_encryption_info()->::naki3d::common::protocol::EncryptionInfo::MergeFrom(
+          from._internal_encryption_info());
       break;
     }
     case kLoadPackage: {
-      _internal_mutable_load_package()->::naki3d::common::protocol::LoadPackage::MergeFrom(from._internal_load_package());
+      _this->_internal_mutable_load_package()->::naki3d::common::protocol::LoadPackage::MergeFrom(
+          from._internal_load_package());
       break;
     }
     case kClearPackage: {
-      _internal_mutable_clear_package()->::naki3d::common::protocol::ClearPackage::MergeFrom(from._internal_clear_package());
+      _this->_internal_mutable_clear_package()->::naki3d::common::protocol::ClearPackage::MergeFrom(
+          from._internal_clear_package());
       break;
     }
     case MESSAGE_NOT_SET: {
       break;
     }
   }
-}
-
-void ServerMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.ServerMessage)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void ServerMessage::CopyFrom(const ServerMessage& from) {
@@ -720,25 +656,25 @@ bool ServerMessage::IsInitialized() const {
 
 void ServerMessage::InternalSwap(ServerMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  connection_id_.Swap(&other->connection_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(message_, other->message_);
-  swap(_oneof_case_[0], other->_oneof_case_[0]);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.connection_id_, lhs_arena,
+      &other->_impl_.connection_id_, rhs_arena
+  );
+  swap(_impl_.message_, other->_impl_.message_);
+  swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata ServerMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_wrappers_2eproto_getter, &descriptor_table_wrappers_2eproto_once,
+      file_level_metadata_wrappers_2eproto[0]);
 }
-
 
 // ===================================================================
 
-void DeviceMessage::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_DeviceMessage_default_instance_.device_descriptor_ = const_cast< ::naki3d::common::protocol::DeviceDescriptor*>(
-      ::naki3d::common::protocol::DeviceDescriptor::internal_default_instance());
-  ::naki3d::common::protocol::_DeviceMessage_default_instance_.ping_ = const_cast< ::naki3d::common::protocol::Ping*>(
-      ::naki3d::common::protocol::Ping::internal_default_instance());
-}
 class DeviceMessage::_Internal {
  public:
   static const ::naki3d::common::protocol::DeviceDescriptor& device_descriptor(const DeviceMessage* msg);
@@ -747,80 +683,94 @@ class DeviceMessage::_Internal {
 
 const ::naki3d::common::protocol::DeviceDescriptor&
 DeviceMessage::_Internal::device_descriptor(const DeviceMessage* msg) {
-  return *msg->message_.device_descriptor_;
+  return *msg->_impl_.message_.device_descriptor_;
 }
 const ::naki3d::common::protocol::Ping&
 DeviceMessage::_Internal::ping(const DeviceMessage* msg) {
-  return *msg->message_.ping_;
+  return *msg->_impl_.message_.ping_;
 }
 void DeviceMessage::set_allocated_device_descriptor(::naki3d::common::protocol::DeviceDescriptor* device_descriptor) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_message();
   if (device_descriptor) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(device_descriptor)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(device_descriptor));
     if (message_arena != submessage_arena) {
       device_descriptor = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, device_descriptor, submessage_arena);
     }
     set_has_device_descriptor();
-    message_.device_descriptor_ = device_descriptor;
+    _impl_.message_.device_descriptor_ = device_descriptor;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.DeviceMessage.device_descriptor)
 }
 void DeviceMessage::clear_device_descriptor() {
   if (_internal_has_device_descriptor()) {
-    if (GetArena() == nullptr) {
-      delete message_.device_descriptor_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.message_.device_descriptor_;
     }
     clear_has_message();
   }
 }
 void DeviceMessage::set_allocated_ping(::naki3d::common::protocol::Ping* ping) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_message();
   if (ping) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ping)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ping));
     if (message_arena != submessage_arena) {
       ping = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ping, submessage_arena);
     }
     set_has_ping();
-    message_.ping_ = ping;
+    _impl_.message_.ping_ = ping;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.DeviceMessage.ping)
 }
 void DeviceMessage::clear_ping() {
   if (_internal_has_ping()) {
-    if (GetArena() == nullptr) {
-      delete message_.ping_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.message_.ping_;
     }
     clear_has_message();
   }
 }
-DeviceMessage::DeviceMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+DeviceMessage::DeviceMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.DeviceMessage)
 }
 DeviceMessage::DeviceMessage(const DeviceMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  DeviceMessage* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.connection_id_){}
+    , decltype(_impl_.message_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  connection_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.connection_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.connection_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_connection_id().empty()) {
-    connection_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_connection_id(),
-      GetArena());
+    _this->_impl_.connection_id_.Set(from._internal_connection_id(), 
+      _this->GetArenaForAllocation());
   }
   clear_has_message();
   switch (from.message_case()) {
     case kDeviceDescriptor: {
-      _internal_mutable_device_descriptor()->::naki3d::common::protocol::DeviceDescriptor::MergeFrom(from._internal_device_descriptor());
+      _this->_internal_mutable_device_descriptor()->::naki3d::common::protocol::DeviceDescriptor::MergeFrom(
+          from._internal_device_descriptor());
       break;
     }
     case kPing: {
-      _internal_mutable_ping()->::naki3d::common::protocol::Ping::MergeFrom(from._internal_ping());
+      _this->_internal_mutable_ping()->::naki3d::common::protocol::Ping::MergeFrom(
+          from._internal_ping());
       break;
     }
     case MESSAGE_NOT_SET: {
@@ -830,53 +780,56 @@ DeviceMessage::DeviceMessage(const DeviceMessage& from)
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.DeviceMessage)
 }
 
-void DeviceMessage::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_DeviceMessage_wrappers_2eproto.base);
-  connection_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void DeviceMessage::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.connection_id_){}
+    , decltype(_impl_.message_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}
+  };
+  _impl_.connection_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.connection_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   clear_has_message();
 }
 
 DeviceMessage::~DeviceMessage() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.DeviceMessage)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void DeviceMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  connection_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void DeviceMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.connection_id_.Destroy();
   if (has_message()) {
     clear_message();
   }
 }
 
-void DeviceMessage::ArenaDtor(void* object) {
-  DeviceMessage* _this = reinterpret_cast< DeviceMessage* >(object);
-  (void)_this;
-}
-void DeviceMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void DeviceMessage::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const DeviceMessage& DeviceMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_DeviceMessage_wrappers_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void DeviceMessage::clear_message() {
 // @@protoc_insertion_point(one_of_clear_start:naki3d.common.protocol.DeviceMessage)
   switch (message_case()) {
     case kDeviceDescriptor: {
-      if (GetArena() == nullptr) {
-        delete message_.device_descriptor_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.message_.device_descriptor_;
       }
       break;
     }
     case kPing: {
-      if (GetArena() == nullptr) {
-        delete message_.ping_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.message_.ping_;
       }
       break;
     }
@@ -884,82 +837,84 @@ void DeviceMessage::clear_message() {
       break;
     }
   }
-  _oneof_case_[0] = MESSAGE_NOT_SET;
+  _impl_._oneof_case_[0] = MESSAGE_NOT_SET;
 }
 
 
 void DeviceMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.DeviceMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  connection_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _impl_.connection_id_.ClearToEmpty();
   clear_message();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* DeviceMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* DeviceMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string connection_id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_connection_id();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "naki3d.common.protocol.DeviceMessage.connection_id"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "naki3d.common.protocol.DeviceMessage.connection_id"));
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.DeviceDescriptor device_descriptor = 16;
       case 16:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_device_descriptor(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.Ping ping = 17;
       case 17:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_ping(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* DeviceMessage::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* DeviceMessage::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.DeviceMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string connection_id = 1;
-  if (this->connection_id().size() > 0) {
+  if (!this->_internal_connection_id().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_connection_id().data(), static_cast<int>(this->_internal_connection_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -970,22 +925,20 @@ failure:
 
   // .naki3d.common.protocol.DeviceDescriptor device_descriptor = 16;
   if (_internal_has_device_descriptor()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        16, _Internal::device_descriptor(this), target, stream);
+      InternalWriteMessage(16, _Internal::device_descriptor(this),
+        _Internal::device_descriptor(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.Ping ping = 17;
   if (_internal_has_ping()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        17, _Internal::ping(this), target, stream);
+      InternalWriteMessage(17, _Internal::ping(this),
+        _Internal::ping(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.DeviceMessage)
@@ -996,12 +949,12 @@ size_t DeviceMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.DeviceMessage)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string connection_id = 1;
-  if (this->connection_id().size() > 0) {
+  if (!this->_internal_connection_id().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_connection_id());
@@ -1012,74 +965,57 @@ size_t DeviceMessage::ByteSizeLong() const {
     case kDeviceDescriptor: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *message_.device_descriptor_);
+          *_impl_.message_.device_descriptor_);
       break;
     }
     // .naki3d.common.protocol.Ping ping = 17;
     case kPing: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *message_.ping_);
+          *_impl_.message_.ping_);
       break;
     }
     case MESSAGE_NOT_SET: {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void DeviceMessage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.DeviceMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  const DeviceMessage* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<DeviceMessage>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.DeviceMessage)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.DeviceMessage)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData DeviceMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    DeviceMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*DeviceMessage::GetClassData() const { return &_class_data_; }
 
-void DeviceMessage::MergeFrom(const DeviceMessage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.DeviceMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void DeviceMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<DeviceMessage*>(&to_msg);
+  auto& from = static_cast<const DeviceMessage&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.DeviceMessage)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.connection_id().size() > 0) {
-    _internal_set_connection_id(from._internal_connection_id());
+  if (!from._internal_connection_id().empty()) {
+    _this->_internal_set_connection_id(from._internal_connection_id());
   }
   switch (from.message_case()) {
     case kDeviceDescriptor: {
-      _internal_mutable_device_descriptor()->::naki3d::common::protocol::DeviceDescriptor::MergeFrom(from._internal_device_descriptor());
+      _this->_internal_mutable_device_descriptor()->::naki3d::common::protocol::DeviceDescriptor::MergeFrom(
+          from._internal_device_descriptor());
       break;
     }
     case kPing: {
-      _internal_mutable_ping()->::naki3d::common::protocol::Ping::MergeFrom(from._internal_ping());
+      _this->_internal_mutable_ping()->::naki3d::common::protocol::Ping::MergeFrom(
+          from._internal_ping());
       break;
     }
     case MESSAGE_NOT_SET: {
       break;
     }
   }
-}
-
-void DeviceMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.DeviceMessage)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void DeviceMessage::CopyFrom(const DeviceMessage& from) {
@@ -1095,45 +1031,25 @@ bool DeviceMessage::IsInitialized() const {
 
 void DeviceMessage::InternalSwap(DeviceMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  connection_id_.Swap(&other->connection_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(message_, other->message_);
-  swap(_oneof_case_[0], other->_oneof_case_[0]);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.connection_id_, lhs_arena,
+      &other->_impl_.connection_id_, rhs_arena
+  );
+  swap(_impl_.message_, other->_impl_.message_);
+  swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata DeviceMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_wrappers_2eproto_getter, &descriptor_table_wrappers_2eproto_once,
+      file_level_metadata_wrappers_2eproto[1]);
 }
-
 
 // ===================================================================
 
-void SensorMessage::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.handtracking_ = const_cast< ::naki3d::common::protocol::MediapipeHandTrackingData*>(
-      ::naki3d::common::protocol::MediapipeHandTrackingData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.gesture_ = const_cast< ::naki3d::common::protocol::GestureData*>(
-      ::naki3d::common::protocol::GestureData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.hand_movement_ = const_cast< ::naki3d::common::protocol::HandMovementData*>(
-      ::naki3d::common::protocol::HandMovementData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.best_user_changed_ = const_cast< ::naki3d::common::protocol::BestUserChangedData*>(
-      ::naki3d::common::protocol::BestUserChangedData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.keyboard_update_ = const_cast< ::naki3d::common::protocol::KeyboardUpdateData*>(
-      ::naki3d::common::protocol::KeyboardUpdateData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.mouse_move_ = const_cast< ::naki3d::common::protocol::MouseMoveData*>(
-      ::naki3d::common::protocol::MouseMoveData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.mouse_button_ = const_cast< ::naki3d::common::protocol::MouseButtonData*>(
-      ::naki3d::common::protocol::MouseButtonData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.mouse_scroll_ = const_cast< ::naki3d::common::protocol::MouseScrollData*>(
-      ::naki3d::common::protocol::MouseScrollData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.ultrasonic_distance_ = const_cast< ::naki3d::common::protocol::UltrasonicDistanceData*>(
-      ::naki3d::common::protocol::UltrasonicDistanceData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.light_level_ = const_cast< ::naki3d::common::protocol::LightLevelData*>(
-      ::naki3d::common::protocol::LightLevelData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.event_ = const_cast< ::naki3d::common::protocol::EventData*>(
-      ::naki3d::common::protocol::EventData::internal_default_instance());
-  ::naki3d::common::protocol::_SensorMessage_default_instance_.pir_movement_ = const_cast< ::naki3d::common::protocol::PirMovementData*>(
-      ::naki3d::common::protocol::PirMovementData::internal_default_instance());
-}
 class SensorMessage::_Internal {
  public:
   static const ::naki3d::common::protocol::MediapipeHandTrackingData& handtracking(const SensorMessage* msg);
@@ -1152,391 +1068,426 @@ class SensorMessage::_Internal {
 
 const ::naki3d::common::protocol::MediapipeHandTrackingData&
 SensorMessage::_Internal::handtracking(const SensorMessage* msg) {
-  return *msg->data_.handtracking_;
+  return *msg->_impl_.data_.handtracking_;
 }
 const ::naki3d::common::protocol::GestureData&
 SensorMessage::_Internal::gesture(const SensorMessage* msg) {
-  return *msg->data_.gesture_;
+  return *msg->_impl_.data_.gesture_;
 }
 const ::naki3d::common::protocol::HandMovementData&
 SensorMessage::_Internal::hand_movement(const SensorMessage* msg) {
-  return *msg->data_.hand_movement_;
+  return *msg->_impl_.data_.hand_movement_;
 }
 const ::naki3d::common::protocol::BestUserChangedData&
 SensorMessage::_Internal::best_user_changed(const SensorMessage* msg) {
-  return *msg->data_.best_user_changed_;
+  return *msg->_impl_.data_.best_user_changed_;
 }
 const ::naki3d::common::protocol::KeyboardUpdateData&
 SensorMessage::_Internal::keyboard_update(const SensorMessage* msg) {
-  return *msg->data_.keyboard_update_;
+  return *msg->_impl_.data_.keyboard_update_;
 }
 const ::naki3d::common::protocol::MouseMoveData&
 SensorMessage::_Internal::mouse_move(const SensorMessage* msg) {
-  return *msg->data_.mouse_move_;
+  return *msg->_impl_.data_.mouse_move_;
 }
 const ::naki3d::common::protocol::MouseButtonData&
 SensorMessage::_Internal::mouse_button(const SensorMessage* msg) {
-  return *msg->data_.mouse_button_;
+  return *msg->_impl_.data_.mouse_button_;
 }
 const ::naki3d::common::protocol::MouseScrollData&
 SensorMessage::_Internal::mouse_scroll(const SensorMessage* msg) {
-  return *msg->data_.mouse_scroll_;
+  return *msg->_impl_.data_.mouse_scroll_;
 }
 const ::naki3d::common::protocol::UltrasonicDistanceData&
 SensorMessage::_Internal::ultrasonic_distance(const SensorMessage* msg) {
-  return *msg->data_.ultrasonic_distance_;
+  return *msg->_impl_.data_.ultrasonic_distance_;
 }
 const ::naki3d::common::protocol::LightLevelData&
 SensorMessage::_Internal::light_level(const SensorMessage* msg) {
-  return *msg->data_.light_level_;
+  return *msg->_impl_.data_.light_level_;
 }
 const ::naki3d::common::protocol::EventData&
 SensorMessage::_Internal::event(const SensorMessage* msg) {
-  return *msg->data_.event_;
+  return *msg->_impl_.data_.event_;
 }
 const ::naki3d::common::protocol::PirMovementData&
 SensorMessage::_Internal::pir_movement(const SensorMessage* msg) {
-  return *msg->data_.pir_movement_;
+  return *msg->_impl_.data_.pir_movement_;
 }
 void SensorMessage::set_allocated_handtracking(::naki3d::common::protocol::MediapipeHandTrackingData* handtracking) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (handtracking) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(handtracking)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(handtracking));
     if (message_arena != submessage_arena) {
       handtracking = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, handtracking, submessage_arena);
     }
     set_has_handtracking();
-    data_.handtracking_ = handtracking;
+    _impl_.data_.handtracking_ = handtracking;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.handTracking)
 }
 void SensorMessage::clear_handtracking() {
   if (_internal_has_handtracking()) {
-    if (GetArena() == nullptr) {
-      delete data_.handtracking_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.handtracking_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_gesture(::naki3d::common::protocol::GestureData* gesture) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (gesture) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(gesture)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(gesture));
     if (message_arena != submessage_arena) {
       gesture = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, gesture, submessage_arena);
     }
     set_has_gesture();
-    data_.gesture_ = gesture;
+    _impl_.data_.gesture_ = gesture;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.gesture)
 }
 void SensorMessage::clear_gesture() {
   if (_internal_has_gesture()) {
-    if (GetArena() == nullptr) {
-      delete data_.gesture_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.gesture_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_hand_movement(::naki3d::common::protocol::HandMovementData* hand_movement) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (hand_movement) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(hand_movement)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(hand_movement));
     if (message_arena != submessage_arena) {
       hand_movement = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, hand_movement, submessage_arena);
     }
     set_has_hand_movement();
-    data_.hand_movement_ = hand_movement;
+    _impl_.data_.hand_movement_ = hand_movement;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.hand_movement)
 }
 void SensorMessage::clear_hand_movement() {
   if (_internal_has_hand_movement()) {
-    if (GetArena() == nullptr) {
-      delete data_.hand_movement_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.hand_movement_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_best_user_changed(::naki3d::common::protocol::BestUserChangedData* best_user_changed) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (best_user_changed) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(best_user_changed)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(best_user_changed));
     if (message_arena != submessage_arena) {
       best_user_changed = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, best_user_changed, submessage_arena);
     }
     set_has_best_user_changed();
-    data_.best_user_changed_ = best_user_changed;
+    _impl_.data_.best_user_changed_ = best_user_changed;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.best_user_changed)
 }
 void SensorMessage::clear_best_user_changed() {
   if (_internal_has_best_user_changed()) {
-    if (GetArena() == nullptr) {
-      delete data_.best_user_changed_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.best_user_changed_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_keyboard_update(::naki3d::common::protocol::KeyboardUpdateData* keyboard_update) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (keyboard_update) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(keyboard_update)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(keyboard_update));
     if (message_arena != submessage_arena) {
       keyboard_update = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, keyboard_update, submessage_arena);
     }
     set_has_keyboard_update();
-    data_.keyboard_update_ = keyboard_update;
+    _impl_.data_.keyboard_update_ = keyboard_update;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.keyboard_update)
 }
 void SensorMessage::clear_keyboard_update() {
   if (_internal_has_keyboard_update()) {
-    if (GetArena() == nullptr) {
-      delete data_.keyboard_update_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.keyboard_update_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_mouse_move(::naki3d::common::protocol::MouseMoveData* mouse_move) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (mouse_move) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mouse_move)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mouse_move));
     if (message_arena != submessage_arena) {
       mouse_move = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, mouse_move, submessage_arena);
     }
     set_has_mouse_move();
-    data_.mouse_move_ = mouse_move;
+    _impl_.data_.mouse_move_ = mouse_move;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.mouse_move)
 }
 void SensorMessage::clear_mouse_move() {
   if (_internal_has_mouse_move()) {
-    if (GetArena() == nullptr) {
-      delete data_.mouse_move_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.mouse_move_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_mouse_button(::naki3d::common::protocol::MouseButtonData* mouse_button) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (mouse_button) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mouse_button)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mouse_button));
     if (message_arena != submessage_arena) {
       mouse_button = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, mouse_button, submessage_arena);
     }
     set_has_mouse_button();
-    data_.mouse_button_ = mouse_button;
+    _impl_.data_.mouse_button_ = mouse_button;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.mouse_button)
 }
 void SensorMessage::clear_mouse_button() {
   if (_internal_has_mouse_button()) {
-    if (GetArena() == nullptr) {
-      delete data_.mouse_button_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.mouse_button_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_mouse_scroll(::naki3d::common::protocol::MouseScrollData* mouse_scroll) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (mouse_scroll) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mouse_scroll)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(mouse_scroll));
     if (message_arena != submessage_arena) {
       mouse_scroll = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, mouse_scroll, submessage_arena);
     }
     set_has_mouse_scroll();
-    data_.mouse_scroll_ = mouse_scroll;
+    _impl_.data_.mouse_scroll_ = mouse_scroll;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.mouse_scroll)
 }
 void SensorMessage::clear_mouse_scroll() {
   if (_internal_has_mouse_scroll()) {
-    if (GetArena() == nullptr) {
-      delete data_.mouse_scroll_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.mouse_scroll_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_ultrasonic_distance(::naki3d::common::protocol::UltrasonicDistanceData* ultrasonic_distance) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (ultrasonic_distance) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ultrasonic_distance)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(ultrasonic_distance));
     if (message_arena != submessage_arena) {
       ultrasonic_distance = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, ultrasonic_distance, submessage_arena);
     }
     set_has_ultrasonic_distance();
-    data_.ultrasonic_distance_ = ultrasonic_distance;
+    _impl_.data_.ultrasonic_distance_ = ultrasonic_distance;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.ultrasonic_distance)
 }
 void SensorMessage::clear_ultrasonic_distance() {
   if (_internal_has_ultrasonic_distance()) {
-    if (GetArena() == nullptr) {
-      delete data_.ultrasonic_distance_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.ultrasonic_distance_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_light_level(::naki3d::common::protocol::LightLevelData* light_level) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (light_level) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(light_level)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(light_level));
     if (message_arena != submessage_arena) {
       light_level = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, light_level, submessage_arena);
     }
     set_has_light_level();
-    data_.light_level_ = light_level;
+    _impl_.data_.light_level_ = light_level;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.light_level)
 }
 void SensorMessage::clear_light_level() {
   if (_internal_has_light_level()) {
-    if (GetArena() == nullptr) {
-      delete data_.light_level_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.light_level_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_event(::naki3d::common::protocol::EventData* event) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (event) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(event)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(event));
     if (message_arena != submessage_arena) {
       event = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, event, submessage_arena);
     }
     set_has_event();
-    data_.event_ = event;
+    _impl_.data_.event_ = event;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.event)
 }
 void SensorMessage::clear_event() {
   if (_internal_has_event()) {
-    if (GetArena() == nullptr) {
-      delete data_.event_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.event_;
     }
     clear_has_data();
   }
 }
 void SensorMessage::set_allocated_pir_movement(::naki3d::common::protocol::PirMovementData* pir_movement) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_data();
   if (pir_movement) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(pir_movement)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(pir_movement));
     if (message_arena != submessage_arena) {
       pir_movement = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, pir_movement, submessage_arena);
     }
     set_has_pir_movement();
-    data_.pir_movement_ = pir_movement;
+    _impl_.data_.pir_movement_ = pir_movement;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorMessage.pir_movement)
 }
 void SensorMessage::clear_pir_movement() {
   if (_internal_has_pir_movement()) {
-    if (GetArena() == nullptr) {
-      delete data_.pir_movement_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.data_.pir_movement_;
     }
     clear_has_data();
   }
 }
-SensorMessage::SensorMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+SensorMessage::SensorMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.SensorMessage)
 }
 SensorMessage::SensorMessage(const SensorMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SensorMessage* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sensor_id_){}
+    , decltype(_impl_.timestamp_){}
+    , decltype(_impl_.data_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  sensor_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.sensor_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.sensor_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_sensor_id().empty()) {
-    sensor_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_sensor_id(),
-      GetArena());
+    _this->_impl_.sensor_id_.Set(from._internal_sensor_id(), 
+      _this->GetArenaForAllocation());
   }
-  timestamp_ = from.timestamp_;
+  _this->_impl_.timestamp_ = from._impl_.timestamp_;
   clear_has_data();
   switch (from.data_case()) {
     case kHandTracking: {
-      _internal_mutable_handtracking()->::naki3d::common::protocol::MediapipeHandTrackingData::MergeFrom(from._internal_handtracking());
+      _this->_internal_mutable_handtracking()->::naki3d::common::protocol::MediapipeHandTrackingData::MergeFrom(
+          from._internal_handtracking());
       break;
     }
     case kGesture: {
-      _internal_mutable_gesture()->::naki3d::common::protocol::GestureData::MergeFrom(from._internal_gesture());
+      _this->_internal_mutable_gesture()->::naki3d::common::protocol::GestureData::MergeFrom(
+          from._internal_gesture());
       break;
     }
     case kHandMovement: {
-      _internal_mutable_hand_movement()->::naki3d::common::protocol::HandMovementData::MergeFrom(from._internal_hand_movement());
+      _this->_internal_mutable_hand_movement()->::naki3d::common::protocol::HandMovementData::MergeFrom(
+          from._internal_hand_movement());
       break;
     }
     case kBestUserChanged: {
-      _internal_mutable_best_user_changed()->::naki3d::common::protocol::BestUserChangedData::MergeFrom(from._internal_best_user_changed());
+      _this->_internal_mutable_best_user_changed()->::naki3d::common::protocol::BestUserChangedData::MergeFrom(
+          from._internal_best_user_changed());
       break;
     }
     case kKeyboardUpdate: {
-      _internal_mutable_keyboard_update()->::naki3d::common::protocol::KeyboardUpdateData::MergeFrom(from._internal_keyboard_update());
+      _this->_internal_mutable_keyboard_update()->::naki3d::common::protocol::KeyboardUpdateData::MergeFrom(
+          from._internal_keyboard_update());
       break;
     }
     case kMouseMove: {
-      _internal_mutable_mouse_move()->::naki3d::common::protocol::MouseMoveData::MergeFrom(from._internal_mouse_move());
+      _this->_internal_mutable_mouse_move()->::naki3d::common::protocol::MouseMoveData::MergeFrom(
+          from._internal_mouse_move());
       break;
     }
     case kMouseButton: {
-      _internal_mutable_mouse_button()->::naki3d::common::protocol::MouseButtonData::MergeFrom(from._internal_mouse_button());
+      _this->_internal_mutable_mouse_button()->::naki3d::common::protocol::MouseButtonData::MergeFrom(
+          from._internal_mouse_button());
       break;
     }
     case kMouseScroll: {
-      _internal_mutable_mouse_scroll()->::naki3d::common::protocol::MouseScrollData::MergeFrom(from._internal_mouse_scroll());
+      _this->_internal_mutable_mouse_scroll()->::naki3d::common::protocol::MouseScrollData::MergeFrom(
+          from._internal_mouse_scroll());
       break;
     }
     case kUltrasonicDistance: {
-      _internal_mutable_ultrasonic_distance()->::naki3d::common::protocol::UltrasonicDistanceData::MergeFrom(from._internal_ultrasonic_distance());
+      _this->_internal_mutable_ultrasonic_distance()->::naki3d::common::protocol::UltrasonicDistanceData::MergeFrom(
+          from._internal_ultrasonic_distance());
       break;
     }
     case kLightLevel: {
-      _internal_mutable_light_level()->::naki3d::common::protocol::LightLevelData::MergeFrom(from._internal_light_level());
+      _this->_internal_mutable_light_level()->::naki3d::common::protocol::LightLevelData::MergeFrom(
+          from._internal_light_level());
       break;
     }
     case kEvent: {
-      _internal_mutable_event()->::naki3d::common::protocol::EventData::MergeFrom(from._internal_event());
+      _this->_internal_mutable_event()->::naki3d::common::protocol::EventData::MergeFrom(
+          from._internal_event());
       break;
     }
     case kPirMovement: {
-      _internal_mutable_pir_movement()->::naki3d::common::protocol::PirMovementData::MergeFrom(from._internal_pir_movement());
+      _this->_internal_mutable_pir_movement()->::naki3d::common::protocol::PirMovementData::MergeFrom(
+          from._internal_pir_movement());
       break;
     }
     case DATA_NOT_SET: {
@@ -1546,114 +1497,117 @@ SensorMessage::SensorMessage(const SensorMessage& from)
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.SensorMessage)
 }
 
-void SensorMessage::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SensorMessage_wrappers_2eproto.base);
-  sensor_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  timestamp_ = PROTOBUF_ULONGLONG(0);
+inline void SensorMessage::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sensor_id_){}
+    , decltype(_impl_.timestamp_){uint64_t{0u}}
+    , decltype(_impl_.data_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}
+  };
+  _impl_.sensor_id_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.sensor_id_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   clear_has_data();
 }
 
 SensorMessage::~SensorMessage() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.SensorMessage)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SensorMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  sensor_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void SensorMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.sensor_id_.Destroy();
   if (has_data()) {
     clear_data();
   }
 }
 
-void SensorMessage::ArenaDtor(void* object) {
-  SensorMessage* _this = reinterpret_cast< SensorMessage* >(object);
-  (void)_this;
-}
-void SensorMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SensorMessage::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const SensorMessage& SensorMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SensorMessage_wrappers_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SensorMessage::clear_data() {
 // @@protoc_insertion_point(one_of_clear_start:naki3d.common.protocol.SensorMessage)
   switch (data_case()) {
     case kHandTracking: {
-      if (GetArena() == nullptr) {
-        delete data_.handtracking_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.handtracking_;
       }
       break;
     }
     case kGesture: {
-      if (GetArena() == nullptr) {
-        delete data_.gesture_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.gesture_;
       }
       break;
     }
     case kHandMovement: {
-      if (GetArena() == nullptr) {
-        delete data_.hand_movement_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.hand_movement_;
       }
       break;
     }
     case kBestUserChanged: {
-      if (GetArena() == nullptr) {
-        delete data_.best_user_changed_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.best_user_changed_;
       }
       break;
     }
     case kKeyboardUpdate: {
-      if (GetArena() == nullptr) {
-        delete data_.keyboard_update_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.keyboard_update_;
       }
       break;
     }
     case kMouseMove: {
-      if (GetArena() == nullptr) {
-        delete data_.mouse_move_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.mouse_move_;
       }
       break;
     }
     case kMouseButton: {
-      if (GetArena() == nullptr) {
-        delete data_.mouse_button_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.mouse_button_;
       }
       break;
     }
     case kMouseScroll: {
-      if (GetArena() == nullptr) {
-        delete data_.mouse_scroll_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.mouse_scroll_;
       }
       break;
     }
     case kUltrasonicDistance: {
-      if (GetArena() == nullptr) {
-        delete data_.ultrasonic_distance_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.ultrasonic_distance_;
       }
       break;
     }
     case kLightLevel: {
-      if (GetArena() == nullptr) {
-        delete data_.light_level_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.light_level_;
       }
       break;
     }
     case kEvent: {
-      if (GetArena() == nullptr) {
-        delete data_.event_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.event_;
       }
       break;
     }
     case kPirMovement: {
-      if (GetArena() == nullptr) {
-        delete data_.pir_movement_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.data_.pir_movement_;
       }
       break;
     }
@@ -1661,160 +1615,173 @@ void SensorMessage::clear_data() {
       break;
     }
   }
-  _oneof_case_[0] = DATA_NOT_SET;
+  _impl_._oneof_case_[0] = DATA_NOT_SET;
 }
 
 
 void SensorMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.SensorMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  sensor_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  timestamp_ = PROTOBUF_ULONGLONG(0);
+  _impl_.sensor_id_.ClearToEmpty();
+  _impl_.timestamp_ = uint64_t{0u};
   clear_data();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SensorMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SensorMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string sensor_id = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_sensor_id();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "naki3d.common.protocol.SensorMessage.sensor_id"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "naki3d.common.protocol.SensorMessage.sensor_id"));
+        } else
+          goto handle_unusual;
         continue;
       // uint64 timestamp = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          _impl_.timestamp_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.MediapipeHandTrackingData handTracking = 15;
       case 15:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 122)) {
           ptr = ctx->ParseMessage(_internal_mutable_handtracking(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.GestureData gesture = 16;
       case 16:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_gesture(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.HandMovementData hand_movement = 17;
       case 17:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_hand_movement(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.BestUserChangedData best_user_changed = 18;
       case 18:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 146)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 146)) {
           ptr = ctx->ParseMessage(_internal_mutable_best_user_changed(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.KeyboardUpdateData keyboard_update = 19;
       case 19:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 154)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 154)) {
           ptr = ctx->ParseMessage(_internal_mutable_keyboard_update(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.MouseMoveData mouse_move = 20;
       case 20:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 162)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 162)) {
           ptr = ctx->ParseMessage(_internal_mutable_mouse_move(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.MouseButtonData mouse_button = 21;
       case 21:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 170)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 170)) {
           ptr = ctx->ParseMessage(_internal_mutable_mouse_button(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.MouseScrollData mouse_scroll = 22;
       case 22:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 178)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 178)) {
           ptr = ctx->ParseMessage(_internal_mutable_mouse_scroll(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.UltrasonicDistanceData ultrasonic_distance = 23;
       case 23:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 186)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 186)) {
           ptr = ctx->ParseMessage(_internal_mutable_ultrasonic_distance(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.LightLevelData light_level = 24;
       case 24:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 194)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 194)) {
           ptr = ctx->ParseMessage(_internal_mutable_light_level(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.EventData event = 25;
       case 25:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 202)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 202)) {
           ptr = ctx->ParseMessage(_internal_mutable_event(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.PirMovementData pir_movement = 26;
       case 26:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 210)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 210)) {
           ptr = ctx->ParseMessage(_internal_mutable_pir_movement(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SensorMessage::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* SensorMessage::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.SensorMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string sensor_id = 1;
-  if (this->sensor_id().size() > 0) {
+  if (!this->_internal_sensor_id().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_sensor_id().data(), static_cast<int>(this->_internal_sensor_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -1824,109 +1791,97 @@ failure:
   }
 
   // uint64 timestamp = 2;
-  if (this->timestamp() != 0) {
+  if (this->_internal_timestamp() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(2, this->_internal_timestamp(), target);
+    target = ::_pbi::WireFormatLite::WriteUInt64ToArray(2, this->_internal_timestamp(), target);
   }
 
   // .naki3d.common.protocol.MediapipeHandTrackingData handTracking = 15;
   if (_internal_has_handtracking()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        15, _Internal::handtracking(this), target, stream);
+      InternalWriteMessage(15, _Internal::handtracking(this),
+        _Internal::handtracking(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.GestureData gesture = 16;
   if (_internal_has_gesture()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        16, _Internal::gesture(this), target, stream);
+      InternalWriteMessage(16, _Internal::gesture(this),
+        _Internal::gesture(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.HandMovementData hand_movement = 17;
   if (_internal_has_hand_movement()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        17, _Internal::hand_movement(this), target, stream);
+      InternalWriteMessage(17, _Internal::hand_movement(this),
+        _Internal::hand_movement(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.BestUserChangedData best_user_changed = 18;
   if (_internal_has_best_user_changed()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        18, _Internal::best_user_changed(this), target, stream);
+      InternalWriteMessage(18, _Internal::best_user_changed(this),
+        _Internal::best_user_changed(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.KeyboardUpdateData keyboard_update = 19;
   if (_internal_has_keyboard_update()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        19, _Internal::keyboard_update(this), target, stream);
+      InternalWriteMessage(19, _Internal::keyboard_update(this),
+        _Internal::keyboard_update(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.MouseMoveData mouse_move = 20;
   if (_internal_has_mouse_move()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        20, _Internal::mouse_move(this), target, stream);
+      InternalWriteMessage(20, _Internal::mouse_move(this),
+        _Internal::mouse_move(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.MouseButtonData mouse_button = 21;
   if (_internal_has_mouse_button()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        21, _Internal::mouse_button(this), target, stream);
+      InternalWriteMessage(21, _Internal::mouse_button(this),
+        _Internal::mouse_button(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.MouseScrollData mouse_scroll = 22;
   if (_internal_has_mouse_scroll()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        22, _Internal::mouse_scroll(this), target, stream);
+      InternalWriteMessage(22, _Internal::mouse_scroll(this),
+        _Internal::mouse_scroll(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.UltrasonicDistanceData ultrasonic_distance = 23;
   if (_internal_has_ultrasonic_distance()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        23, _Internal::ultrasonic_distance(this), target, stream);
+      InternalWriteMessage(23, _Internal::ultrasonic_distance(this),
+        _Internal::ultrasonic_distance(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.LightLevelData light_level = 24;
   if (_internal_has_light_level()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        24, _Internal::light_level(this), target, stream);
+      InternalWriteMessage(24, _Internal::light_level(this),
+        _Internal::light_level(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.EventData event = 25;
   if (_internal_has_event()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        25, _Internal::event(this), target, stream);
+      InternalWriteMessage(25, _Internal::event(this),
+        _Internal::event(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.PirMovementData pir_movement = 26;
   if (_internal_has_pir_movement()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        26, _Internal::pir_movement(this), target, stream);
+      InternalWriteMessage(26, _Internal::pir_movement(this),
+        _Internal::pir_movement(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.SensorMessage)
@@ -1937,22 +1892,20 @@ size_t SensorMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.SensorMessage)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string sensor_id = 1;
-  if (this->sensor_id().size() > 0) {
+  if (!this->_internal_sensor_id().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_sensor_id());
   }
 
   // uint64 timestamp = 2;
-  if (this->timestamp() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
-        this->_internal_timestamp());
+  if (this->_internal_timestamp() != 0) {
+    total_size += ::_pbi::WireFormatLite::UInt64SizePlusOne(this->_internal_timestamp());
   }
 
   switch (data_case()) {
@@ -1960,187 +1913,180 @@ size_t SensorMessage::ByteSizeLong() const {
     case kHandTracking: {
       total_size += 1 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.handtracking_);
+          *_impl_.data_.handtracking_);
       break;
     }
     // .naki3d.common.protocol.GestureData gesture = 16;
     case kGesture: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.gesture_);
+          *_impl_.data_.gesture_);
       break;
     }
     // .naki3d.common.protocol.HandMovementData hand_movement = 17;
     case kHandMovement: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.hand_movement_);
+          *_impl_.data_.hand_movement_);
       break;
     }
     // .naki3d.common.protocol.BestUserChangedData best_user_changed = 18;
     case kBestUserChanged: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.best_user_changed_);
+          *_impl_.data_.best_user_changed_);
       break;
     }
     // .naki3d.common.protocol.KeyboardUpdateData keyboard_update = 19;
     case kKeyboardUpdate: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.keyboard_update_);
+          *_impl_.data_.keyboard_update_);
       break;
     }
     // .naki3d.common.protocol.MouseMoveData mouse_move = 20;
     case kMouseMove: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.mouse_move_);
+          *_impl_.data_.mouse_move_);
       break;
     }
     // .naki3d.common.protocol.MouseButtonData mouse_button = 21;
     case kMouseButton: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.mouse_button_);
+          *_impl_.data_.mouse_button_);
       break;
     }
     // .naki3d.common.protocol.MouseScrollData mouse_scroll = 22;
     case kMouseScroll: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.mouse_scroll_);
+          *_impl_.data_.mouse_scroll_);
       break;
     }
     // .naki3d.common.protocol.UltrasonicDistanceData ultrasonic_distance = 23;
     case kUltrasonicDistance: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.ultrasonic_distance_);
+          *_impl_.data_.ultrasonic_distance_);
       break;
     }
     // .naki3d.common.protocol.LightLevelData light_level = 24;
     case kLightLevel: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.light_level_);
+          *_impl_.data_.light_level_);
       break;
     }
     // .naki3d.common.protocol.EventData event = 25;
     case kEvent: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.event_);
+          *_impl_.data_.event_);
       break;
     }
     // .naki3d.common.protocol.PirMovementData pir_movement = 26;
     case kPirMovement: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *data_.pir_movement_);
+          *_impl_.data_.pir_movement_);
       break;
     }
     case DATA_NOT_SET: {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SensorMessage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.SensorMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SensorMessage* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SensorMessage>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.SensorMessage)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.SensorMessage)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SensorMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SensorMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SensorMessage::GetClassData() const { return &_class_data_; }
 
-void SensorMessage::MergeFrom(const SensorMessage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SensorMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SensorMessage*>(&to_msg);
+  auto& from = static_cast<const SensorMessage&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorMessage)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.sensor_id().size() > 0) {
-    _internal_set_sensor_id(from._internal_sensor_id());
+  if (!from._internal_sensor_id().empty()) {
+    _this->_internal_set_sensor_id(from._internal_sensor_id());
   }
-  if (from.timestamp() != 0) {
-    _internal_set_timestamp(from._internal_timestamp());
+  if (from._internal_timestamp() != 0) {
+    _this->_internal_set_timestamp(from._internal_timestamp());
   }
   switch (from.data_case()) {
     case kHandTracking: {
-      _internal_mutable_handtracking()->::naki3d::common::protocol::MediapipeHandTrackingData::MergeFrom(from._internal_handtracking());
+      _this->_internal_mutable_handtracking()->::naki3d::common::protocol::MediapipeHandTrackingData::MergeFrom(
+          from._internal_handtracking());
       break;
     }
     case kGesture: {
-      _internal_mutable_gesture()->::naki3d::common::protocol::GestureData::MergeFrom(from._internal_gesture());
+      _this->_internal_mutable_gesture()->::naki3d::common::protocol::GestureData::MergeFrom(
+          from._internal_gesture());
       break;
     }
     case kHandMovement: {
-      _internal_mutable_hand_movement()->::naki3d::common::protocol::HandMovementData::MergeFrom(from._internal_hand_movement());
+      _this->_internal_mutable_hand_movement()->::naki3d::common::protocol::HandMovementData::MergeFrom(
+          from._internal_hand_movement());
       break;
     }
     case kBestUserChanged: {
-      _internal_mutable_best_user_changed()->::naki3d::common::protocol::BestUserChangedData::MergeFrom(from._internal_best_user_changed());
+      _this->_internal_mutable_best_user_changed()->::naki3d::common::protocol::BestUserChangedData::MergeFrom(
+          from._internal_best_user_changed());
       break;
     }
     case kKeyboardUpdate: {
-      _internal_mutable_keyboard_update()->::naki3d::common::protocol::KeyboardUpdateData::MergeFrom(from._internal_keyboard_update());
+      _this->_internal_mutable_keyboard_update()->::naki3d::common::protocol::KeyboardUpdateData::MergeFrom(
+          from._internal_keyboard_update());
       break;
     }
     case kMouseMove: {
-      _internal_mutable_mouse_move()->::naki3d::common::protocol::MouseMoveData::MergeFrom(from._internal_mouse_move());
+      _this->_internal_mutable_mouse_move()->::naki3d::common::protocol::MouseMoveData::MergeFrom(
+          from._internal_mouse_move());
       break;
     }
     case kMouseButton: {
-      _internal_mutable_mouse_button()->::naki3d::common::protocol::MouseButtonData::MergeFrom(from._internal_mouse_button());
+      _this->_internal_mutable_mouse_button()->::naki3d::common::protocol::MouseButtonData::MergeFrom(
+          from._internal_mouse_button());
       break;
     }
     case kMouseScroll: {
-      _internal_mutable_mouse_scroll()->::naki3d::common::protocol::MouseScrollData::MergeFrom(from._internal_mouse_scroll());
+      _this->_internal_mutable_mouse_scroll()->::naki3d::common::protocol::MouseScrollData::MergeFrom(
+          from._internal_mouse_scroll());
       break;
     }
     case kUltrasonicDistance: {
-      _internal_mutable_ultrasonic_distance()->::naki3d::common::protocol::UltrasonicDistanceData::MergeFrom(from._internal_ultrasonic_distance());
+      _this->_internal_mutable_ultrasonic_distance()->::naki3d::common::protocol::UltrasonicDistanceData::MergeFrom(
+          from._internal_ultrasonic_distance());
       break;
     }
     case kLightLevel: {
-      _internal_mutable_light_level()->::naki3d::common::protocol::LightLevelData::MergeFrom(from._internal_light_level());
+      _this->_internal_mutable_light_level()->::naki3d::common::protocol::LightLevelData::MergeFrom(
+          from._internal_light_level());
       break;
     }
     case kEvent: {
-      _internal_mutable_event()->::naki3d::common::protocol::EventData::MergeFrom(from._internal_event());
+      _this->_internal_mutable_event()->::naki3d::common::protocol::EventData::MergeFrom(
+          from._internal_event());
       break;
     }
     case kPirMovement: {
-      _internal_mutable_pir_movement()->::naki3d::common::protocol::PirMovementData::MergeFrom(from._internal_pir_movement());
+      _this->_internal_mutable_pir_movement()->::naki3d::common::protocol::PirMovementData::MergeFrom(
+          from._internal_pir_movement());
       break;
     }
     case DATA_NOT_SET: {
       break;
     }
   }
-}
-
-void SensorMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.SensorMessage)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SensorMessage::CopyFrom(const SensorMessage& from) {
@@ -2156,26 +2102,26 @@ bool SensorMessage::IsInitialized() const {
 
 void SensorMessage::InternalSwap(SensorMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  sensor_id_.Swap(&other->sensor_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(timestamp_, other->timestamp_);
-  swap(data_, other->data_);
-  swap(_oneof_case_[0], other->_oneof_case_[0]);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.sensor_id_, lhs_arena,
+      &other->_impl_.sensor_id_, rhs_arena
+  );
+  swap(_impl_.timestamp_, other->_impl_.timestamp_);
+  swap(_impl_.data_, other->_impl_.data_);
+  swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SensorMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_wrappers_2eproto_getter, &descriptor_table_wrappers_2eproto_once,
+      file_level_metadata_wrappers_2eproto[2]);
 }
-
 
 // ===================================================================
 
-void SensorControlMessage::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_SensorControlMessage_default_instance_.sensor_list_ = const_cast< ::naki3d::common::protocol::SensorListRequest*>(
-      ::naki3d::common::protocol::SensorListRequest::internal_default_instance());
-  ::naki3d::common::protocol::_SensorControlMessage_default_instance_.cec_message_ = const_cast< ::naki3d::common::protocol::CECMessage*>(
-      ::naki3d::common::protocol::CECMessage::internal_default_instance());
-}
 class SensorControlMessage::_Internal {
  public:
   static const ::naki3d::common::protocol::SensorListRequest& sensor_list(const SensorControlMessage* msg);
@@ -2184,80 +2130,94 @@ class SensorControlMessage::_Internal {
 
 const ::naki3d::common::protocol::SensorListRequest&
 SensorControlMessage::_Internal::sensor_list(const SensorControlMessage* msg) {
-  return *msg->message_.sensor_list_;
+  return *msg->_impl_.message_.sensor_list_;
 }
 const ::naki3d::common::protocol::CECMessage&
 SensorControlMessage::_Internal::cec_message(const SensorControlMessage* msg) {
-  return *msg->message_.cec_message_;
+  return *msg->_impl_.message_.cec_message_;
 }
 void SensorControlMessage::set_allocated_sensor_list(::naki3d::common::protocol::SensorListRequest* sensor_list) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_message();
   if (sensor_list) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(sensor_list)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(sensor_list));
     if (message_arena != submessage_arena) {
       sensor_list = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, sensor_list, submessage_arena);
     }
     set_has_sensor_list();
-    message_.sensor_list_ = sensor_list;
+    _impl_.message_.sensor_list_ = sensor_list;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorControlMessage.sensor_list)
 }
 void SensorControlMessage::clear_sensor_list() {
   if (_internal_has_sensor_list()) {
-    if (GetArena() == nullptr) {
-      delete message_.sensor_list_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.message_.sensor_list_;
     }
     clear_has_message();
   }
 }
 void SensorControlMessage::set_allocated_cec_message(::naki3d::common::protocol::CECMessage* cec_message) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   clear_message();
   if (cec_message) {
     ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cec_message)->GetArena();
+        ::PROTOBUF_NAMESPACE_ID::Arena::InternalGetOwningArena(
+                reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(cec_message));
     if (message_arena != submessage_arena) {
       cec_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
           message_arena, cec_message, submessage_arena);
     }
     set_has_cec_message();
-    message_.cec_message_ = cec_message;
+    _impl_.message_.cec_message_ = cec_message;
   }
   // @@protoc_insertion_point(field_set_allocated:naki3d.common.protocol.SensorControlMessage.cec_message)
 }
 void SensorControlMessage::clear_cec_message() {
   if (_internal_has_cec_message()) {
-    if (GetArena() == nullptr) {
-      delete message_.cec_message_;
+    if (GetArenaForAllocation() == nullptr) {
+      delete _impl_.message_.cec_message_;
     }
     clear_has_message();
   }
 }
-SensorControlMessage::SensorControlMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+SensorControlMessage::SensorControlMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.SensorControlMessage)
 }
 SensorControlMessage::SensorControlMessage(const SensorControlMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SensorControlMessage* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.hostname_){}
+    , decltype(_impl_.message_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  hostname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.hostname_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.hostname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_hostname().empty()) {
-    hostname_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_hostname(),
-      GetArena());
+    _this->_impl_.hostname_.Set(from._internal_hostname(), 
+      _this->GetArenaForAllocation());
   }
   clear_has_message();
   switch (from.message_case()) {
     case kSensorList: {
-      _internal_mutable_sensor_list()->::naki3d::common::protocol::SensorListRequest::MergeFrom(from._internal_sensor_list());
+      _this->_internal_mutable_sensor_list()->::naki3d::common::protocol::SensorListRequest::MergeFrom(
+          from._internal_sensor_list());
       break;
     }
     case kCecMessage: {
-      _internal_mutable_cec_message()->::naki3d::common::protocol::CECMessage::MergeFrom(from._internal_cec_message());
+      _this->_internal_mutable_cec_message()->::naki3d::common::protocol::CECMessage::MergeFrom(
+          from._internal_cec_message());
       break;
     }
     case MESSAGE_NOT_SET: {
@@ -2267,53 +2227,56 @@ SensorControlMessage::SensorControlMessage(const SensorControlMessage& from)
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.SensorControlMessage)
 }
 
-void SensorControlMessage::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SensorControlMessage_wrappers_2eproto.base);
-  hostname_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void SensorControlMessage::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.hostname_){}
+    , decltype(_impl_.message_){}
+    , /*decltype(_impl_._cached_size_)*/{}
+    , /*decltype(_impl_._oneof_case_)*/{}
+  };
+  _impl_.hostname_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.hostname_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   clear_has_message();
 }
 
 SensorControlMessage::~SensorControlMessage() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.SensorControlMessage)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SensorControlMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  hostname_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void SensorControlMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.hostname_.Destroy();
   if (has_message()) {
     clear_message();
   }
 }
 
-void SensorControlMessage::ArenaDtor(void* object) {
-  SensorControlMessage* _this = reinterpret_cast< SensorControlMessage* >(object);
-  (void)_this;
-}
-void SensorControlMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SensorControlMessage::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const SensorControlMessage& SensorControlMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SensorControlMessage_wrappers_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SensorControlMessage::clear_message() {
 // @@protoc_insertion_point(one_of_clear_start:naki3d.common.protocol.SensorControlMessage)
   switch (message_case()) {
     case kSensorList: {
-      if (GetArena() == nullptr) {
-        delete message_.sensor_list_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.message_.sensor_list_;
       }
       break;
     }
     case kCecMessage: {
-      if (GetArena() == nullptr) {
-        delete message_.cec_message_;
+      if (GetArenaForAllocation() == nullptr) {
+        delete _impl_.message_.cec_message_;
       }
       break;
     }
@@ -2321,82 +2284,84 @@ void SensorControlMessage::clear_message() {
       break;
     }
   }
-  _oneof_case_[0] = MESSAGE_NOT_SET;
+  _impl_._oneof_case_[0] = MESSAGE_NOT_SET;
 }
 
 
 void SensorControlMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.SensorControlMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  hostname_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  _impl_.hostname_.ClearToEmpty();
   clear_message();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SensorControlMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SensorControlMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string hostname = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_hostname();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "naki3d.common.protocol.SensorControlMessage.hostname"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "naki3d.common.protocol.SensorControlMessage.hostname"));
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.SensorListRequest sensor_list = 16;
       case 16:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 130)) {
           ptr = ctx->ParseMessage(_internal_mutable_sensor_list(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.CECMessage cec_message = 17;
       case 17:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 138)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 138)) {
           ptr = ctx->ParseMessage(_internal_mutable_cec_message(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SensorControlMessage::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* SensorControlMessage::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.SensorControlMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string hostname = 1;
-  if (this->hostname().size() > 0) {
+  if (!this->_internal_hostname().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_hostname().data(), static_cast<int>(this->_internal_hostname().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -2407,22 +2372,20 @@ failure:
 
   // .naki3d.common.protocol.SensorListRequest sensor_list = 16;
   if (_internal_has_sensor_list()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        16, _Internal::sensor_list(this), target, stream);
+      InternalWriteMessage(16, _Internal::sensor_list(this),
+        _Internal::sensor_list(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.CECMessage cec_message = 17;
   if (_internal_has_cec_message()) {
-    target = stream->EnsureSpace(target);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        17, _Internal::cec_message(this), target, stream);
+      InternalWriteMessage(17, _Internal::cec_message(this),
+        _Internal::cec_message(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.SensorControlMessage)
@@ -2433,12 +2396,12 @@ size_t SensorControlMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.SensorControlMessage)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string hostname = 1;
-  if (this->hostname().size() > 0) {
+  if (!this->_internal_hostname().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_hostname());
@@ -2449,74 +2412,57 @@ size_t SensorControlMessage::ByteSizeLong() const {
     case kSensorList: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *message_.sensor_list_);
+          *_impl_.message_.sensor_list_);
       break;
     }
     // .naki3d.common.protocol.CECMessage cec_message = 17;
     case kCecMessage: {
       total_size += 2 +
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *message_.cec_message_);
+          *_impl_.message_.cec_message_);
       break;
     }
     case MESSAGE_NOT_SET: {
       break;
     }
   }
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SensorControlMessage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.SensorControlMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SensorControlMessage* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SensorControlMessage>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.SensorControlMessage)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.SensorControlMessage)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SensorControlMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SensorControlMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SensorControlMessage::GetClassData() const { return &_class_data_; }
 
-void SensorControlMessage::MergeFrom(const SensorControlMessage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorControlMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SensorControlMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SensorControlMessage*>(&to_msg);
+  auto& from = static_cast<const SensorControlMessage&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorControlMessage)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.hostname().size() > 0) {
-    _internal_set_hostname(from._internal_hostname());
+  if (!from._internal_hostname().empty()) {
+    _this->_internal_set_hostname(from._internal_hostname());
   }
   switch (from.message_case()) {
     case kSensorList: {
-      _internal_mutable_sensor_list()->::naki3d::common::protocol::SensorListRequest::MergeFrom(from._internal_sensor_list());
+      _this->_internal_mutable_sensor_list()->::naki3d::common::protocol::SensorListRequest::MergeFrom(
+          from._internal_sensor_list());
       break;
     }
     case kCecMessage: {
-      _internal_mutable_cec_message()->::naki3d::common::protocol::CECMessage::MergeFrom(from._internal_cec_message());
+      _this->_internal_mutable_cec_message()->::naki3d::common::protocol::CECMessage::MergeFrom(
+          from._internal_cec_message());
       break;
     }
     case MESSAGE_NOT_SET: {
       break;
     }
   }
-}
-
-void SensorControlMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.SensorControlMessage)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SensorControlMessage::CopyFrom(const SensorControlMessage& from) {
@@ -2532,32 +2478,42 @@ bool SensorControlMessage::IsInitialized() const {
 
 void SensorControlMessage::InternalSwap(SensorControlMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  hostname_.Swap(&other->hostname_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(message_, other->message_);
-  swap(_oneof_case_[0], other->_oneof_case_[0]);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.hostname_, lhs_arena,
+      &other->_impl_.hostname_, rhs_arena
+  );
+  swap(_impl_.message_, other->_impl_.message_);
+  swap(_impl_._oneof_case_[0], other->_impl_._oneof_case_[0]);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SensorControlMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_wrappers_2eproto_getter, &descriptor_table_wrappers_2eproto_once,
+      file_level_metadata_wrappers_2eproto[3]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::ServerMessage* Arena::CreateMaybeMessage< ::naki3d::common::protocol::ServerMessage >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::ServerMessage*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::ServerMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::ServerMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::DeviceMessage* Arena::CreateMaybeMessage< ::naki3d::common::protocol::DeviceMessage >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::DeviceMessage*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::DeviceMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::DeviceMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorMessage* Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorMessage >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorMessage*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::SensorMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorControlMessage* Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorControlMessage >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorControlMessage*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorControlMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::SensorControlMessage >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

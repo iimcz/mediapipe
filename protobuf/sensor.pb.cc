@@ -14,206 +14,181 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_sensor_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SensorInfo_sensor_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace naki3d {
 namespace common {
 namespace protocol {
-class SensorInfoDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SensorInfo> _instance;
-} _SensorInfo_default_instance_;
-class SensorListDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SensorList> _instance;
-} _SensorList_default_instance_;
-class SensorListRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<SensorListRequest> _instance;
-} _SensorListRequest_default_instance_;
-class CECMessageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CECMessage> _instance;
-} _CECMessage_default_instance_;
-class UltrasonicDistanceDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<UltrasonicDistanceData> _instance;
-} _UltrasonicDistanceData_default_instance_;
-class LightLevelDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<LightLevelData> _instance;
-} _LightLevelData_default_instance_;
-class PirMovementDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PirMovementData> _instance;
-} _PirMovementData_default_instance_;
+PROTOBUF_CONSTEXPR SensorInfo::SensorInfo(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.sensor_name_)*/{&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{}}
+  , /*decltype(_impl_.type_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SensorInfoDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SensorInfoDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SensorInfoDefaultTypeInternal() {}
+  union {
+    SensorInfo _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SensorInfoDefaultTypeInternal _SensorInfo_default_instance_;
+PROTOBUF_CONSTEXPR SensorList::SensorList(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.sensors_)*/{}
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct SensorListDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SensorListDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SensorListDefaultTypeInternal() {}
+  union {
+    SensorList _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SensorListDefaultTypeInternal _SensorList_default_instance_;
+PROTOBUF_CONSTEXPR SensorListRequest::SensorListRequest(
+    ::_pbi::ConstantInitialized) {}
+struct SensorListRequestDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR SensorListRequestDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~SensorListRequestDefaultTypeInternal() {}
+  union {
+    SensorListRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 SensorListRequestDefaultTypeInternal _SensorListRequest_default_instance_;
+PROTOBUF_CONSTEXPR CECMessage::CECMessage(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.action_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct CECMessageDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR CECMessageDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~CECMessageDefaultTypeInternal() {}
+  union {
+    CECMessage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 CECMessageDefaultTypeInternal _CECMessage_default_instance_;
+PROTOBUF_CONSTEXPR UltrasonicDistanceData::UltrasonicDistanceData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.distance_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct UltrasonicDistanceDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR UltrasonicDistanceDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~UltrasonicDistanceDataDefaultTypeInternal() {}
+  union {
+    UltrasonicDistanceData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 UltrasonicDistanceDataDefaultTypeInternal _UltrasonicDistanceData_default_instance_;
+PROTOBUF_CONSTEXPR LightLevelData::LightLevelData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.level_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct LightLevelDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR LightLevelDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~LightLevelDataDefaultTypeInternal() {}
+  union {
+    LightLevelData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 LightLevelDataDefaultTypeInternal _LightLevelData_default_instance_;
+PROTOBUF_CONSTEXPR PirMovementData::PirMovementData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.event_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct PirMovementDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR PirMovementDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~PirMovementDataDefaultTypeInternal() {}
+  union {
+    PirMovementData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 PirMovementDataDefaultTypeInternal _PirMovementData_default_instance_;
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
-static void InitDefaultsscc_info_CECMessage_sensor_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_sensor_2eproto[7];
+static const ::_pb::EnumDescriptor* file_level_enum_descriptors_sensor_2eproto[2];
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_sensor_2eproto = nullptr;
 
-  {
-    void* ptr = &::naki3d::common::protocol::_CECMessage_default_instance_;
-    new (ptr) ::naki3d::common::protocol::CECMessage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::CECMessage::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CECMessage_sensor_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CECMessage_sensor_2eproto}, {}};
-
-static void InitDefaultsscc_info_LightLevelData_sensor_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_LightLevelData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::LightLevelData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::LightLevelData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_LightLevelData_sensor_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_LightLevelData_sensor_2eproto}, {}};
-
-static void InitDefaultsscc_info_PirMovementData_sensor_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_PirMovementData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::PirMovementData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::PirMovementData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PirMovementData_sensor_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PirMovementData_sensor_2eproto}, {}};
-
-static void InitDefaultsscc_info_SensorInfo_sensor_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_SensorInfo_default_instance_;
-    new (ptr) ::naki3d::common::protocol::SensorInfo();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::SensorInfo::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SensorInfo_sensor_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SensorInfo_sensor_2eproto}, {}};
-
-static void InitDefaultsscc_info_SensorList_sensor_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_SensorList_default_instance_;
-    new (ptr) ::naki3d::common::protocol::SensorList();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::SensorList::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_SensorList_sensor_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_SensorList_sensor_2eproto}, {
-      &scc_info_SensorInfo_sensor_2eproto.base,}};
-
-static void InitDefaultsscc_info_SensorListRequest_sensor_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_SensorListRequest_default_instance_;
-    new (ptr) ::naki3d::common::protocol::SensorListRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::SensorListRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_SensorListRequest_sensor_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_SensorListRequest_sensor_2eproto}, {}};
-
-static void InitDefaultsscc_info_UltrasonicDistanceData_sensor_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_UltrasonicDistanceData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::UltrasonicDistanceData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::UltrasonicDistanceData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_UltrasonicDistanceData_sensor_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_UltrasonicDistanceData_sensor_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_sensor_2eproto[7];
-static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_sensor_2eproto[2];
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_sensor_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_sensor_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_sensor_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorInfo, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorInfo, sensor_name_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorInfo, type_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorInfo, _impl_.sensor_name_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorInfo, _impl_.type_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorList, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorList, sensors_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorList, _impl_.sensors_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::SensorListRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  ~0u,  // no _inlined_string_donated_
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::CECMessage, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::CECMessage, action_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::CECMessage, _impl_.action_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::UltrasonicDistanceData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::UltrasonicDistanceData, distance_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::UltrasonicDistanceData, _impl_.distance_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::LightLevelData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::LightLevelData, level_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::LightLevelData, _impl_.level_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::PirMovementData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::PirMovementData, event_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::PirMovementData, _impl_.event_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::naki3d::common::protocol::SensorInfo)},
-  { 7, -1, sizeof(::naki3d::common::protocol::SensorList)},
-  { 13, -1, sizeof(::naki3d::common::protocol::SensorListRequest)},
-  { 18, -1, sizeof(::naki3d::common::protocol::CECMessage)},
-  { 24, -1, sizeof(::naki3d::common::protocol::UltrasonicDistanceData)},
-  { 30, -1, sizeof(::naki3d::common::protocol::LightLevelData)},
-  { 36, -1, sizeof(::naki3d::common::protocol::PirMovementData)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::naki3d::common::protocol::SensorInfo)},
+  { 8, -1, -1, sizeof(::naki3d::common::protocol::SensorList)},
+  { 15, -1, -1, sizeof(::naki3d::common::protocol::SensorListRequest)},
+  { 21, -1, -1, sizeof(::naki3d::common::protocol::CECMessage)},
+  { 28, -1, -1, sizeof(::naki3d::common::protocol::UltrasonicDistanceData)},
+  { 35, -1, -1, sizeof(::naki3d::common::protocol::LightLevelData)},
+  { 42, -1, -1, sizeof(::naki3d::common::protocol::PirMovementData)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_SensorInfo_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_SensorList_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_SensorListRequest_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_CECMessage_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_UltrasonicDistanceData_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_LightLevelData_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_PirMovementData_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::naki3d::common::protocol::_SensorInfo_default_instance_._instance,
+  &::naki3d::common::protocol::_SensorList_default_instance_._instance,
+  &::naki3d::common::protocol::_SensorListRequest_default_instance_._instance,
+  &::naki3d::common::protocol::_CECMessage_default_instance_._instance,
+  &::naki3d::common::protocol::_UltrasonicDistanceData_default_instance_._instance,
+  &::naki3d::common::protocol::_LightLevelData_default_instance_._instance,
+  &::naki3d::common::protocol::_PirMovementData_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_sensor_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -233,28 +208,24 @@ const char descriptor_table_protodef_sensor_2eproto[] PROTOBUF_SECTION_VARIABLE(
   "T_STARTED\020\000\022\024\n\020MOVEMENT_STOPPED\020\001b\006proto"
   "3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_sensor_2eproto_deps[1] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_sensor_2eproto_deps[1] = {
   &::descriptor_table_connection_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_sensor_2eproto_sccs[7] = {
-  &scc_info_CECMessage_sensor_2eproto.base,
-  &scc_info_LightLevelData_sensor_2eproto.base,
-  &scc_info_PirMovementData_sensor_2eproto.base,
-  &scc_info_SensorInfo_sensor_2eproto.base,
-  &scc_info_SensorList_sensor_2eproto.base,
-  &scc_info_SensorListRequest_sensor_2eproto.base,
-  &scc_info_UltrasonicDistanceData_sensor_2eproto.base,
+static ::_pbi::once_flag descriptor_table_sensor_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_sensor_2eproto = {
+    false, false, 561, descriptor_table_protodef_sensor_2eproto,
+    "sensor.proto",
+    &descriptor_table_sensor_2eproto_once, descriptor_table_sensor_2eproto_deps, 1, 7,
+    schemas, file_default_instances, TableStruct_sensor_2eproto::offsets,
+    file_level_metadata_sensor_2eproto, file_level_enum_descriptors_sensor_2eproto,
+    file_level_service_descriptors_sensor_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_sensor_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_sensor_2eproto = {
-  false, false, descriptor_table_protodef_sensor_2eproto, "sensor.proto", 561,
-  &descriptor_table_sensor_2eproto_once, descriptor_table_sensor_2eproto_sccs, descriptor_table_sensor_2eproto_deps, 7, 1,
-  schemas, file_default_instances, TableStruct_sensor_2eproto::offsets,
-  file_level_metadata_sensor_2eproto, 7, file_level_enum_descriptors_sensor_2eproto, file_level_service_descriptors_sensor_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_sensor_2eproto_getter() {
+  return &descriptor_table_sensor_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_sensor_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_sensor_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_sensor_2eproto(&descriptor_table_sensor_2eproto);
 namespace naki3d {
 namespace common {
 namespace protocol {
@@ -289,128 +260,137 @@ bool PirMovementEvent_IsValid(int value) {
 
 // ===================================================================
 
-void SensorInfo::InitAsDefaultInstance() {
-}
 class SensorInfo::_Internal {
  public:
 };
 
-SensorInfo::SensorInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+SensorInfo::SensorInfo(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.SensorInfo)
 }
 SensorInfo::SensorInfo(const SensorInfo& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SensorInfo* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sensor_name_){}
+    , decltype(_impl_.type_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  sensor_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  _impl_.sensor_name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.sensor_name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
   if (!from._internal_sensor_name().empty()) {
-    sensor_name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_sensor_name(),
-      GetArena());
+    _this->_impl_.sensor_name_.Set(from._internal_sensor_name(), 
+      _this->GetArenaForAllocation());
   }
-  type_ = from.type_;
+  _this->_impl_.type_ = from._impl_.type_;
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.SensorInfo)
 }
 
-void SensorInfo::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SensorInfo_sensor_2eproto.base);
-  sensor_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  type_ = 0;
+inline void SensorInfo::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sensor_name_){}
+    , decltype(_impl_.type_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
+  _impl_.sensor_name_.InitDefault();
+  #ifdef PROTOBUF_FORCE_COPY_DEFAULT_STRING
+    _impl_.sensor_name_.Set("", GetArenaForAllocation());
+  #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
 }
 
 SensorInfo::~SensorInfo() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.SensorInfo)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SensorInfo::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  sensor_name_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+inline void SensorInfo::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.sensor_name_.Destroy();
 }
 
-void SensorInfo::ArenaDtor(void* object) {
-  SensorInfo* _this = reinterpret_cast< SensorInfo* >(object);
-  (void)_this;
-}
-void SensorInfo::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SensorInfo::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const SensorInfo& SensorInfo::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SensorInfo_sensor_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SensorInfo::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.SensorInfo)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  sensor_name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  type_ = 0;
+  _impl_.sensor_name_.ClearToEmpty();
+  _impl_.type_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SensorInfo::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SensorInfo::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // string sensor_name = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           auto str = _internal_mutable_sensor_name();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "naki3d.common.protocol.SensorInfo.sensor_name"));
+          ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-        } else goto handle_unusual;
+          CHK_(::_pbi::VerifyUTF8(str, "naki3d.common.protocol.SensorInfo.sensor_name"));
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.SensorType type = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 16)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 16)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_type(static_cast<::naki3d::common::protocol::SensorType>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SensorInfo::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* SensorInfo::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.SensorInfo)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // string sensor_name = 1;
-  if (this->sensor_name().size() > 0) {
+  if (!this->_internal_sensor_name().empty()) {
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_sensor_name().data(), static_cast<int>(this->_internal_sensor_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
@@ -420,14 +400,14 @@ failure:
   }
 
   // .naki3d.common.protocol.SensorType type = 2;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       2, this->_internal_type(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.SensorInfo)
@@ -438,67 +418,48 @@ size_t SensorInfo::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.SensorInfo)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string sensor_name = 1;
-  if (this->sensor_name().size() > 0) {
+  if (!this->_internal_sensor_name().empty()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_sensor_name());
   }
 
   // .naki3d.common.protocol.SensorType type = 2;
-  if (this->type() != 0) {
+  if (this->_internal_type() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_type());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_type());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SensorInfo::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.SensorInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SensorInfo* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SensorInfo>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.SensorInfo)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.SensorInfo)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SensorInfo::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SensorInfo::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SensorInfo::GetClassData() const { return &_class_data_; }
 
-void SensorInfo::MergeFrom(const SensorInfo& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorInfo)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SensorInfo::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SensorInfo*>(&to_msg);
+  auto& from = static_cast<const SensorInfo&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorInfo)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.sensor_name().size() > 0) {
-    _internal_set_sensor_name(from._internal_sensor_name());
+  if (!from._internal_sensor_name().empty()) {
+    _this->_internal_set_sensor_name(from._internal_sensor_name());
   }
-  if (from.type() != 0) {
-    _internal_set_type(from._internal_type());
+  if (from._internal_type() != 0) {
+    _this->_internal_set_type(from._internal_type());
   }
-}
-
-void SensorInfo::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.SensorInfo)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SensorInfo::CopyFrom(const SensorInfo& from) {
@@ -514,88 +475,92 @@ bool SensorInfo::IsInitialized() const {
 
 void SensorInfo::InternalSwap(SensorInfo* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  sensor_name_.Swap(&other->sensor_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(type_, other->type_);
+  auto* lhs_arena = GetArenaForAllocation();
+  auto* rhs_arena = other->GetArenaForAllocation();
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::InternalSwap(
+      &_impl_.sensor_name_, lhs_arena,
+      &other->_impl_.sensor_name_, rhs_arena
+  );
+  swap(_impl_.type_, other->_impl_.type_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SensorInfo::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_sensor_2eproto_getter, &descriptor_table_sensor_2eproto_once,
+      file_level_metadata_sensor_2eproto[0]);
 }
-
 
 // ===================================================================
 
-void SensorList::InitAsDefaultInstance() {
-}
 class SensorList::_Internal {
  public:
 };
 
-SensorList::SensorList(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  sensors_(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+SensorList::SensorList(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.SensorList)
 }
 SensorList::SensorList(const SensorList& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message(),
-      sensors_(from.sensors_) {
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  SensorList* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sensors_){from._impl_.sensors_}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.SensorList)
 }
 
-void SensorList::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_SensorList_sensor_2eproto.base);
+inline void SensorList::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.sensors_){arena}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 SensorList::~SensorList() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.SensorList)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void SensorList::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void SensorList::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  _impl_.sensors_.~RepeatedPtrField();
 }
 
-void SensorList::ArenaDtor(void* object) {
-  SensorList* _this = reinterpret_cast< SensorList* >(object);
-  (void)_this;
-}
-void SensorList::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void SensorList::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const SensorList& SensorList::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SensorList_sensor_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void SensorList::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.SensorList)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  sensors_.Clear();
+  _impl_.sensors_.Clear();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* SensorList::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* SensorList::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // repeated .naki3d.common.protocol.SensorInfo sensors = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr -= 1;
           do {
             ptr += 1;
@@ -603,46 +568,48 @@ const char* SensorList::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID:
             CHK_(ptr);
             if (!ctx->DataAvailable(ptr)) break;
           } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<10>(ptr));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SensorList::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* SensorList::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.SensorList)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // repeated .naki3d.common.protocol.SensorInfo sensors = 1;
-  for (unsigned int i = 0,
-      n = static_cast<unsigned int>(this->_internal_sensors_size()); i < n; i++) {
-    target = stream->EnsureSpace(target);
+  for (unsigned i = 0,
+      n = static_cast<unsigned>(this->_internal_sensors_size()); i < n; i++) {
+    const auto& repfield = this->_internal_sensors(i);
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(1, this->_internal_sensors(i), target, stream);
+        InternalWriteMessage(1, repfield, repfield.GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.SensorList)
@@ -653,56 +620,37 @@ size_t SensorList::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.SensorList)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // repeated .naki3d.common.protocol.SensorInfo sensors = 1;
   total_size += 1UL * this->_internal_sensors_size();
-  for (const auto& msg : this->sensors_) {
+  for (const auto& msg : this->_impl_.sensors_) {
     total_size +=
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void SensorList::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.SensorList)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SensorList* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SensorList>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.SensorList)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.SensorList)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SensorList::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    SensorList::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SensorList::GetClassData() const { return &_class_data_; }
 
-void SensorList::MergeFrom(const SensorList& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorList)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void SensorList::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<SensorList*>(&to_msg);
+  auto& from = static_cast<const SensorList&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorList)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  sensors_.MergeFrom(from.sensors_);
-}
-
-void SensorList::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.SensorList)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_impl_.sensors_.MergeFrom(from._impl_.sensors_);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void SensorList::CopyFrom(const SensorList& from) {
@@ -718,293 +666,170 @@ bool SensorList::IsInitialized() const {
 
 void SensorList::InternalSwap(SensorList* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  sensors_.InternalSwap(&other->sensors_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  _impl_.sensors_.InternalSwap(&other->_impl_.sensors_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SensorList::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_sensor_2eproto_getter, &descriptor_table_sensor_2eproto_once,
+      file_level_metadata_sensor_2eproto[1]);
 }
-
 
 // ===================================================================
 
-void SensorListRequest::InitAsDefaultInstance() {
-}
 class SensorListRequest::_Internal {
  public:
 };
 
-SensorListRequest::SensorListRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+SensorListRequest::SensorListRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase(arena, is_message_owned) {
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.SensorListRequest)
 }
 SensorListRequest::SensorListRequest(const SensorListRequest& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  : ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase() {
+  SensorListRequest* const _this = this; (void)_this;
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.SensorListRequest)
 }
 
-void SensorListRequest::SharedCtor() {
-}
-
-SensorListRequest::~SensorListRequest() {
-  // @@protoc_insertion_point(destructor:naki3d.common.protocol.SensorListRequest)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void SensorListRequest::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-}
-
-void SensorListRequest::ArenaDtor(void* object) {
-  SensorListRequest* _this = reinterpret_cast< SensorListRequest* >(object);
-  (void)_this;
-}
-void SensorListRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void SensorListRequest::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const SensorListRequest& SensorListRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_SensorListRequest_sensor_2eproto.base);
-  return *internal_default_instance();
-}
 
 
-void SensorListRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.SensorListRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
 
-const char* SensorListRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData SensorListRequest::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::CopyImpl,
+    ::PROTOBUF_NAMESPACE_ID::internal::ZeroFieldsBase::MergeImpl,
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*SensorListRequest::GetClassData() const { return &_class_data_; }
 
-::PROTOBUF_NAMESPACE_ID::uint8* SensorListRequest::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.SensorListRequest)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.SensorListRequest)
-  return target;
-}
 
-size_t SensorListRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.SensorListRequest)
-  size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
 
-void SensorListRequest::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.SensorListRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  const SensorListRequest* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<SensorListRequest>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.SensorListRequest)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.SensorListRequest)
-    MergeFrom(*source);
-  }
-}
-
-void SensorListRequest::MergeFrom(const SensorListRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.SensorListRequest)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-}
-
-void SensorListRequest::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.SensorListRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void SensorListRequest::CopyFrom(const SensorListRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:naki3d.common.protocol.SensorListRequest)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool SensorListRequest::IsInitialized() const {
-  return true;
-}
-
-void SensorListRequest::InternalSwap(SensorListRequest* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-}
 
 ::PROTOBUF_NAMESPACE_ID::Metadata SensorListRequest::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_sensor_2eproto_getter, &descriptor_table_sensor_2eproto_once,
+      file_level_metadata_sensor_2eproto[2]);
 }
-
 
 // ===================================================================
 
-void CECMessage::InitAsDefaultInstance() {
-}
 class CECMessage::_Internal {
  public:
 };
 
-CECMessage::CECMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+CECMessage::CECMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.CECMessage)
 }
 CECMessage::CECMessage(const CECMessage& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  CECMessage* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.action_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  action_ = from.action_;
+  _this->_impl_.action_ = from._impl_.action_;
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.CECMessage)
 }
 
-void CECMessage::SharedCtor() {
-  action_ = 0;
+inline void CECMessage::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.action_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 CECMessage::~CECMessage() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.CECMessage)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void CECMessage::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void CECMessage::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void CECMessage::ArenaDtor(void* object) {
-  CECMessage* _this = reinterpret_cast< CECMessage* >(object);
-  (void)_this;
-}
-void CECMessage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void CECMessage::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const CECMessage& CECMessage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CECMessage_sensor_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CECMessage::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.CECMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  action_ = 0;
+  _impl_.action_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* CECMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* CECMessage::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.CECAction action = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_action(static_cast<::naki3d::common::protocol::CECAction>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* CECMessage::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* CECMessage::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.CECMessage)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.CECAction action = 1;
-  if (this->action() != 0) {
+  if (this->_internal_action() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       1, this->_internal_action(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.CECMessage)
@@ -1015,57 +840,38 @@ size_t CECMessage::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.CECMessage)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.CECAction action = 1;
-  if (this->action() != 0) {
+  if (this->_internal_action() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_action());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_action());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void CECMessage::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.CECMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  const CECMessage* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CECMessage>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.CECMessage)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.CECMessage)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData CECMessage::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    CECMessage::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*CECMessage::GetClassData() const { return &_class_data_; }
 
-void CECMessage::MergeFrom(const CECMessage& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.CECMessage)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void CECMessage::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<CECMessage*>(&to_msg);
+  auto& from = static_cast<const CECMessage&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.CECMessage)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.action() != 0) {
-    _internal_set_action(from._internal_action());
+  if (from._internal_action() != 0) {
+    _this->_internal_set_action(from._internal_action());
   }
-}
-
-void CECMessage::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.CECMessage)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void CECMessage::CopyFrom(const CECMessage& from) {
@@ -1081,126 +887,132 @@ bool CECMessage::IsInitialized() const {
 
 void CECMessage::InternalSwap(CECMessage* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(action_, other->action_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.action_, other->_impl_.action_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata CECMessage::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_sensor_2eproto_getter, &descriptor_table_sensor_2eproto_once,
+      file_level_metadata_sensor_2eproto[3]);
 }
-
 
 // ===================================================================
 
-void UltrasonicDistanceData::InitAsDefaultInstance() {
-}
 class UltrasonicDistanceData::_Internal {
  public:
 };
 
-UltrasonicDistanceData::UltrasonicDistanceData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+UltrasonicDistanceData::UltrasonicDistanceData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.UltrasonicDistanceData)
 }
 UltrasonicDistanceData::UltrasonicDistanceData(const UltrasonicDistanceData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  UltrasonicDistanceData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.distance_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  distance_ = from.distance_;
+  _this->_impl_.distance_ = from._impl_.distance_;
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.UltrasonicDistanceData)
 }
 
-void UltrasonicDistanceData::SharedCtor() {
-  distance_ = 0;
+inline void UltrasonicDistanceData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.distance_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 UltrasonicDistanceData::~UltrasonicDistanceData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.UltrasonicDistanceData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void UltrasonicDistanceData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void UltrasonicDistanceData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void UltrasonicDistanceData::ArenaDtor(void* object) {
-  UltrasonicDistanceData* _this = reinterpret_cast< UltrasonicDistanceData* >(object);
-  (void)_this;
-}
-void UltrasonicDistanceData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void UltrasonicDistanceData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const UltrasonicDistanceData& UltrasonicDistanceData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_UltrasonicDistanceData_sensor_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void UltrasonicDistanceData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.UltrasonicDistanceData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  distance_ = 0;
+  _impl_.distance_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* UltrasonicDistanceData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* UltrasonicDistanceData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // float distance = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
-          distance_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
+          _impl_.distance_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* UltrasonicDistanceData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* UltrasonicDistanceData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.UltrasonicDistanceData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // float distance = 1;
-  if (!(this->distance() <= 0 && this->distance() >= 0)) {
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_distance = this->_internal_distance();
+  uint32_t raw_distance;
+  memcpy(&raw_distance, &tmp_distance, sizeof(tmp_distance));
+  if (raw_distance != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_distance(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_distance(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.UltrasonicDistanceData)
@@ -1211,56 +1023,45 @@ size_t UltrasonicDistanceData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.UltrasonicDistanceData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // float distance = 1;
-  if (!(this->distance() <= 0 && this->distance() >= 0)) {
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_distance = this->_internal_distance();
+  uint32_t raw_distance;
+  memcpy(&raw_distance, &tmp_distance, sizeof(tmp_distance));
+  if (raw_distance != 0) {
     total_size += 1 + 4;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void UltrasonicDistanceData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.UltrasonicDistanceData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const UltrasonicDistanceData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<UltrasonicDistanceData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.UltrasonicDistanceData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.UltrasonicDistanceData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData UltrasonicDistanceData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    UltrasonicDistanceData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*UltrasonicDistanceData::GetClassData() const { return &_class_data_; }
 
-void UltrasonicDistanceData::MergeFrom(const UltrasonicDistanceData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.UltrasonicDistanceData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void UltrasonicDistanceData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<UltrasonicDistanceData*>(&to_msg);
+  auto& from = static_cast<const UltrasonicDistanceData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.UltrasonicDistanceData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!(from.distance() <= 0 && from.distance() >= 0)) {
-    _internal_set_distance(from._internal_distance());
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_distance = from._internal_distance();
+  uint32_t raw_distance;
+  memcpy(&raw_distance, &tmp_distance, sizeof(tmp_distance));
+  if (raw_distance != 0) {
+    _this->_internal_set_distance(from._internal_distance());
   }
-}
-
-void UltrasonicDistanceData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.UltrasonicDistanceData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void UltrasonicDistanceData::CopyFrom(const UltrasonicDistanceData& from) {
@@ -1276,126 +1077,132 @@ bool UltrasonicDistanceData::IsInitialized() const {
 
 void UltrasonicDistanceData::InternalSwap(UltrasonicDistanceData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(distance_, other->distance_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.distance_, other->_impl_.distance_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata UltrasonicDistanceData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_sensor_2eproto_getter, &descriptor_table_sensor_2eproto_once,
+      file_level_metadata_sensor_2eproto[4]);
 }
-
 
 // ===================================================================
 
-void LightLevelData::InitAsDefaultInstance() {
-}
 class LightLevelData::_Internal {
  public:
 };
 
-LightLevelData::LightLevelData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+LightLevelData::LightLevelData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.LightLevelData)
 }
 LightLevelData::LightLevelData(const LightLevelData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  LightLevelData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.level_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  level_ = from.level_;
+  _this->_impl_.level_ = from._impl_.level_;
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.LightLevelData)
 }
 
-void LightLevelData::SharedCtor() {
-  level_ = 0;
+inline void LightLevelData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.level_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 LightLevelData::~LightLevelData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.LightLevelData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void LightLevelData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void LightLevelData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void LightLevelData::ArenaDtor(void* object) {
-  LightLevelData* _this = reinterpret_cast< LightLevelData* >(object);
-  (void)_this;
-}
-void LightLevelData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void LightLevelData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const LightLevelData& LightLevelData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_LightLevelData_sensor_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void LightLevelData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.LightLevelData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  level_ = 0;
+  _impl_.level_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* LightLevelData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* LightLevelData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // float level = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 13)) {
-          level_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 13)) {
+          _impl_.level_ = ::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<float>(ptr);
           ptr += sizeof(float);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* LightLevelData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* LightLevelData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.LightLevelData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // float level = 1;
-  if (!(this->level() <= 0 && this->level() >= 0)) {
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_level = this->_internal_level();
+  uint32_t raw_level;
+  memcpy(&raw_level, &tmp_level, sizeof(tmp_level));
+  if (raw_level != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteFloatToArray(1, this->_internal_level(), target);
+    target = ::_pbi::WireFormatLite::WriteFloatToArray(1, this->_internal_level(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.LightLevelData)
@@ -1406,56 +1213,45 @@ size_t LightLevelData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.LightLevelData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // float level = 1;
-  if (!(this->level() <= 0 && this->level() >= 0)) {
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_level = this->_internal_level();
+  uint32_t raw_level;
+  memcpy(&raw_level, &tmp_level, sizeof(tmp_level));
+  if (raw_level != 0) {
     total_size += 1 + 4;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void LightLevelData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.LightLevelData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const LightLevelData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<LightLevelData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.LightLevelData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.LightLevelData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData LightLevelData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    LightLevelData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*LightLevelData::GetClassData() const { return &_class_data_; }
 
-void LightLevelData::MergeFrom(const LightLevelData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.LightLevelData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void LightLevelData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<LightLevelData*>(&to_msg);
+  auto& from = static_cast<const LightLevelData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.LightLevelData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (!(from.level() <= 0 && from.level() >= 0)) {
-    _internal_set_level(from._internal_level());
+  static_assert(sizeof(uint32_t) == sizeof(float), "Code assumes uint32_t and float are the same size.");
+  float tmp_level = from._internal_level();
+  uint32_t raw_level;
+  memcpy(&raw_level, &tmp_level, sizeof(tmp_level));
+  if (raw_level != 0) {
+    _this->_internal_set_level(from._internal_level());
   }
-}
-
-void LightLevelData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.LightLevelData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void LightLevelData::CopyFrom(const LightLevelData& from) {
@@ -1471,128 +1267,130 @@ bool LightLevelData::IsInitialized() const {
 
 void LightLevelData::InternalSwap(LightLevelData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(level_, other->level_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.level_, other->_impl_.level_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata LightLevelData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_sensor_2eproto_getter, &descriptor_table_sensor_2eproto_once,
+      file_level_metadata_sensor_2eproto[5]);
 }
-
 
 // ===================================================================
 
-void PirMovementData::InitAsDefaultInstance() {
-}
 class PirMovementData::_Internal {
  public:
 };
 
-PirMovementData::PirMovementData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+PirMovementData::PirMovementData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.PirMovementData)
 }
 PirMovementData::PirMovementData(const PirMovementData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  PirMovementData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.event_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  event_ = from.event_;
+  _this->_impl_.event_ = from._impl_.event_;
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.PirMovementData)
 }
 
-void PirMovementData::SharedCtor() {
-  event_ = 0;
+inline void PirMovementData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.event_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 PirMovementData::~PirMovementData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.PirMovementData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void PirMovementData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
+inline void PirMovementData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
 }
 
-void PirMovementData::ArenaDtor(void* object) {
-  PirMovementData* _this = reinterpret_cast< PirMovementData* >(object);
-  (void)_this;
-}
-void PirMovementData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void PirMovementData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const PirMovementData& PirMovementData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PirMovementData_sensor_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PirMovementData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.PirMovementData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  event_ = 0;
+  _impl_.event_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* PirMovementData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* PirMovementData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.PirMovementEvent event = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_event(static_cast<::naki3d::common::protocol::PirMovementEvent>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* PirMovementData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* PirMovementData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.PirMovementData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.PirMovementEvent event = 1;
-  if (this->event() != 0) {
+  if (this->_internal_event() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       1, this->_internal_event(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.PirMovementData)
@@ -1603,57 +1401,38 @@ size_t PirMovementData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.PirMovementData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.PirMovementEvent event = 1;
-  if (this->event() != 0) {
+  if (this->_internal_event() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_event());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_event());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void PirMovementData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.PirMovementData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const PirMovementData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<PirMovementData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.PirMovementData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.PirMovementData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData PirMovementData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    PirMovementData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*PirMovementData::GetClassData() const { return &_class_data_; }
 
-void PirMovementData::MergeFrom(const PirMovementData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.PirMovementData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void PirMovementData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<PirMovementData*>(&to_msg);
+  auto& from = static_cast<const PirMovementData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.PirMovementData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.event() != 0) {
-    _internal_set_event(from._internal_event());
+  if (from._internal_event() != 0) {
+    _this->_internal_set_event(from._internal_event());
   }
-}
-
-void PirMovementData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.PirMovementData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void PirMovementData::CopyFrom(const PirMovementData& from) {
@@ -1669,39 +1448,47 @@ bool PirMovementData::IsInitialized() const {
 
 void PirMovementData::InternalSwap(PirMovementData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  swap(event_, other->event_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
+  swap(_impl_.event_, other->_impl_.event_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PirMovementData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_sensor_2eproto_getter, &descriptor_table_sensor_2eproto_once,
+      file_level_metadata_sensor_2eproto[6]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorInfo* Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorInfo >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorInfo*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorInfo >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::SensorInfo >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorList* Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorList >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorList*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorList >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::SensorList >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorListRequest* Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorListRequest >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::SensorListRequest*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::SensorListRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::SensorListRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::CECMessage* Arena::CreateMaybeMessage< ::naki3d::common::protocol::CECMessage >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::CECMessage*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::CECMessage >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::CECMessage >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::UltrasonicDistanceData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::UltrasonicDistanceData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::UltrasonicDistanceData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::UltrasonicDistanceData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::UltrasonicDistanceData >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::LightLevelData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::LightLevelData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::LightLevelData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::LightLevelData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::LightLevelData >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::PirMovementData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::PirMovementData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::PirMovementData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::PirMovementData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::PirMovementData >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE

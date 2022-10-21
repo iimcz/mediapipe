@@ -137,7 +137,7 @@ namespace mediapipe
                 {
                     recognized_hand_movement_scrolling = new std::string("Scrolling up");
                     data.set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_UP);
-                }                }
+                }
                 else if (angle >= 135 || angle < -135)
                 {
                     recognized_hand_movement_scrolling = new std::string("Scrolling left");

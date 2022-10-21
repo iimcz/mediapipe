@@ -14,115 +14,110 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_mediapipe_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_FingerState_mediapipe_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_mediapipe_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_HandFingerState_mediapipe_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_types_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Vector3_types_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
+
+namespace _pb = ::PROTOBUF_NAMESPACE_ID;
+namespace _pbi = _pb::internal;
+
 namespace naki3d {
 namespace common {
 namespace protocol {
-class FingerStateDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<FingerState> _instance;
-} _FingerState_default_instance_;
-class HandFingerStateDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<HandFingerState> _instance;
-} _HandFingerState_default_instance_;
-class MediapipeHandTrackingDataDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<MediapipeHandTrackingData> _instance;
-} _MediapipeHandTrackingData_default_instance_;
+PROTOBUF_CONSTEXPR FingerState::FingerState(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.position_)*/nullptr
+  , /*decltype(_impl_.closed_)*/false
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct FingerStateDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR FingerStateDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~FingerStateDefaultTypeInternal() {}
+  union {
+    FingerState _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 FingerStateDefaultTypeInternal _FingerState_default_instance_;
+PROTOBUF_CONSTEXPR HandFingerState::HandFingerState(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.thumb_)*/nullptr
+  , /*decltype(_impl_.index_)*/nullptr
+  , /*decltype(_impl_.middle_)*/nullptr
+  , /*decltype(_impl_.ring_)*/nullptr
+  , /*decltype(_impl_.pinky_)*/nullptr
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct HandFingerStateDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR HandFingerStateDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~HandFingerStateDefaultTypeInternal() {}
+  union {
+    HandFingerState _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 HandFingerStateDefaultTypeInternal _HandFingerState_default_instance_;
+PROTOBUF_CONSTEXPR MediapipeHandTrackingData::MediapipeHandTrackingData(
+    ::_pbi::ConstantInitialized): _impl_{
+    /*decltype(_impl_.center_position_)*/nullptr
+  , /*decltype(_impl_.finger_state_)*/nullptr
+  , /*decltype(_impl_.side_)*/0
+  , /*decltype(_impl_.gesture_)*/0
+  , /*decltype(_impl_._cached_size_)*/{}} {}
+struct MediapipeHandTrackingDataDefaultTypeInternal {
+  PROTOBUF_CONSTEXPR MediapipeHandTrackingDataDefaultTypeInternal()
+      : _instance(::_pbi::ConstantInitialized{}) {}
+  ~MediapipeHandTrackingDataDefaultTypeInternal() {}
+  union {
+    MediapipeHandTrackingData _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 MediapipeHandTrackingDataDefaultTypeInternal _MediapipeHandTrackingData_default_instance_;
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
-static void InitDefaultsscc_info_FingerState_mediapipe_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::_pb::Metadata file_level_metadata_mediapipe_2eproto[3];
+static constexpr ::_pb::EnumDescriptor const** file_level_enum_descriptors_mediapipe_2eproto = nullptr;
+static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_mediapipe_2eproto = nullptr;
 
-  {
-    void* ptr = &::naki3d::common::protocol::_FingerState_default_instance_;
-    new (ptr) ::naki3d::common::protocol::FingerState();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::FingerState::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_FingerState_mediapipe_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_FingerState_mediapipe_2eproto}, {
-      &scc_info_Vector3_types_2eproto.base,}};
-
-static void InitDefaultsscc_info_HandFingerState_mediapipe_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_HandFingerState_default_instance_;
-    new (ptr) ::naki3d::common::protocol::HandFingerState();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::HandFingerState::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_HandFingerState_mediapipe_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_HandFingerState_mediapipe_2eproto}, {
-      &scc_info_FingerState_mediapipe_2eproto.base,}};
-
-static void InitDefaultsscc_info_MediapipeHandTrackingData_mediapipe_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::naki3d::common::protocol::_MediapipeHandTrackingData_default_instance_;
-    new (ptr) ::naki3d::common::protocol::MediapipeHandTrackingData();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::naki3d::common::protocol::MediapipeHandTrackingData::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_MediapipeHandTrackingData_mediapipe_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_MediapipeHandTrackingData_mediapipe_2eproto}, {
-      &scc_info_Vector3_types_2eproto.base,
-      &scc_info_HandFingerState_mediapipe_2eproto.base,}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_mediapipe_2eproto[3];
-static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_mediapipe_2eproto = nullptr;
-static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_mediapipe_2eproto = nullptr;
-
-const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_mediapipe_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const uint32_t TableStruct_mediapipe_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::FingerState, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::FingerState, closed_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::FingerState, position_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::FingerState, _impl_.closed_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::FingerState, _impl_.position_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, thumb_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, index_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, middle_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, ring_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, pinky_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, _impl_.thumb_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, _impl_.index_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, _impl_.middle_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, _impl_.ring_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::HandFingerState, _impl_.pinky_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, side_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, center_position_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, finger_state_),
-  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, gesture_),
+  ~0u,  // no _inlined_string_donated_
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, _impl_.side_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, _impl_.center_position_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, _impl_.finger_state_),
+  PROTOBUF_FIELD_OFFSET(::naki3d::common::protocol::MediapipeHandTrackingData, _impl_.gesture_),
 };
-static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, sizeof(::naki3d::common::protocol::FingerState)},
-  { 7, -1, sizeof(::naki3d::common::protocol::HandFingerState)},
-  { 17, -1, sizeof(::naki3d::common::protocol::MediapipeHandTrackingData)},
+static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+  { 0, -1, -1, sizeof(::naki3d::common::protocol::FingerState)},
+  { 8, -1, -1, sizeof(::naki3d::common::protocol::HandFingerState)},
+  { 19, -1, -1, sizeof(::naki3d::common::protocol::MediapipeHandTrackingData)},
 };
 
-static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_FingerState_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_HandFingerState_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::naki3d::common::protocol::_MediapipeHandTrackingData_default_instance_),
+static const ::_pb::Message* const file_default_instances[] = {
+  &::naki3d::common::protocol::_FingerState_default_instance_._instance,
+  &::naki3d::common::protocol::_HandFingerState_default_instance_._instance,
+  &::naki3d::common::protocol::_MediapipeHandTrackingData_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_mediapipe_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
@@ -145,35 +140,31 @@ const char descriptor_table_protodef_mediapipe_2eproto[] PROTOBUF_SECTION_VARIAB
   "esture\030\004 \001(\0162\'.naki3d.common.protocol.Ha"
   "ndGestureTypeb\006proto3"
   ;
-static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_mediapipe_2eproto_deps[2] = {
+static const ::_pbi::DescriptorTable* const descriptor_table_mediapipe_2eproto_deps[2] = {
   &::descriptor_table_handtracking_2eproto,
   &::descriptor_table_types_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_mediapipe_2eproto_sccs[3] = {
-  &scc_info_FingerState_mediapipe_2eproto.base,
-  &scc_info_HandFingerState_mediapipe_2eproto.base,
-  &scc_info_MediapipeHandTrackingData_mediapipe_2eproto.base,
+static ::_pbi::once_flag descriptor_table_mediapipe_2eproto_once;
+const ::_pbi::DescriptorTable descriptor_table_mediapipe_2eproto = {
+    false, false, 701, descriptor_table_protodef_mediapipe_2eproto,
+    "mediapipe.proto",
+    &descriptor_table_mediapipe_2eproto_once, descriptor_table_mediapipe_2eproto_deps, 2, 3,
+    schemas, file_default_instances, TableStruct_mediapipe_2eproto::offsets,
+    file_level_metadata_mediapipe_2eproto, file_level_enum_descriptors_mediapipe_2eproto,
+    file_level_service_descriptors_mediapipe_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_mediapipe_2eproto_once;
-const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_mediapipe_2eproto = {
-  false, false, descriptor_table_protodef_mediapipe_2eproto, "mediapipe.proto", 701,
-  &descriptor_table_mediapipe_2eproto_once, descriptor_table_mediapipe_2eproto_sccs, descriptor_table_mediapipe_2eproto_deps, 3, 2,
-  schemas, file_default_instances, TableStruct_mediapipe_2eproto::offsets,
-  file_level_metadata_mediapipe_2eproto, 3, file_level_enum_descriptors_mediapipe_2eproto, file_level_service_descriptors_mediapipe_2eproto,
-};
+PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_mediapipe_2eproto_getter() {
+  return &descriptor_table_mediapipe_2eproto;
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_mediapipe_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_mediapipe_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_mediapipe_2eproto(&descriptor_table_mediapipe_2eproto);
 namespace naki3d {
 namespace common {
 namespace protocol {
 
 // ===================================================================
 
-void FingerState::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_FingerState_default_instance_._instance.get_mutable()->position_ = const_cast< ::naki3d::common::protocol::Vector3*>(
-      ::naki3d::common::protocol::Vector3::internal_default_instance());
-}
 class FingerState::_Internal {
  public:
   static const ::naki3d::common::protocol::Vector3& position(const FingerState* msg);
@@ -181,145 +172,145 @@ class FingerState::_Internal {
 
 const ::naki3d::common::protocol::Vector3&
 FingerState::_Internal::position(const FingerState* msg) {
-  return *msg->position_;
+  return *msg->_impl_.position_;
 }
 void FingerState::clear_position() {
-  if (GetArena() == nullptr && position_ != nullptr) {
-    delete position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.position_ != nullptr) {
+    delete _impl_.position_;
   }
-  position_ = nullptr;
+  _impl_.position_ = nullptr;
 }
-FingerState::FingerState(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+FingerState::FingerState(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.FingerState)
 }
 FingerState::FingerState(const FingerState& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  FingerState* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.position_){nullptr}
+    , decltype(_impl_.closed_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_position()) {
-    position_ = new ::naki3d::common::protocol::Vector3(*from.position_);
-  } else {
-    position_ = nullptr;
+    _this->_impl_.position_ = new ::naki3d::common::protocol::Vector3(*from._impl_.position_);
   }
-  closed_ = from.closed_;
+  _this->_impl_.closed_ = from._impl_.closed_;
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.FingerState)
 }
 
-void FingerState::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_FingerState_mediapipe_2eproto.base);
-  ::memset(&position_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&closed_) -
-      reinterpret_cast<char*>(&position_)) + sizeof(closed_));
+inline void FingerState::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.position_){nullptr}
+    , decltype(_impl_.closed_){false}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 FingerState::~FingerState() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.FingerState)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void FingerState::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete position_;
+inline void FingerState::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.position_;
 }
 
-void FingerState::ArenaDtor(void* object) {
-  FingerState* _this = reinterpret_cast< FingerState* >(object);
-  (void)_this;
-}
-void FingerState::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void FingerState::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const FingerState& FingerState::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_FingerState_mediapipe_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void FingerState::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.FingerState)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && position_ != nullptr) {
-    delete position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.position_ != nullptr) {
+    delete _impl_.position_;
   }
-  position_ = nullptr;
-  closed_ = false;
+  _impl_.position_ = nullptr;
+  _impl_.closed_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* FingerState::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* FingerState::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // bool closed = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          closed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          _impl_.closed_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.Vector3 position = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_position(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* FingerState::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* FingerState::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.FingerState)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // bool closed = 1;
-  if (this->closed() != 0) {
+  if (this->_internal_closed() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteBoolToArray(1, this->_internal_closed(), target);
+    target = ::_pbi::WireFormatLite::WriteBoolToArray(1, this->_internal_closed(), target);
   }
 
   // .naki3d.common.protocol.Vector3 position = 2;
-  if (this->has_position()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_position()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::position(this), target, stream);
+      InternalWriteMessage(2, _Internal::position(this),
+        _Internal::position(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.FingerState)
@@ -330,66 +321,48 @@ size_t FingerState::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.FingerState)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.Vector3 position = 2;
-  if (this->has_position()) {
+  if (this->_internal_has_position()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *position_);
+        *_impl_.position_);
   }
 
   // bool closed = 1;
-  if (this->closed() != 0) {
+  if (this->_internal_closed() != 0) {
     total_size += 1 + 1;
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void FingerState::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.FingerState)
-  GOOGLE_DCHECK_NE(&from, this);
-  const FingerState* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<FingerState>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.FingerState)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.FingerState)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData FingerState::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    FingerState::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*FingerState::GetClassData() const { return &_class_data_; }
 
-void FingerState::MergeFrom(const FingerState& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.FingerState)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void FingerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<FingerState*>(&to_msg);
+  auto& from = static_cast<const FingerState&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.FingerState)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_position()) {
-    _internal_mutable_position()->::naki3d::common::protocol::Vector3::MergeFrom(from._internal_position());
+  if (from._internal_has_position()) {
+    _this->_internal_mutable_position()->::naki3d::common::protocol::Vector3::MergeFrom(
+        from._internal_position());
   }
-  if (from.closed() != 0) {
-    _internal_set_closed(from._internal_closed());
+  if (from._internal_closed() != 0) {
+    _this->_internal_set_closed(from._internal_closed());
   }
-}
-
-void FingerState::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.FingerState)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void FingerState::CopyFrom(const FingerState& from) {
@@ -405,34 +378,23 @@ bool FingerState::IsInitialized() const {
 
 void FingerState::InternalSwap(FingerState* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(FingerState, closed_)
-      + sizeof(FingerState::closed_)
-      - PROTOBUF_FIELD_OFFSET(FingerState, position_)>(
-          reinterpret_cast<char*>(&position_),
-          reinterpret_cast<char*>(&other->position_));
+      PROTOBUF_FIELD_OFFSET(FingerState, _impl_.closed_)
+      + sizeof(FingerState::_impl_.closed_)
+      - PROTOBUF_FIELD_OFFSET(FingerState, _impl_.position_)>(
+          reinterpret_cast<char*>(&_impl_.position_),
+          reinterpret_cast<char*>(&other->_impl_.position_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata FingerState::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_mediapipe_2eproto_getter, &descriptor_table_mediapipe_2eproto_once,
+      file_level_metadata_mediapipe_2eproto[0]);
 }
-
 
 // ===================================================================
 
-void HandFingerState::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_HandFingerState_default_instance_._instance.get_mutable()->thumb_ = const_cast< ::naki3d::common::protocol::FingerState*>(
-      ::naki3d::common::protocol::FingerState::internal_default_instance());
-  ::naki3d::common::protocol::_HandFingerState_default_instance_._instance.get_mutable()->index_ = const_cast< ::naki3d::common::protocol::FingerState*>(
-      ::naki3d::common::protocol::FingerState::internal_default_instance());
-  ::naki3d::common::protocol::_HandFingerState_default_instance_._instance.get_mutable()->middle_ = const_cast< ::naki3d::common::protocol::FingerState*>(
-      ::naki3d::common::protocol::FingerState::internal_default_instance());
-  ::naki3d::common::protocol::_HandFingerState_default_instance_._instance.get_mutable()->ring_ = const_cast< ::naki3d::common::protocol::FingerState*>(
-      ::naki3d::common::protocol::FingerState::internal_default_instance());
-  ::naki3d::common::protocol::_HandFingerState_default_instance_._instance.get_mutable()->pinky_ = const_cast< ::naki3d::common::protocol::FingerState*>(
-      ::naki3d::common::protocol::FingerState::internal_default_instance());
-}
 class HandFingerState::_Internal {
  public:
   static const ::naki3d::common::protocol::FingerState& thumb(const HandFingerState* msg);
@@ -444,240 +406,237 @@ class HandFingerState::_Internal {
 
 const ::naki3d::common::protocol::FingerState&
 HandFingerState::_Internal::thumb(const HandFingerState* msg) {
-  return *msg->thumb_;
+  return *msg->_impl_.thumb_;
 }
 const ::naki3d::common::protocol::FingerState&
 HandFingerState::_Internal::index(const HandFingerState* msg) {
-  return *msg->index_;
+  return *msg->_impl_.index_;
 }
 const ::naki3d::common::protocol::FingerState&
 HandFingerState::_Internal::middle(const HandFingerState* msg) {
-  return *msg->middle_;
+  return *msg->_impl_.middle_;
 }
 const ::naki3d::common::protocol::FingerState&
 HandFingerState::_Internal::ring(const HandFingerState* msg) {
-  return *msg->ring_;
+  return *msg->_impl_.ring_;
 }
 const ::naki3d::common::protocol::FingerState&
 HandFingerState::_Internal::pinky(const HandFingerState* msg) {
-  return *msg->pinky_;
+  return *msg->_impl_.pinky_;
 }
-HandFingerState::HandFingerState(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+HandFingerState::HandFingerState(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.HandFingerState)
 }
 HandFingerState::HandFingerState(const HandFingerState& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  HandFingerState* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.thumb_){nullptr}
+    , decltype(_impl_.index_){nullptr}
+    , decltype(_impl_.middle_){nullptr}
+    , decltype(_impl_.ring_){nullptr}
+    , decltype(_impl_.pinky_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_thumb()) {
-    thumb_ = new ::naki3d::common::protocol::FingerState(*from.thumb_);
-  } else {
-    thumb_ = nullptr;
+    _this->_impl_.thumb_ = new ::naki3d::common::protocol::FingerState(*from._impl_.thumb_);
   }
   if (from._internal_has_index()) {
-    index_ = new ::naki3d::common::protocol::FingerState(*from.index_);
-  } else {
-    index_ = nullptr;
+    _this->_impl_.index_ = new ::naki3d::common::protocol::FingerState(*from._impl_.index_);
   }
   if (from._internal_has_middle()) {
-    middle_ = new ::naki3d::common::protocol::FingerState(*from.middle_);
-  } else {
-    middle_ = nullptr;
+    _this->_impl_.middle_ = new ::naki3d::common::protocol::FingerState(*from._impl_.middle_);
   }
   if (from._internal_has_ring()) {
-    ring_ = new ::naki3d::common::protocol::FingerState(*from.ring_);
-  } else {
-    ring_ = nullptr;
+    _this->_impl_.ring_ = new ::naki3d::common::protocol::FingerState(*from._impl_.ring_);
   }
   if (from._internal_has_pinky()) {
-    pinky_ = new ::naki3d::common::protocol::FingerState(*from.pinky_);
-  } else {
-    pinky_ = nullptr;
+    _this->_impl_.pinky_ = new ::naki3d::common::protocol::FingerState(*from._impl_.pinky_);
   }
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.HandFingerState)
 }
 
-void HandFingerState::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_HandFingerState_mediapipe_2eproto.base);
-  ::memset(&thumb_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&pinky_) -
-      reinterpret_cast<char*>(&thumb_)) + sizeof(pinky_));
+inline void HandFingerState::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.thumb_){nullptr}
+    , decltype(_impl_.index_){nullptr}
+    , decltype(_impl_.middle_){nullptr}
+    , decltype(_impl_.ring_){nullptr}
+    , decltype(_impl_.pinky_){nullptr}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 HandFingerState::~HandFingerState() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.HandFingerState)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void HandFingerState::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete thumb_;
-  if (this != internal_default_instance()) delete index_;
-  if (this != internal_default_instance()) delete middle_;
-  if (this != internal_default_instance()) delete ring_;
-  if (this != internal_default_instance()) delete pinky_;
+inline void HandFingerState::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.thumb_;
+  if (this != internal_default_instance()) delete _impl_.index_;
+  if (this != internal_default_instance()) delete _impl_.middle_;
+  if (this != internal_default_instance()) delete _impl_.ring_;
+  if (this != internal_default_instance()) delete _impl_.pinky_;
 }
 
-void HandFingerState::ArenaDtor(void* object) {
-  HandFingerState* _this = reinterpret_cast< HandFingerState* >(object);
-  (void)_this;
-}
-void HandFingerState::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void HandFingerState::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const HandFingerState& HandFingerState::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_HandFingerState_mediapipe_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void HandFingerState::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.HandFingerState)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && thumb_ != nullptr) {
-    delete thumb_;
+  if (GetArenaForAllocation() == nullptr && _impl_.thumb_ != nullptr) {
+    delete _impl_.thumb_;
   }
-  thumb_ = nullptr;
-  if (GetArena() == nullptr && index_ != nullptr) {
-    delete index_;
+  _impl_.thumb_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.index_ != nullptr) {
+    delete _impl_.index_;
   }
-  index_ = nullptr;
-  if (GetArena() == nullptr && middle_ != nullptr) {
-    delete middle_;
+  _impl_.index_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.middle_ != nullptr) {
+    delete _impl_.middle_;
   }
-  middle_ = nullptr;
-  if (GetArena() == nullptr && ring_ != nullptr) {
-    delete ring_;
+  _impl_.middle_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.ring_ != nullptr) {
+    delete _impl_.ring_;
   }
-  ring_ = nullptr;
-  if (GetArena() == nullptr && pinky_ != nullptr) {
-    delete pinky_;
+  _impl_.ring_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.pinky_ != nullptr) {
+    delete _impl_.pinky_;
   }
-  pinky_ = nullptr;
+  _impl_.pinky_ = nullptr;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* HandFingerState::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* HandFingerState::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.FingerState thumb = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 10)) {
           ptr = ctx->ParseMessage(_internal_mutable_thumb(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.FingerState index = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_index(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.FingerState middle = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_middle(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.FingerState ring = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_ring(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.FingerState pinky = 5;
       case 5:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_pinky(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* HandFingerState::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* HandFingerState::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.HandFingerState)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.FingerState thumb = 1;
-  if (this->has_thumb()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_thumb()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        1, _Internal::thumb(this), target, stream);
+      InternalWriteMessage(1, _Internal::thumb(this),
+        _Internal::thumb(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.FingerState index = 2;
-  if (this->has_index()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_index()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::index(this), target, stream);
+      InternalWriteMessage(2, _Internal::index(this),
+        _Internal::index(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.FingerState middle = 3;
-  if (this->has_middle()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_middle()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::middle(this), target, stream);
+      InternalWriteMessage(3, _Internal::middle(this),
+        _Internal::middle(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.FingerState ring = 4;
-  if (this->has_ring()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_ring()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        4, _Internal::ring(this), target, stream);
+      InternalWriteMessage(4, _Internal::ring(this),
+        _Internal::ring(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.FingerState pinky = 5;
-  if (this->has_pinky()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_pinky()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        5, _Internal::pinky(this), target, stream);
+      InternalWriteMessage(5, _Internal::pinky(this),
+        _Internal::pinky(this).GetCachedSize(), target, stream);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.HandFingerState)
@@ -688,98 +647,84 @@ size_t HandFingerState::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.HandFingerState)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.FingerState thumb = 1;
-  if (this->has_thumb()) {
+  if (this->_internal_has_thumb()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *thumb_);
+        *_impl_.thumb_);
   }
 
   // .naki3d.common.protocol.FingerState index = 2;
-  if (this->has_index()) {
+  if (this->_internal_has_index()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *index_);
+        *_impl_.index_);
   }
 
   // .naki3d.common.protocol.FingerState middle = 3;
-  if (this->has_middle()) {
+  if (this->_internal_has_middle()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *middle_);
+        *_impl_.middle_);
   }
 
   // .naki3d.common.protocol.FingerState ring = 4;
-  if (this->has_ring()) {
+  if (this->_internal_has_ring()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *ring_);
+        *_impl_.ring_);
   }
 
   // .naki3d.common.protocol.FingerState pinky = 5;
-  if (this->has_pinky()) {
+  if (this->_internal_has_pinky()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *pinky_);
+        *_impl_.pinky_);
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void HandFingerState::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.HandFingerState)
-  GOOGLE_DCHECK_NE(&from, this);
-  const HandFingerState* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<HandFingerState>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.HandFingerState)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.HandFingerState)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData HandFingerState::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    HandFingerState::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*HandFingerState::GetClassData() const { return &_class_data_; }
 
-void HandFingerState::MergeFrom(const HandFingerState& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.HandFingerState)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void HandFingerState::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<HandFingerState*>(&to_msg);
+  auto& from = static_cast<const HandFingerState&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.HandFingerState)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_thumb()) {
-    _internal_mutable_thumb()->::naki3d::common::protocol::FingerState::MergeFrom(from._internal_thumb());
+  if (from._internal_has_thumb()) {
+    _this->_internal_mutable_thumb()->::naki3d::common::protocol::FingerState::MergeFrom(
+        from._internal_thumb());
   }
-  if (from.has_index()) {
-    _internal_mutable_index()->::naki3d::common::protocol::FingerState::MergeFrom(from._internal_index());
+  if (from._internal_has_index()) {
+    _this->_internal_mutable_index()->::naki3d::common::protocol::FingerState::MergeFrom(
+        from._internal_index());
   }
-  if (from.has_middle()) {
-    _internal_mutable_middle()->::naki3d::common::protocol::FingerState::MergeFrom(from._internal_middle());
+  if (from._internal_has_middle()) {
+    _this->_internal_mutable_middle()->::naki3d::common::protocol::FingerState::MergeFrom(
+        from._internal_middle());
   }
-  if (from.has_ring()) {
-    _internal_mutable_ring()->::naki3d::common::protocol::FingerState::MergeFrom(from._internal_ring());
+  if (from._internal_has_ring()) {
+    _this->_internal_mutable_ring()->::naki3d::common::protocol::FingerState::MergeFrom(
+        from._internal_ring());
   }
-  if (from.has_pinky()) {
-    _internal_mutable_pinky()->::naki3d::common::protocol::FingerState::MergeFrom(from._internal_pinky());
+  if (from._internal_has_pinky()) {
+    _this->_internal_mutable_pinky()->::naki3d::common::protocol::FingerState::MergeFrom(
+        from._internal_pinky());
   }
-}
-
-void HandFingerState::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.HandFingerState)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void HandFingerState::CopyFrom(const HandFingerState& from) {
@@ -795,28 +740,23 @@ bool HandFingerState::IsInitialized() const {
 
 void HandFingerState::InternalSwap(HandFingerState* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(HandFingerState, pinky_)
-      + sizeof(HandFingerState::pinky_)
-      - PROTOBUF_FIELD_OFFSET(HandFingerState, thumb_)>(
-          reinterpret_cast<char*>(&thumb_),
-          reinterpret_cast<char*>(&other->thumb_));
+      PROTOBUF_FIELD_OFFSET(HandFingerState, _impl_.pinky_)
+      + sizeof(HandFingerState::_impl_.pinky_)
+      - PROTOBUF_FIELD_OFFSET(HandFingerState, _impl_.thumb_)>(
+          reinterpret_cast<char*>(&_impl_.thumb_),
+          reinterpret_cast<char*>(&other->_impl_.thumb_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata HandFingerState::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_mediapipe_2eproto_getter, &descriptor_table_mediapipe_2eproto_once,
+      file_level_metadata_mediapipe_2eproto[1]);
 }
-
 
 // ===================================================================
 
-void MediapipeHandTrackingData::InitAsDefaultInstance() {
-  ::naki3d::common::protocol::_MediapipeHandTrackingData_default_instance_._instance.get_mutable()->center_position_ = const_cast< ::naki3d::common::protocol::Vector3*>(
-      ::naki3d::common::protocol::Vector3::internal_default_instance());
-  ::naki3d::common::protocol::_MediapipeHandTrackingData_default_instance_._instance.get_mutable()->finger_state_ = const_cast< ::naki3d::common::protocol::HandFingerState*>(
-      ::naki3d::common::protocol::HandFingerState::internal_default_instance());
-}
 class MediapipeHandTrackingData::_Internal {
  public:
   static const ::naki3d::common::protocol::Vector3& center_position(const MediapipeHandTrackingData* msg);
@@ -825,195 +765,198 @@ class MediapipeHandTrackingData::_Internal {
 
 const ::naki3d::common::protocol::Vector3&
 MediapipeHandTrackingData::_Internal::center_position(const MediapipeHandTrackingData* msg) {
-  return *msg->center_position_;
+  return *msg->_impl_.center_position_;
 }
 const ::naki3d::common::protocol::HandFingerState&
 MediapipeHandTrackingData::_Internal::finger_state(const MediapipeHandTrackingData* msg) {
-  return *msg->finger_state_;
+  return *msg->_impl_.finger_state_;
 }
 void MediapipeHandTrackingData::clear_center_position() {
-  if (GetArena() == nullptr && center_position_ != nullptr) {
-    delete center_position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.center_position_ != nullptr) {
+    delete _impl_.center_position_;
   }
-  center_position_ = nullptr;
+  _impl_.center_position_ = nullptr;
 }
-MediapipeHandTrackingData::MediapipeHandTrackingData(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
+MediapipeHandTrackingData::MediapipeHandTrackingData(::PROTOBUF_NAMESPACE_ID::Arena* arena,
+                         bool is_message_owned)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
+  SharedCtor(arena, is_message_owned);
   // @@protoc_insertion_point(arena_constructor:naki3d.common.protocol.MediapipeHandTrackingData)
 }
 MediapipeHandTrackingData::MediapipeHandTrackingData(const MediapipeHandTrackingData& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
+  MediapipeHandTrackingData* const _this = this; (void)_this;
+  new (&_impl_) Impl_{
+      decltype(_impl_.center_position_){nullptr}
+    , decltype(_impl_.finger_state_){nullptr}
+    , decltype(_impl_.side_){}
+    , decltype(_impl_.gesture_){}
+    , /*decltype(_impl_._cached_size_)*/{}};
+
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   if (from._internal_has_center_position()) {
-    center_position_ = new ::naki3d::common::protocol::Vector3(*from.center_position_);
-  } else {
-    center_position_ = nullptr;
+    _this->_impl_.center_position_ = new ::naki3d::common::protocol::Vector3(*from._impl_.center_position_);
   }
   if (from._internal_has_finger_state()) {
-    finger_state_ = new ::naki3d::common::protocol::HandFingerState(*from.finger_state_);
-  } else {
-    finger_state_ = nullptr;
+    _this->_impl_.finger_state_ = new ::naki3d::common::protocol::HandFingerState(*from._impl_.finger_state_);
   }
-  ::memcpy(&side_, &from.side_,
-    static_cast<size_t>(reinterpret_cast<char*>(&gesture_) -
-    reinterpret_cast<char*>(&side_)) + sizeof(gesture_));
+  ::memcpy(&_impl_.side_, &from._impl_.side_,
+    static_cast<size_t>(reinterpret_cast<char*>(&_impl_.gesture_) -
+    reinterpret_cast<char*>(&_impl_.side_)) + sizeof(_impl_.gesture_));
   // @@protoc_insertion_point(copy_constructor:naki3d.common.protocol.MediapipeHandTrackingData)
 }
 
-void MediapipeHandTrackingData::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_MediapipeHandTrackingData_mediapipe_2eproto.base);
-  ::memset(&center_position_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&gesture_) -
-      reinterpret_cast<char*>(&center_position_)) + sizeof(gesture_));
+inline void MediapipeHandTrackingData::SharedCtor(
+    ::_pb::Arena* arena, bool is_message_owned) {
+  (void)arena;
+  (void)is_message_owned;
+  new (&_impl_) Impl_{
+      decltype(_impl_.center_position_){nullptr}
+    , decltype(_impl_.finger_state_){nullptr}
+    , decltype(_impl_.side_){0}
+    , decltype(_impl_.gesture_){0}
+    , /*decltype(_impl_._cached_size_)*/{}
+  };
 }
 
 MediapipeHandTrackingData::~MediapipeHandTrackingData() {
   // @@protoc_insertion_point(destructor:naki3d.common.protocol.MediapipeHandTrackingData)
+  if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
+  (void)arena;
+    return;
+  }
   SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-void MediapipeHandTrackingData::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  if (this != internal_default_instance()) delete center_position_;
-  if (this != internal_default_instance()) delete finger_state_;
+inline void MediapipeHandTrackingData::SharedDtor() {
+  GOOGLE_DCHECK(GetArenaForAllocation() == nullptr);
+  if (this != internal_default_instance()) delete _impl_.center_position_;
+  if (this != internal_default_instance()) delete _impl_.finger_state_;
 }
 
-void MediapipeHandTrackingData::ArenaDtor(void* object) {
-  MediapipeHandTrackingData* _this = reinterpret_cast< MediapipeHandTrackingData* >(object);
-  (void)_this;
-}
-void MediapipeHandTrackingData::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
 void MediapipeHandTrackingData::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
+  _impl_._cached_size_.Set(size);
 }
-const MediapipeHandTrackingData& MediapipeHandTrackingData::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_MediapipeHandTrackingData_mediapipe_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void MediapipeHandTrackingData::Clear() {
 // @@protoc_insertion_point(message_clear_start:naki3d.common.protocol.MediapipeHandTrackingData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  if (GetArena() == nullptr && center_position_ != nullptr) {
-    delete center_position_;
+  if (GetArenaForAllocation() == nullptr && _impl_.center_position_ != nullptr) {
+    delete _impl_.center_position_;
   }
-  center_position_ = nullptr;
-  if (GetArena() == nullptr && finger_state_ != nullptr) {
-    delete finger_state_;
+  _impl_.center_position_ = nullptr;
+  if (GetArenaForAllocation() == nullptr && _impl_.finger_state_ != nullptr) {
+    delete _impl_.finger_state_;
   }
-  finger_state_ = nullptr;
-  ::memset(&side_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&gesture_) -
-      reinterpret_cast<char*>(&side_)) + sizeof(gesture_));
+  _impl_.finger_state_ = nullptr;
+  ::memset(&_impl_.side_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&_impl_.gesture_) -
+      reinterpret_cast<char*>(&_impl_.side_)) + sizeof(_impl_.gesture_));
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
-const char* MediapipeHandTrackingData::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+const char* MediapipeHandTrackingData::_InternalParse(const char* ptr, ::_pbi::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
+    uint32_t tag;
+    ptr = ::_pbi::ReadTag(ptr, &tag);
     switch (tag >> 3) {
       // .naki3d.common.protocol.HandSide side = 1;
       case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 8)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 8)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_side(static_cast<::naki3d::common::protocol::HandSide>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.Vector3 center_position = 2;
       case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 18)) {
           ptr = ctx->ParseMessage(_internal_mutable_center_position(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.HandFingerState finger_state = 3;
       case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_finger_state(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
       // .naki3d.common.protocol.HandGestureType gesture = 4;
       case 4:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+        if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
+          uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_gesture(static_cast<::naki3d::common::protocol::HandGestureType>(val));
-        } else goto handle_unusual;
+        } else
+          goto handle_unusual;
         continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
+      default:
+        goto handle_unusual;
     }  // switch
+  handle_unusual:
+    if ((tag == 0) || ((tag & 7) == 4)) {
+      CHK_(ptr);
+      ctx->SetLastTag(tag);
+      goto message_done;
+    }
+    ptr = UnknownFieldParse(
+        tag,
+        _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+        ptr, ctx);
+    CHK_(ptr != nullptr);
   }  // while
-success:
+message_done:
   return ptr;
 failure:
   ptr = nullptr;
-  goto success;
+  goto message_done;
 #undef CHK_
 }
 
-::PROTOBUF_NAMESPACE_ID::uint8* MediapipeHandTrackingData::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+uint8_t* MediapipeHandTrackingData::_InternalSerialize(
+    uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
   // @@protoc_insertion_point(serialize_to_array_start:naki3d.common.protocol.MediapipeHandTrackingData)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.HandSide side = 1;
-  if (this->side() != 0) {
+  if (this->_internal_side() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       1, this->_internal_side(), target);
   }
 
   // .naki3d.common.protocol.Vector3 center_position = 2;
-  if (this->has_center_position()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_center_position()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        2, _Internal::center_position(this), target, stream);
+      InternalWriteMessage(2, _Internal::center_position(this),
+        _Internal::center_position(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.HandFingerState finger_state = 3;
-  if (this->has_finger_state()) {
-    target = stream->EnsureSpace(target);
+  if (this->_internal_has_finger_state()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        3, _Internal::finger_state(this), target, stream);
+      InternalWriteMessage(3, _Internal::finger_state(this),
+        _Internal::finger_state(this).GetCachedSize(), target, stream);
   }
 
   // .naki3d.common.protocol.HandGestureType gesture = 4;
-  if (this->gesture() != 0) {
+  if (this->_internal_gesture() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+    target = ::_pbi::WireFormatLite::WriteEnumToArray(
       4, this->_internal_gesture(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+    target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
   // @@protoc_insertion_point(serialize_to_array_end:naki3d.common.protocol.MediapipeHandTrackingData)
@@ -1024,86 +967,69 @@ size_t MediapipeHandTrackingData::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:naki3d.common.protocol.MediapipeHandTrackingData)
   size_t total_size = 0;
 
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .naki3d.common.protocol.Vector3 center_position = 2;
-  if (this->has_center_position()) {
+  if (this->_internal_has_center_position()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *center_position_);
+        *_impl_.center_position_);
   }
 
   // .naki3d.common.protocol.HandFingerState finger_state = 3;
-  if (this->has_finger_state()) {
+  if (this->_internal_has_finger_state()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-        *finger_state_);
+        *_impl_.finger_state_);
   }
 
   // .naki3d.common.protocol.HandSide side = 1;
-  if (this->side() != 0) {
+  if (this->_internal_side() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_side());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_side());
   }
 
   // .naki3d.common.protocol.HandGestureType gesture = 4;
-  if (this->gesture() != 0) {
+  if (this->_internal_gesture() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_gesture());
+      ::_pbi::WireFormatLite::EnumSize(this->_internal_gesture());
   }
 
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
+  return MaybeComputeUnknownFieldsSize(total_size, &_impl_._cached_size_);
 }
 
-void MediapipeHandTrackingData::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:naki3d.common.protocol.MediapipeHandTrackingData)
-  GOOGLE_DCHECK_NE(&from, this);
-  const MediapipeHandTrackingData* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<MediapipeHandTrackingData>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:naki3d.common.protocol.MediapipeHandTrackingData)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:naki3d.common.protocol.MediapipeHandTrackingData)
-    MergeFrom(*source);
-  }
-}
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData MediapipeHandTrackingData::_class_data_ = {
+    ::PROTOBUF_NAMESPACE_ID::Message::CopyWithSourceCheck,
+    MediapipeHandTrackingData::MergeImpl
+};
+const ::PROTOBUF_NAMESPACE_ID::Message::ClassData*MediapipeHandTrackingData::GetClassData() const { return &_class_data_; }
 
-void MediapipeHandTrackingData::MergeFrom(const MediapipeHandTrackingData& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.MediapipeHandTrackingData)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+
+void MediapipeHandTrackingData::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message& to_msg, const ::PROTOBUF_NAMESPACE_ID::Message& from_msg) {
+  auto* const _this = static_cast<MediapipeHandTrackingData*>(&to_msg);
+  auto& from = static_cast<const MediapipeHandTrackingData&>(from_msg);
+  // @@protoc_insertion_point(class_specific_merge_from_start:naki3d.common.protocol.MediapipeHandTrackingData)
+  GOOGLE_DCHECK_NE(&from, _this);
+  uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
-  if (from.has_center_position()) {
-    _internal_mutable_center_position()->::naki3d::common::protocol::Vector3::MergeFrom(from._internal_center_position());
+  if (from._internal_has_center_position()) {
+    _this->_internal_mutable_center_position()->::naki3d::common::protocol::Vector3::MergeFrom(
+        from._internal_center_position());
   }
-  if (from.has_finger_state()) {
-    _internal_mutable_finger_state()->::naki3d::common::protocol::HandFingerState::MergeFrom(from._internal_finger_state());
+  if (from._internal_has_finger_state()) {
+    _this->_internal_mutable_finger_state()->::naki3d::common::protocol::HandFingerState::MergeFrom(
+        from._internal_finger_state());
   }
-  if (from.side() != 0) {
-    _internal_set_side(from._internal_side());
+  if (from._internal_side() != 0) {
+    _this->_internal_set_side(from._internal_side());
   }
-  if (from.gesture() != 0) {
-    _internal_set_gesture(from._internal_gesture());
+  if (from._internal_gesture() != 0) {
+    _this->_internal_set_gesture(from._internal_gesture());
   }
-}
-
-void MediapipeHandTrackingData::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:naki3d.common.protocol.MediapipeHandTrackingData)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
+  _this->_internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void MediapipeHandTrackingData::CopyFrom(const MediapipeHandTrackingData& from) {
@@ -1119,32 +1045,36 @@ bool MediapipeHandTrackingData::IsInitialized() const {
 
 void MediapipeHandTrackingData::InternalSwap(MediapipeHandTrackingData* other) {
   using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  _internal_metadata_.InternalSwap(&other->_internal_metadata_);
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
-      PROTOBUF_FIELD_OFFSET(MediapipeHandTrackingData, gesture_)
-      + sizeof(MediapipeHandTrackingData::gesture_)
-      - PROTOBUF_FIELD_OFFSET(MediapipeHandTrackingData, center_position_)>(
-          reinterpret_cast<char*>(&center_position_),
-          reinterpret_cast<char*>(&other->center_position_));
+      PROTOBUF_FIELD_OFFSET(MediapipeHandTrackingData, _impl_.gesture_)
+      + sizeof(MediapipeHandTrackingData::_impl_.gesture_)
+      - PROTOBUF_FIELD_OFFSET(MediapipeHandTrackingData, _impl_.center_position_)>(
+          reinterpret_cast<char*>(&_impl_.center_position_),
+          reinterpret_cast<char*>(&other->_impl_.center_position_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata MediapipeHandTrackingData::GetMetadata() const {
-  return GetMetadataStatic();
+  return ::_pbi::AssignDescriptors(
+      &descriptor_table_mediapipe_2eproto_getter, &descriptor_table_mediapipe_2eproto_once,
+      file_level_metadata_mediapipe_2eproto[2]);
 }
-
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace protocol
 }  // namespace common
 }  // namespace naki3d
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::FingerState* Arena::CreateMaybeMessage< ::naki3d::common::protocol::FingerState >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::FingerState*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::FingerState >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::FingerState >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::HandFingerState* Arena::CreateMaybeMessage< ::naki3d::common::protocol::HandFingerState >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::HandFingerState*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::HandFingerState >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::HandFingerState >(arena);
 }
-template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::MediapipeHandTrackingData* Arena::CreateMaybeMessage< ::naki3d::common::protocol::MediapipeHandTrackingData >(Arena* arena) {
+template<> PROTOBUF_NOINLINE ::naki3d::common::protocol::MediapipeHandTrackingData*
+Arena::CreateMaybeMessage< ::naki3d::common::protocol::MediapipeHandTrackingData >(Arena* arena) {
   return Arena::CreateMessageInternal< ::naki3d::common::protocol::MediapipeHandTrackingData >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
