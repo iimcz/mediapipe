@@ -99,8 +99,7 @@ namespace mediapipe
         const auto rect = &(cc->Inputs().Tag(normRectTag).Get<NormalizedRect>());
         const float height = rect->height();
         const float x_center = rect->x_center();
-        const float y_center = rect->y_center();
-
+        const float  = rect->y_center();
 
         if (cc->Inputs().Tag(normalizedLandmarkListTag).IsEmpty())
                 return ::mediapipe::OkStatus();
@@ -108,6 +107,16 @@ namespace mediapipe
                                        .Tag(normalizedLandmarkListTag)
                                        .Get<mediapipe::NormalizedLandmarkList>();
         RET_CHECK_GT(landmarkList.landmark_size(), 0) << "Input landmark vector is empty.";
+
+				naki3d::common::protocol::Vector3 position;
+				position.set_x(rect->x_center());
+				position.set_y(rect->y_center());
+				position.set_z(rect->z_center());
+						
+				naki3d::common::protocol::MediapipeHandTrackingData data;
+				data.set_side(naki3d::common::protocol::HandSide::RIGHT);
+				data.set_allocated_center_position(&position);
+				data.set_gesture(naki3d::common::protocol::HandGestureType::NONE);
 
         //Scrolling
         if (this->previous_x_center)
@@ -117,13 +126,6 @@ namespace mediapipe
             const float movementDistanceFactor = 0.3; //movement threshold.
 
             const float movementDistanceThreshold = movementDistanceFactor * height;
-            
-            const std::string ID = "rpi-cammera";
-						naki3d::common::protocol::SensorMessage message;
-						message.set_sensor_id(ID);
-						message.set_timestamp(32315151313);
-						naki3d::common::protocol::MediapipeHandTrackingData data;
-						data.set_side(naki3d::common::protocol::HandSide::LEFT);
             
             if (movementDistance > movementDistanceThreshold)
             {
@@ -153,25 +155,109 @@ namespace mediapipe
         this->previous_x_center = x_center;
         this->previous_y_center = y_center;
         
-        //Zooming
-        if (this->previous_rectangle_height)
-        {
-            const float heightDifferenceFactor = 0.03;
+        //Finger state
+        bool thumbIsOpen = false;
+    		bool firstFingerIsOpen = false;
+    		bool secondFingerIsOpen = false;
+    		bool thirdFingerIsOpen = false;
+    		bool fourthFingerIsOpen = false;
+    		
+    		naki3d::common::protocol::Vector3 thumbPosition;
+				thumbPosition.set_x(landmarkList.landmark(4).x());
+				thumbPosition.set_y(landmarkList.landmark(4).y());
+				thumbPosition.set_z(landmarkList.landmark(4).z());
 
-            const float heightDifferenceThreshold = height * heightDifferenceFactor;
-            if (height < this->previous_rectangle_height - heightDifferenceThreshold)
-            {
-                recognized_hand_movement_zooming = new std::string("Zoom out");
-            }
-            else if (height > this->previous_rectangle_height + heightDifferenceThreshold)
-            {
-                recognized_hand_movement_zooming = new std::string("Zoom in");
-            }
-        }
-        this->previous_rectangle_height = height;
+				naki3d::common::protocol::FingerState thumb;
+				thumb.set_closed(true);
+				thumb.set_allocated_position(&thumbPosition);
 
+				naki3d::common::protocol::Vector3 indexPosition;
+				indexPosition.set_x(landmarkList.landmark(8).x());
+				indexPosition.set_y(landmarkList.landmark(8).y());
+				indexPosition.set_z(landmarkList.landmark(8).z());
+
+				naki3d::common::protocol::FingerState index;
+				index.set_closed(true);
+				index.set_allocated_position(&indexPosition);
+
+				naki3d::common::protocol::Vector3 middlePosition;
+				middlePosition.set_x(landmarkList.landmark(12).x());
+				middlePosition.set_y(landmarkList.landmark(12).y());
+				middlePosition.set_z(landmarkList.landmark(12).z());
+
+				naki3d::common::protocol::FingerState middle;
+				middle.set_closed(true);
+				middle.set_allocated_position(&middlePosition);
+
+				naki3d::common::protocol::Vector3 ringPosition;
+				ringPosition.set_x(landmarkList.landmark(16).x());
+				ringPosition.set_y(landmarkList.landmark(16).y());
+				ringPosition.set_z(landmarkList.landmark(16).z());
+
+				naki3d::common::protocol::FingerState ring;
+				ring.set_closed(true);
+				ring.set_allocated_position(&ringPosition);
+
+				naki3d::common::protocol::Vector3 pinkyPosition;
+				pinkyPosition.set_x(landmarkList.landmark(20).x());
+				pinkyPosition.set_y(landmarkList.landmark(20).y());
+				pinkyPosition.set_z(landmarkList.landmark(20).z());
+
+				naki3d::common::protocol::FingerState pinky;
+				pinky.set_closed(true);
+				pinky.set_allocated_position(&pinkyPosition);
+    		
+    		float pseudoFixKeyPoint = landmarkList.landmark(2).x();
+    		if (landmarkList.landmark(3).x() < pseudoFixKeyPoint && landmarkList.landmark(4).x() < pseudoFixKeyPoint)
+    		{
+        	thumbIsOpen = true;
+        	thumb.set_closed(false);
+    		}
+
+    		pseudoFixKeyPoint = landmarkList.landmark(6).y();
+    		if (landmarkList.landmark(7).y() < pseudoFixKeyPoint && landmarkList.landmark(8).y() < pseudoFixKeyPoint)
+    		{
+        	firstFingerIsOpen = true;
+        	index.set_closed(false);
+    		}
+
+    		pseudoFixKeyPoint = landmarkList.landmark(10).y();
+    		if (landmarkList.landmark(11).y() < pseudoFixKeyPoint && landmarkList.landmark(12).y() < pseudoFixKeyPoint)
+    		{
+        	secondFingerIsOpen = true;
+        	middle.set_closed(false);
+    		}
+
+    		pseudoFixKeyPoint = landmarkList.landmark(14).y();
+    		if (landmarkList.landmark(15).y() < pseudoFixKeyPoint && landmarkList.landmark(16).y() < pseudoFixKeyPoint)
+    		{
+        	thirdFingerIsOpen = true;
+        	ring.set_closed(false);
+    		}
+
+    		pseudoFixKeyPoint = landmarkList.landmark(18).y();
+    		if (landmarkList.landmark(19).y() < pseudoFixKeyPoint && landmarkList.landmark(20).y() < pseudoFixKeyPoint)
+    		{
+        	fourthFingerIsOpen = true;
+        	pinky.set_closed(false);
+    		}
+
+				naki3d::common::protocol::HandFingerState fingerState;
+				fingerState.set_allocated_thumb(&thumb);
+				fingerState.set_allocated_index(&index);
+				fingerState.set_allocated_middle(&middle);
+				fingerState.set_allocated_ring(&ring);
+				fingerState.set_allocated_pinky(&pinky);
+				
+				data.set_allocated_finger_state(&fingerState);
+				
+				naki3d::common::protocol::SensorMessage message;
+				message.set_sensor_id("rpi-cammera");
+				const auto p1 = std::chrono::system_clock::now();
+				message.set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+				message.set_allocated_handtracking(&data);
+		
         LOG(INFO) << recognized_hand_movement_scrolling->c_str();
-        LOG(INFO) << recognized_hand_movement_zooming->c_str();
 
         cc->Outputs()
             .Tag(recognizedHandMouvementScrollingTag)
