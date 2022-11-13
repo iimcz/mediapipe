@@ -291,24 +291,14 @@ namespace mediapipe
 		message->set_allocated_handtracking(data);
 
 		size_t size = message->ByteSizeLong();
-		char *buffer = new char[size];
-		message->SerializeToArray(buffer, size);
-		send(sock, buffer, strlen(buffer), 0);
+		char *buffer = new char[size + 2];
+		buffer[0] = static_cast<uint8_t>(size);
+		buffer[0] |= static_cast<uint8_t>(0x80);
+		buffer[1] = static_cast<uint8_t>(size >> 7);
+		message->SerializeToArray(buffer + 2, size);
+		send(sock, buffer, size + 2, 0);
 		delete[] buffer;
 
-		delete position;
-		delete data;
-		delete thumbPosition;
-		delete thumb;
-		delete indexPosition;
-		delete index;
-		delete middlePosition;
-		delete middle;
-		delete ringPosition;
-		delete ring;
-		delete pinkyPosition;
-		delete pinky;
-		delete fingerState;
 		delete message;
 
 		LOG(INFO) << recognized_hand_movement_scrolling->c_str();
