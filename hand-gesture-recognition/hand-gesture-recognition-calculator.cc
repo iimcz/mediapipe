@@ -17,304 +17,307 @@
 namespace mediapipe
 {
 
-    namespace
-    {
-        constexpr char normRectTag[] = "NORM_RECT";
-        constexpr char normalizedLandmarkListTag[] = "NORM_LANDMARKS";
-        constexpr char recognizedHandMouvementScrollingTag[] = "RECOGNIZED_HAND_GESTURE";
-    }
+	namespace
+	{
+		constexpr char normRectTag[] = "NORM_RECT";
+		constexpr char normalizedLandmarkListTag[] = "NORM_LANDMARKS";
+		constexpr char recognizedHandMouvementScrollingTag[] = "RECOGNIZED_HAND_GESTURE";
+	}
 
-    class HandGestureRecognitionCalculator : public CalculatorBase
-    {
-    public:
-    	
-    		HandGestureRecognitionCalculator() {
-      		if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
-						LOG(INFO) << "Socket creation error";
-					}
+	class HandGestureRecognitionCalculator : public CalculatorBase
+	{
+	public:
+		HandGestureRecognitionCalculator()
+		{
+			if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+			{
+				LOG(INFO) << "Socket creation error";
+			}
 
-					serv_addr.sin_family = AF_INET;
-					serv_addr.sin_port = htons(PORT);
+			serv_addr.sin_family = AF_INET;
+			serv_addr.sin_port = htons(PORT);
 
-					if (inet_pton(AF_INET, IP, &serv_addr.sin_addr) <= 0) {
-						LOG(INFO) << "Invalid address";
-					}
+			if (inet_pton(AF_INET, IP, &serv_addr.sin_addr) <= 0)
+			{
+				LOG(INFO) << "Invalid address";
+			}
 
-					if ((client_fd = connect(sock, (struct sockaddr*)&serv_addr, sizeof(serv_addr))) < 0) {
-						LOG(INFO) << "Connection Failed";
-					}
-    		}
-    			
-        static ::mediapipe::Status GetContract(CalculatorContract *cc);
-        ::mediapipe::Status Open(CalculatorContext *cc) override;
+			if ((client_fd = connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr))) < 0)
+			{
+				LOG(INFO) << "Connection Failed";
+			}
+		}
 
-        ::mediapipe::Status Process(CalculatorContext *cc) override;
+		static ::mediapipe::Status GetContract(CalculatorContract *cc);
+		::mediapipe::Status Open(CalculatorContext *cc) override;
 
-    private:
-        float previous_x_center;
-        float previous_y_center;
-        float previous_angle;
-        float previous_rectangle_width;
-        float previous_rectangle_height;
-        
-        int sock = 0, client_fd;
-				struct sockaddr_in serv_addr;
+		::mediapipe::Status Process(CalculatorContext *cc) override;
 
-        float get_Euclidean_DistanceAB(float a_x, float a_y, float b_x, float b_y)
-        {
-            float dist = std::pow(a_x - b_x, 2) + pow(a_y - b_y, 2);
-            return std::sqrt(dist);
-        }
+	private:
+		float previous_x_center;
+		float previous_y_center;
+		float previous_angle;
+		float previous_rectangle_width;
+		float previous_rectangle_height;
 
-        bool isThumbNearFirstFinger(NormalizedLandmark point1, NormalizedLandmark point2)
-        {
-            float distance = this->get_Euclidean_DistanceAB(point1.x(), point1.y(), point2.x(), point2.y());
-            return distance < 0.1;
-        }
+		int sock = 0, client_fd;
+		struct sockaddr_in serv_addr;
 
-        float getAngleABC(float a_x, float a_y, float b_x, float b_y, float c_x, float c_y)
-        {
-            float ab_x = b_x - a_x;
-            float ab_y = b_y - a_y;
-            float cb_x = b_x - c_x;
-            float cb_y = b_y - c_y;
+		float get_Euclidean_DistanceAB(float a_x, float a_y, float b_x, float b_y)
+		{
+			float dist = std::pow(a_x - b_x, 2) + pow(a_y - b_y, 2);
+			return std::sqrt(dist);
+		}
 
-            float dot = (ab_x * cb_x + ab_y * cb_y);
-            float cross = (ab_x * cb_y - ab_y * cb_x);
+		bool isThumbNearFirstFinger(NormalizedLandmark point1, NormalizedLandmark point2)
+		{
+			float distance = this->get_Euclidean_DistanceAB(point1.x(), point1.y(), point2.x(), point2.y());
+			return distance < 0.1;
+		}
 
-            float alpha = std::atan2(cross, dot);
+		float getAngleABC(float a_x, float a_y, float b_x, float b_y, float c_x, float c_y)
+		{
+			float ab_x = b_x - a_x;
+			float ab_y = b_y - a_y;
+			float cb_x = b_x - c_x;
+			float cb_y = b_y - c_y;
 
-            return alpha;
-        }
+			float dot = (ab_x * cb_x + ab_y * cb_y);
+			float cross = (ab_x * cb_y - ab_y * cb_x);
 
-        int radianToDegree(float radian)
-        {
-            return (int)floor(radian * 180. / M_PI + 0.5);
-        }
-    };
+			float alpha = std::atan2(cross, dot);
 
-    REGISTER_CALCULATOR(HandGestureRecognitionCalculator);
+			return alpha;
+		}
 
-    ::mediapipe::Status HandGestureRecognitionCalculator::GetContract(
-        CalculatorContract *cc)
-    {
-        RET_CHECK(cc->Inputs().HasTag(normalizedLandmarkListTag));
-        cc->Inputs().Tag(normalizedLandmarkListTag).Set<mediapipe::NormalizedLandmarkList>();
+		int radianToDegree(float radian)
+		{
+			return (int)floor(radian * 180. / M_PI + 0.5);
+		}
+	};
 
-        RET_CHECK(cc->Inputs().HasTag(normRectTag));
-        cc->Inputs().Tag(normRectTag).Set<NormalizedRect>();
+	REGISTER_CALCULATOR(HandGestureRecognitionCalculator);
 
-        RET_CHECK(cc->Outputs().HasTag(recognizedHandMouvementScrollingTag));
-        cc->Outputs().Tag(recognizedHandMouvementScrollingTag).Set<std::string>();
+	::mediapipe::Status HandGestureRecognitionCalculator::GetContract(
+		CalculatorContract *cc)
+	{
+		RET_CHECK(cc->Inputs().HasTag(normalizedLandmarkListTag));
+		cc->Inputs().Tag(normalizedLandmarkListTag).Set<mediapipe::NormalizedLandmarkList>();
 
-        return ::mediapipe::OkStatus();
-    }
+		RET_CHECK(cc->Inputs().HasTag(normRectTag));
+		cc->Inputs().Tag(normRectTag).Set<NormalizedRect>();
 
-    ::mediapipe::Status HandGestureRecognitionCalculator::Open(
-        CalculatorContext *cc)
-    {
-        cc->SetOffset(TimestampDiff(0));
-        return ::mediapipe::OkStatus();
-    }
+		RET_CHECK(cc->Outputs().HasTag(recognizedHandMouvementScrollingTag));
+		cc->Outputs().Tag(recognizedHandMouvementScrollingTag).Set<std::string>();
 
-    ::mediapipe::Status HandGestureRecognitionCalculator::Process(
-        CalculatorContext *cc)
-    {
-        Counter *frameCounter = cc->GetCounter("HandGestureRecognitionCalculator");
-        frameCounter->Increment();
+		return ::mediapipe::OkStatus();
+	}
 
-        std::string *recognized_hand_movement_scrolling = new std::string("___");
-        std::string *recognized_hand_movement_zooming = new std::string("___");
+	::mediapipe::Status HandGestureRecognitionCalculator::Open(
+		CalculatorContext *cc)
+	{
+		cc->SetOffset(TimestampDiff(0));
+		return ::mediapipe::OkStatus();
+	}
 
-        const auto rect = &(cc->Inputs().Tag(normRectTag).Get<NormalizedRect>());
-        const float height = rect->height();
-        const float x_center = rect->x_center();
-        const float  = rect->y_center();
+	::mediapipe::Status HandGestureRecognitionCalculator::Process(
+		CalculatorContext *cc)
+	{
+		Counter *frameCounter = cc->GetCounter("HandGestureRecognitionCalculator");
+		frameCounter->Increment();
 
-        if (cc->Inputs().Tag(normalizedLandmarkListTag).IsEmpty())
-                return ::mediapipe::OkStatus();
-        const auto &landmarkList = cc->Inputs()
-                                       .Tag(normalizedLandmarkListTag)
-                                       .Get<mediapipe::NormalizedLandmarkList>();
-        RET_CHECK_GT(landmarkList.landmark_size(), 0) << "Input landmark vector is empty.";
+		std::string *recognized_hand_movement_scrolling = new std::string("___");
+		std::string *recognized_hand_movement_zooming = new std::string("___");
 
-				naki3d::common::protocol::Vector3* position = new naki3d::common::protocol::Vector3();
-				position->set_x(landmarkList.landmark(0).x());
-				position->set_y(landmarkList.landmark(0).y());
-				position->set_z(landmarkList.landmark(0).z());
-				
-				naki3d::common::protocol::MediapipeHandTrackingData* data = new naki3d::common::protocol::MediapipeHandTrackingData();
-				data->set_side(naki3d::common::protocol::HandSide::RIGHT);
-				data->set_allocated_center_position(position);
-				data->set_gesture(naki3d::common::protocol::HandGestureType::NONE);
+		const auto rect = &(cc->Inputs().Tag(normRectTag).Get<NormalizedRect>());
+		const float height = rect->height();
+		const float x_center = rect->x_center();
+		const float = rect->y_center();
 
-        //Scrolling
-        if (this->previous_x_center)
-        {
-            const float movementDistance = this->get_Euclidean_DistanceAB(x_center, y_center, this->previous_x_center, this->previous_y_center);
+		if (cc->Inputs().Tag(normalizedLandmarkListTag).IsEmpty())
+			return ::mediapipe::OkStatus();
+		const auto &landmarkList = cc->Inputs()
+									   .Tag(normalizedLandmarkListTag)
+									   .Get<mediapipe::NormalizedLandmarkList>();
+		RET_CHECK_GT(landmarkList.landmark_size(), 0) << "Input landmark vector is empty.";
 
-            const float movementDistanceFactor = 0.3; //movement threshold.
+		naki3d::common::protocol::Vector3 *position = new naki3d::common::protocol::Vector3();
+		position->set_x(landmarkList.landmark(0).x());
+		position->set_y(landmarkList.landmark(0).y());
+		position->set_z(landmarkList.landmark(0).z());
 
-            const float movementDistanceThreshold = movementDistanceFactor * height;
-            
-            if (movementDistance > movementDistanceThreshold)
-            {
-                const float angle = this->radianToDegree(this->getAngleABC(x_center, y_center, this->previous_x_center, this->previous_y_center, this->previous_x_center + 0.1, this->previous_y_center));
-                if (angle >= -45 && angle < 45)
-                {
-                    recognized_hand_movement_scrolling = new std::string("Scrolling right");
-                    data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_RIGHT);
-                }
-                else if (angle >= 45 && angle < 135)
-                {
-                    recognized_hand_movement_scrolling = new std::string("Scrolling up");
-                    data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_UP);
-                }
-                else if (angle >= 135 || angle < -135)
-                {
-                    recognized_hand_movement_scrolling = new std::string("Scrolling left");
-                    data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_LEFT);
-                }
-                else if (angle >= -135 && angle < -45)
-                {
-                    recognized_hand_movement_scrolling = new std::string("Scrolling down");
-                    data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_DOWN);
-                }
-            }
-        }
-        this->previous_x_center = x_center;
-        this->previous_y_center = y_center;
-        
-        //Finger state
-        bool thumbIsOpen = false;
-    		bool firstFingerIsOpen = false;
-    		bool secondFingerIsOpen = false;
-    		bool thirdFingerIsOpen = false;
-    		bool fourthFingerIsOpen = false;
-    		
-    		naki3d::common::protocol::Vector3* thumbPosition = new naki3d::common::protocol::Vector3();
-				thumbPosition->set_x(landmarkList.landmark(4).x());
-				thumbPosition->set_y(landmarkList.landmark(4).y());
-				thumbPosition->set_z(landmarkList.landmark(4).z());
-	
-				naki3d::common::protocol::FingerState* thumb = new naki3d::common::protocol::FingerState();
-				thumb->set_closed(true);
-				thumb->set_allocated_position(thumbPosition);
-	
-				naki3d::common::protocol::Vector3* indexPosition = new naki3d::common::protocol::Vector3();
-				indexPosition->set_x(landmarkList.landmark(8).x());
-				indexPosition->set_y(landmarkList.landmark(8).y());
-				indexPosition->set_z(landmarkList.landmark(8).z());
-		
-				naki3d::common::protocol::FingerState* index = new naki3d::common::protocol::FingerState();
-				index->set_closed(true);
-				index->set_allocated_position(indexPosition);
-	
-				naki3d::common::protocol::Vector3* middlePosition = new naki3d::common::protocol::Vector3();
-				middlePosition->set_x(landmarkList.landmark(12).x());
-				middlePosition->set_y(landmarkList.landmark(12).y());
-				middlePosition->set_z(landmarkList.landmark(12).z());
-	
-				naki3d::common::protocol::FingerState* middle = new naki3d::common::protocol::FingerState();
-				middle->set_closed(true);
-				middle->set_allocated_position(middlePosition);
-	
-				naki3d::common::protocol::Vector3* ringPosition = new naki3d::common::protocol::Vector3();
-				ringPosition->set_x(landmarkList.landmark(16).x());
-				ringPosition->set_y(landmarkList.landmark(16).y());
-				ringPosition->set_z(landmarkList.landmark(16).z());
-	
-				naki3d::common::protocol::FingerState* ring = new naki3d::common::protocol::FingerState();
-				ring->set_closed(true);
-				ring->set_allocated_position(ringPosition);
-	
-				naki3d::common::protocol::Vector3* pinkyPosition = new naki3d::common::protocol::Vector3();
-				pinkyPosition->set_x(landmarkList.landmark(20).x());
-				pinkyPosition->set_y(landmarkList.landmark(20).y());
-				pinkyPosition->set_z(landmarkList.landmark(20).z());
-	
-				naki3d::common::protocol::FingerState* pinky = new naki3d::common::protocol::FingerState();
-				pinky->set_closed(true);
-				pinky->set_allocated_position(pinkyPosition);
-    		
-    		float pseudoFixKeyPoint = landmarkList.landmark(2).x();
-    		if (landmarkList.landmark(3).x() < pseudoFixKeyPoint && landmarkList.landmark(4).x() < pseudoFixKeyPoint)
-    		{
-        	thumbIsOpen = true;
-        	thumb->set_closed(false);
-    		}
+		naki3d::common::protocol::MediapipeHandTrackingData *data = new naki3d::common::protocol::MediapipeHandTrackingData();
+		data->set_side(naki3d::common::protocol::HandSide::RIGHT);
+		data->set_allocated_center_position(position);
+		data->set_gesture(naki3d::common::protocol::HandGestureType::NONE);
 
-    		pseudoFixKeyPoint = landmarkList.landmark(6).y();
-    		if (landmarkList.landmark(7).y() < pseudoFixKeyPoint && landmarkList.landmark(8).y() < pseudoFixKeyPoint)
-    		{
-        	firstFingerIsOpen = true;
-        	index->set_closed(false);
-    		}
+		// Scrolling
+		if (this->previous_x_center)
+		{
+			const float movementDistance = this->get_Euclidean_DistanceAB(x_center, y_center, this->previous_x_center, this->previous_y_center);
 
-    		pseudoFixKeyPoint = landmarkList.landmark(10).y();
-    		if (landmarkList.landmark(11).y() < pseudoFixKeyPoint && landmarkList.landmark(12).y() < pseudoFixKeyPoint)
-    		{
-        	secondFingerIsOpen = true;
-        	middle->set_closed(false);
-    		}
+			const float movementDistanceFactor = 0.3; // movement threshold.
 
-    		pseudoFixKeyPoint = landmarkList.landmark(14).y();
-    		if (landmarkList.landmark(15).y() < pseudoFixKeyPoint && landmarkList.landmark(16).y() < pseudoFixKeyPoint)
-    		{
-        	thirdFingerIsOpen = true;
-        	ring->set_closed(false);
-    		}
+			const float movementDistanceThreshold = movementDistanceFactor * height;
 
-    		pseudoFixKeyPoint = landmarkList.landmark(18).y();
-    		if (landmarkList.landmark(19).y() < pseudoFixKeyPoint && landmarkList.landmark(20).y() < pseudoFixKeyPoint)
-    		{
-        	fourthFingerIsOpen = true;
-        	pinky->set_closed(false);
-    		}
+			if (movementDistance > movementDistanceThreshold)
+			{
+				const float angle = this->radianToDegree(this->getAngleABC(x_center, y_center, this->previous_x_center, this->previous_y_center, this->previous_x_center + 0.1, this->previous_y_center));
+				if (angle >= -45 && angle < 45)
+				{
+					recognized_hand_movement_scrolling = new std::string("Scrolling right");
+					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_RIGHT);
+				}
+				else if (angle >= 45 && angle < 135)
+				{
+					recognized_hand_movement_scrolling = new std::string("Scrolling up");
+					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_UP);
+				}
+				else if (angle >= 135 || angle < -135)
+				{
+					recognized_hand_movement_scrolling = new std::string("Scrolling left");
+					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_LEFT);
+				}
+				else if (angle >= -135 && angle < -45)
+				{
+					recognized_hand_movement_scrolling = new std::string("Scrolling down");
+					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_DOWN);
+				}
+			}
+		}
+		this->previous_x_center = x_center;
+		this->previous_y_center = y_center;
 
-				naki3d::common::protocol::HandFingerState* fingerState = new naki3d::common::protocol::HandFingerState();
-				fingerState->set_allocated_thumb(thumb);
-				fingerState->set_allocated_index(index);
-				fingerState->set_allocated_middle(middle);
-				fingerState->set_allocated_ring(ring);
-				fingerState->set_allocated_pinky(pinky);
-			
-				data->set_allocated_finger_state(fingerState);
-			
-				naki3d::common::protocol::SensorMessage* message = new naki3d::common::protocol::SensorMessage();
-				message->set_sensor_id("rpi-cammera");
-				const auto p1 = std::chrono::system_clock::now();
-				message->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
-				message->set_allocated_handtracking(data);
-				
-				size_t size = message->ByteSizeLong(); 
-				char *buffer = new char[size];
-				message->SerializeToArray(buffer, size);
-				send(sock, buffer, strlen(buffer), 0);
-				delete[] buffer;
-				
-				delete position;
-				delete data;
-				delete thumbPosition;
-				delete thumb;
-				delete indexPosition;
-				delete index;
-				delete middlePosition;
-				delete middle;
-				delete ringPosition;
-				delete ring;
-				delete pinkyPosition;
-				delete pinky;
-				delete fingerState;
-				delete message;
-		
-        LOG(INFO) << recognized_hand_movement_scrolling->c_str();
+		// Finger state
+		bool thumbIsOpen = false;
+		bool firstFingerIsOpen = false;
+		bool secondFingerIsOpen = false;
+		bool thirdFingerIsOpen = false;
+		bool fourthFingerIsOpen = false;
 
-        cc->Outputs()
-            .Tag(recognizedHandMouvementScrollingTag)
-            .Add(recognized_hand_movement_scrolling, cc->InputTimestamp());
+		naki3d::common::protocol::Vector3 *thumbPosition = new naki3d::common::protocol::Vector3();
+		thumbPosition->set_x(landmarkList.landmark(4).x());
+		thumbPosition->set_y(landmarkList.landmark(4).y());
+		thumbPosition->set_z(landmarkList.landmark(4).z());
 
-        return ::mediapipe::OkStatus();
-    }
+		naki3d::common::protocol::FingerState *thumb = new naki3d::common::protocol::FingerState();
+		thumb->set_closed(true);
+		thumb->set_allocated_position(thumbPosition);
+
+		naki3d::common::protocol::Vector3 *indexPosition = new naki3d::common::protocol::Vector3();
+		indexPosition->set_x(landmarkList.landmark(8).x());
+		indexPosition->set_y(landmarkList.landmark(8).y());
+		indexPosition->set_z(landmarkList.landmark(8).z());
+
+		naki3d::common::protocol::FingerState *index = new naki3d::common::protocol::FingerState();
+		index->set_closed(true);
+		index->set_allocated_position(indexPosition);
+
+		naki3d::common::protocol::Vector3 *middlePosition = new naki3d::common::protocol::Vector3();
+		middlePosition->set_x(landmarkList.landmark(12).x());
+		middlePosition->set_y(landmarkList.landmark(12).y());
+		middlePosition->set_z(landmarkList.landmark(12).z());
+
+		naki3d::common::protocol::FingerState *middle = new naki3d::common::protocol::FingerState();
+		middle->set_closed(true);
+		middle->set_allocated_position(middlePosition);
+
+		naki3d::common::protocol::Vector3 *ringPosition = new naki3d::common::protocol::Vector3();
+		ringPosition->set_x(landmarkList.landmark(16).x());
+		ringPosition->set_y(landmarkList.landmark(16).y());
+		ringPosition->set_z(landmarkList.landmark(16).z());
+
+		naki3d::common::protocol::FingerState *ring = new naki3d::common::protocol::FingerState();
+		ring->set_closed(true);
+		ring->set_allocated_position(ringPosition);
+
+		naki3d::common::protocol::Vector3 *pinkyPosition = new naki3d::common::protocol::Vector3();
+		pinkyPosition->set_x(landmarkList.landmark(20).x());
+		pinkyPosition->set_y(landmarkList.landmark(20).y());
+		pinkyPosition->set_z(landmarkList.landmark(20).z());
+
+		naki3d::common::protocol::FingerState *pinky = new naki3d::common::protocol::FingerState();
+		pinky->set_closed(true);
+		pinky->set_allocated_position(pinkyPosition);
+
+		float pseudoFixKeyPoint = landmarkList.landmark(2).x();
+		if (landmarkList.landmark(3).x() < pseudoFixKeyPoint && landmarkList.landmark(4).x() < pseudoFixKeyPoint)
+		{
+			thumbIsOpen = true;
+			thumb->set_closed(false);
+		}
+
+		pseudoFixKeyPoint = landmarkList.landmark(6).y();
+		if (landmarkList.landmark(7).y() < pseudoFixKeyPoint && landmarkList.landmark(8).y() < pseudoFixKeyPoint)
+		{
+			firstFingerIsOpen = true;
+			index->set_closed(false);
+		}
+
+		pseudoFixKeyPoint = landmarkList.landmark(10).y();
+		if (landmarkList.landmark(11).y() < pseudoFixKeyPoint && landmarkList.landmark(12).y() < pseudoFixKeyPoint)
+		{
+			secondFingerIsOpen = true;
+			middle->set_closed(false);
+		}
+
+		pseudoFixKeyPoint = landmarkList.landmark(14).y();
+		if (landmarkList.landmark(15).y() < pseudoFixKeyPoint && landmarkList.landmark(16).y() < pseudoFixKeyPoint)
+		{
+			thirdFingerIsOpen = true;
+			ring->set_closed(false);
+		}
+
+		pseudoFixKeyPoint = landmarkList.landmark(18).y();
+		if (landmarkList.landmark(19).y() < pseudoFixKeyPoint && landmarkList.landmark(20).y() < pseudoFixKeyPoint)
+		{
+			fourthFingerIsOpen = true;
+			pinky->set_closed(false);
+		}
+
+		naki3d::common::protocol::HandFingerState *fingerState = new naki3d::common::protocol::HandFingerState();
+		fingerState->set_allocated_thumb(thumb);
+		fingerState->set_allocated_index(index);
+		fingerState->set_allocated_middle(middle);
+		fingerState->set_allocated_ring(ring);
+		fingerState->set_allocated_pinky(pinky);
+
+		data->set_allocated_finger_state(fingerState);
+
+		naki3d::common::protocol::SensorMessage *message = new naki3d::common::protocol::SensorMessage();
+		message->set_sensor_id("rpi-cammera");
+		const auto p1 = std::chrono::system_clock::now();
+		message->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+		message->set_allocated_handtracking(data);
+
+		size_t size = message->ByteSizeLong();
+		char *buffer = new char[size];
+		message->SerializeToArray(buffer, size);
+		send(sock, buffer, strlen(buffer), 0);
+		delete[] buffer;
+
+		delete position;
+		delete data;
+		delete thumbPosition;
+		delete thumb;
+		delete indexPosition;
+		delete index;
+		delete middlePosition;
+		delete middle;
+		delete ringPosition;
+		delete ring;
+		delete pinkyPosition;
+		delete pinky;
+		delete fingerState;
+		delete message;
+
+		LOG(INFO) << recognized_hand_movement_scrolling->c_str();
+
+		cc->Outputs()
+			.Tag(recognizedHandMouvementScrollingTag)
+			.Add(recognized_hand_movement_scrolling, cc->InputTimestamp());
+
+		return ::mediapipe::OkStatus();
+	}
 
 }
