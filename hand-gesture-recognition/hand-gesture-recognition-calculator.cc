@@ -21,6 +21,7 @@ namespace mediapipe
 	{
 		constexpr char normRectTag[] = "NORM_RECT";
 		constexpr char normalizedLandmarkListTag[] = "NORM_LANDMARKS";
+		constexpr char landmarkListTag[] = "LANDMARKS";
 		constexpr char recognizedHandMouvementScrollingTag[] = "RECOGNIZED_HAND_GESTURE";
 	}
 
@@ -107,6 +108,9 @@ namespace mediapipe
 		RET_CHECK(cc->Inputs().HasTag(normRectTag));
 		cc->Inputs().Tag(normRectTag).Set<NormalizedRect>();
 
+		RET_CHECK(cc->Inputs().HasTag(landmarkListTag));
+		cc->Inputs().Tag(landmarkListTag).Set<mediapipe::LandmarkList>();
+
 		RET_CHECK(cc->Outputs().HasTag(recognizedHandMouvementScrollingTag));
 		cc->Outputs().Tag(recognizedHandMouvementScrollingTag).Set<std::string>();
 
@@ -141,10 +145,18 @@ namespace mediapipe
 									   .Get<mediapipe::NormalizedLandmarkList>();
 		RET_CHECK_GT(landmarkList.landmark_size(), 0) << "Input landmark vector is empty.";
 
+		if (cc->Inputs().Tag(landmarkListTag).IsEmpty())
+			return ::mediapipe::OkStatus();
+
+		const auto &landmarks = cc->Inputs()
+									   .Tag(landmarkListTag)
+									   .Get<mediapipe::LandmarkList>();
+		RET_CHECK_GT(landmarks.landmark_size(), 0) << "Input landmark vector is empty.";
+
 		naki3d::common::protocol::Vector3 *position = new naki3d::common::protocol::Vector3();
-		position->set_x(landmarkList.landmark(0).x());
-		position->set_y(landmarkList.landmark(0).y());
-		position->set_z(landmarkList.landmark(0).z());
+		position->set_y(landmarks.landmark(0).y());
+		position->set_z(landmarks.landmark(0).z());
+		position->set_x(landmarks.landmark(0).x());
 
 		naki3d::common::protocol::MediapipeHandTrackingData *data = new naki3d::common::protocol::MediapipeHandTrackingData();
 		data->set_side(naki3d::common::protocol::HandSide::RIGHT);
@@ -196,45 +208,45 @@ namespace mediapipe
 		bool fourthFingerIsOpen = false;
 
 		naki3d::common::protocol::Vector3 *thumbPosition = new naki3d::common::protocol::Vector3();
-		thumbPosition->set_x(landmarkList.landmark(4).x());
-		thumbPosition->set_y(landmarkList.landmark(4).y());
-		thumbPosition->set_z(landmarkList.landmark(4).z());
+		thumbPosition->set_x(landmarks.landmark(4).x());
+		thumbPosition->set_y(landmarks.landmark(4).y());
+		thumbPosition->set_z(landmarks.landmark(4).z());
 
 		naki3d::common::protocol::FingerState *thumb = new naki3d::common::protocol::FingerState();
 		thumb->set_closed(true);
 		thumb->set_allocated_position(thumbPosition);
 
 		naki3d::common::protocol::Vector3 *indexPosition = new naki3d::common::protocol::Vector3();
-		indexPosition->set_x(landmarkList.landmark(8).x());
-		indexPosition->set_y(landmarkList.landmark(8).y());
-		indexPosition->set_z(landmarkList.landmark(8).z());
+		indexPosition->set_x(landmarks.landmark(8).x());
+		indexPosition->set_y(landmarks.landmark(8).y());
+		indexPosition->set_z(landmarks.landmark(8).z());
 
 		naki3d::common::protocol::FingerState *index = new naki3d::common::protocol::FingerState();
 		index->set_closed(true);
 		index->set_allocated_position(indexPosition);
 
 		naki3d::common::protocol::Vector3 *middlePosition = new naki3d::common::protocol::Vector3();
-		middlePosition->set_x(landmarkList.landmark(12).x());
-		middlePosition->set_y(landmarkList.landmark(12).y());
-		middlePosition->set_z(landmarkList.landmark(12).z());
+		middlePosition->set_x(landmarks.landmark(12).x());
+		middlePosition->set_y(landmarks.landmark(12).y());
+		middlePosition->set_z(landmarks.landmark(12).z());
 
 		naki3d::common::protocol::FingerState *middle = new naki3d::common::protocol::FingerState();
 		middle->set_closed(true);
 		middle->set_allocated_position(middlePosition);
 
 		naki3d::common::protocol::Vector3 *ringPosition = new naki3d::common::protocol::Vector3();
-		ringPosition->set_x(landmarkList.landmark(16).x());
-		ringPosition->set_y(landmarkList.landmark(16).y());
-		ringPosition->set_z(landmarkList.landmark(16).z());
+		ringPosition->set_x(landmarks.landmark(16).x());
+		ringPosition->set_y(landmarks.landmark(16).y());
+		ringPosition->set_z(landmarks.landmark(16).z());
 
 		naki3d::common::protocol::FingerState *ring = new naki3d::common::protocol::FingerState();
 		ring->set_closed(true);
 		ring->set_allocated_position(ringPosition);
 
 		naki3d::common::protocol::Vector3 *pinkyPosition = new naki3d::common::protocol::Vector3();
-		pinkyPosition->set_x(landmarkList.landmark(20).x());
-		pinkyPosition->set_y(landmarkList.landmark(20).y());
-		pinkyPosition->set_z(landmarkList.landmark(20).z());
+		pinkyPosition->set_x(landmarks.landmark(20).x());
+		pinkyPosition->set_y(landmarks.landmark(20).y());
+		pinkyPosition->set_z(landmarks.landmark(20).z());
 
 		naki3d::common::protocol::FingerState *pinky = new naki3d::common::protocol::FingerState();
 		pinky->set_closed(true);

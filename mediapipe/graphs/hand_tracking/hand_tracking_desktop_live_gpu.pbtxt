@@ -46,3 +46,11 @@ node {
   input_stream: "NORM_RECTS:1:hand_rects_from_landmarks"
   output_stream: "IMAGE:output_video"
 }
+
+node {
+  calculator: "HandGestureRecognitionCalculator"
+  input_stream: "NORM_LANDMARKS:scaled_landmarks"
+  input_stream: "LANDMARKS:hand_landmarks"
+  input_stream: "NORM_RECT:hand_rect_for_next_frame"
+  output_stream: "RECOGNIZED_HAND_GESTURE:recognized_hand_gesture"
+}
