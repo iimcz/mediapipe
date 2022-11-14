@@ -11,8 +11,8 @@
 #include <sys/socket.h>
 #include <unistd.h>
 
-#define PORT 8080
-#define IP "127.0.0.1"
+#define PORT 5000
+#define IP "192.168.22.172"
 
 namespace mediapipe
 {
@@ -47,6 +47,7 @@ namespace mediapipe
 			{
 				LOG(INFO) << "Connection Failed";
 			}
+			LOG(INFO) << "Socket connected";
 		}
 
 		static ::mediapipe::Status GetContract(CalculatorContract *cc);
@@ -136,7 +137,7 @@ namespace mediapipe
 		const auto rect = &(cc->Inputs().Tag(normRectTag).Get<NormalizedRect>());
 		const float height = rect->height();
 		const float x_center = rect->x_center();
-		const float = rect->y_center();
+		const float y_center = rect->y_center();
 
 		if (cc->Inputs().Tag(normalizedLandmarkListTag).IsEmpty())
 			return ::mediapipe::OkStatus();
@@ -154,14 +155,15 @@ namespace mediapipe
 		RET_CHECK_GT(landmarks.landmark_size(), 0) << "Input landmark vector is empty.";
 
 		naki3d::common::protocol::Vector3 *position = new naki3d::common::protocol::Vector3();
-		position->set_y(landmarks.landmark(0).y());
-		position->set_z(landmarks.landmark(0).z());
-		position->set_x(landmarks.landmark(0).x());
+		position->set_y(y_center);
+		position->set_z(rect->width());
+		// position->set_z(landmarkList.landmark(0).z());
+		position->set_x(x_center);
 
 		naki3d::common::protocol::MediapipeHandTrackingData *data = new naki3d::common::protocol::MediapipeHandTrackingData();
 		data->set_side(naki3d::common::protocol::HandSide::RIGHT);
 		data->set_allocated_center_position(position);
-		data->set_gesture(naki3d::common::protocol::HandGestureType::NONE);
+		data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_NONE);
 
 		// Scrolling
 		if (this->previous_x_center)

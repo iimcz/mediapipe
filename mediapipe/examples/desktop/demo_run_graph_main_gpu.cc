@@ -179,7 +179,7 @@ absl::Status RunMPPGraph() {
       cv::imshow(kWindowName, output_frame_mat);
       // Press any key to exit.
       const int pressed_key = cv::waitKey(5);
-      if (pressed_key >= 0 && pressed_key != 255) grab_frames = false;
+      //if (pressed_key >= 0 && pressed_key != 255) grab_frames = false;
     }
   }
 
