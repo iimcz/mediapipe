@@ -208,6 +208,9 @@ namespace mediapipe
 		bool secondFingerIsOpen = false;
 		bool thirdFingerIsOpen = false;
 		bool fourthFingerIsOpen = false;
+		bool handIsOpen = false;
+		bool handStatus = false;
+		const float pinchThreshold = 0.1;
 
 		naki3d::common::protocol::Vector3 *thumbPosition = new naki3d::common::protocol::Vector3();
 		thumbPosition->set_x(landmarks.landmark(4).x());
@@ -312,6 +315,52 @@ namespace mediapipe
 		message->SerializeToArray(buffer + 2, size);
 		send(sock, buffer, size + 2, 0);
 		delete[] buffer;
+
+		if (!thumbIsOpen && !firstFingerIsOpen && !secondFingerIsOpen && !thirdFingerIsOpen && !fourthFingerIsOpen)
+		{
+			handIsOpen = false;
+		}else
+		{
+			handIsOpen = true;
+		}
+
+		if (handIsOpen != handStatus)
+		{
+			handStatus = handIsOpen;
+			if (handIsOpen)
+			{
+				//LOG(INFO) << "Open hand";
+				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_OPEN_HAND);
+			}else
+			{
+				//LOG(INFO) << "Close hand";
+				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_CLOSE_HAND);
+			}
+
+			size_t size = message->ByteSizeLong();
+			char *buffer = new char[size + 2];
+			buffer[0] = static_cast<uint8_t>(size);
+			buffer[0] |= static_cast<uint8_t>(0x80);
+			buffer[1] = static_cast<uint8_t>(size >> 7);
+			message->SerializeToArray(buffer + 2, size);
+			send(sock, buffer, size + 2, 0);
+			delete[] buffer;
+		}
+
+		if(get_Euclidean_DistanceAB(landmarkList.landmark(4).x(), landmarkList.landmark(4).y(), landmarkList.landmark(8).x(), landmarkList.landmark(8).y()) <= pinchThreshold)
+		{
+			//LOG(INFO) << "Pinch";
+			data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_PINCH);
+
+			size_t size = message->ByteSizeLong();
+			char *buffer = new char[size + 2];
+			buffer[0] = static_cast<uint8_t>(size);
+			buffer[0] |= static_cast<uint8_t>(0x80);
+			buffer[1] = static_cast<uint8_t>(size >> 7);
+			message->SerializeToArray(buffer + 2, size);
+			send(sock, buffer, size + 2, 0);
+			delete[] buffer;
+		}
 
 		delete message;
 
