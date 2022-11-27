@@ -62,6 +62,10 @@ namespace mediapipe
 		float previous_rectangle_width;
 		float previous_rectangle_height;
 
+		int last_gesture = 0;
+		const float thumb_index_distance_threshold = 0.1;
+		const float index_middle_distance_threshold = 0.4;
+
 		int sock = 0, client_fd;
 		struct sockaddr_in serv_addr;
 
@@ -150,8 +154,8 @@ namespace mediapipe
 			return ::mediapipe::OkStatus();
 
 		const auto &landmarks = cc->Inputs()
-									   .Tag(landmarkListTag)
-									   .Get<mediapipe::LandmarkList>();
+									.Tag(landmarkListTag)
+									.Get<mediapipe::LandmarkList>();
 		RET_CHECK_GT(landmarks.landmark_size(), 0) << "Input landmark vector is empty.";
 
 		naki3d::common::protocol::Vector3 *position = new naki3d::common::protocol::Vector3();
@@ -208,9 +212,7 @@ namespace mediapipe
 		bool secondFingerIsOpen = false;
 		bool thirdFingerIsOpen = false;
 		bool fourthFingerIsOpen = false;
-		bool handIsOpen = false;
-		bool handStatus = false;
-		const float pinchThreshold = 0.1;
+		int detected_gesture = 0;
 
 		naki3d::common::protocol::Vector3 *thumbPosition = new naki3d::common::protocol::Vector3();
 		thumbPosition->set_x(landmarks.landmark(4).x());
@@ -316,25 +318,36 @@ namespace mediapipe
 		send(sock, buffer, size + 2, 0);
 		delete[] buffer;
 
-		if (!thumbIsOpen && !firstFingerIsOpen && !secondFingerIsOpen && !thirdFingerIsOpen && !fourthFingerIsOpen)
+		if (!firstFingerIsOpen && !secondFingerIsOpen && !thirdFingerIsOpen && !fourthFingerIsOpen)
 		{
-			handIsOpen = false;
-		}else
+			detected_gesture = 0;
+			LOG(INFO) << "Closed Hand";
+		}
+		else if (get_Euclidean_DistanceAB(landmarkList.landmark(4).x(), landmarkList.landmark(4).y(), landmarkList.landmark(8).x(), landmarkList.landmark(8).y()) <= thumb_index_distance_threshold &&
+				 get_Euclidean_DistanceAB(landmarkList.landmark(12).x(), landmarkList.landmark(12).y(), landmarkList.landmark(8).x(), landmarkList.landmark(8).y()) >= index_middle_distance_threshold)
 		{
-			handIsOpen = true;
+			detected_gesture = 1;
+			LOG(INFO) << "Pinch";
+		}
+		else
+		{
+			detected_gesture = 2;
+			LOG(INFO) << "Open Hand";
 		}
 
-		if (handIsOpen != handStatus)
+		if (detected_gesture != last_gesture)
 		{
-			handStatus = handIsOpen;
-			if (handIsOpen)
+			switch (detected_gesture)
 			{
-				//LOG(INFO) << "Open hand";
-				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_OPEN_HAND);
-			}else
-			{
-				//LOG(INFO) << "Close hand";
-				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_CLOSE_HAND);
+				case 0:
+					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_CLOSE_HAND);
+					break;
+				case 1:
+					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_PINCH);
+					break;
+				case 2:
+					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_OPEN_HAND);
+					break;
 			}
 
 			size_t size = message->ByteSizeLong();
@@ -345,21 +358,8 @@ namespace mediapipe
 			message->SerializeToArray(buffer + 2, size);
 			send(sock, buffer, size + 2, 0);
 			delete[] buffer;
-		}
 
-		if(get_Euclidean_DistanceAB(landmarkList.landmark(4).x(), landmarkList.landmark(4).y(), landmarkList.landmark(8).x(), landmarkList.landmark(8).y()) <= pinchThreshold)
-		{
-			//LOG(INFO) << "Pinch";
-			data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_PINCH);
-
-			size_t size = message->ByteSizeLong();
-			char *buffer = new char[size + 2];
-			buffer[0] = static_cast<uint8_t>(size);
-			buffer[0] |= static_cast<uint8_t>(0x80);
-			buffer[1] = static_cast<uint8_t>(size >> 7);
-			message->SerializeToArray(buffer + 2, size);
-			send(sock, buffer, size + 2, 0);
-			delete[] buffer;
+			last_gesture = detected_gesture;
 		}
 
 		delete message;
