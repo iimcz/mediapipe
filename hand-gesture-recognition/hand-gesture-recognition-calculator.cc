@@ -10,6 +10,8 @@
 #include <string.h>
 #include <sys/socket.h>
 #include <unistd.h>
+#include <chrono>
+#include <thread>
 
 #define PORT 5000
 #define IP "192.168.22.172"
@@ -32,7 +34,7 @@ namespace mediapipe
 		{
 			if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0)
 			{
-				LOG(INFO) << "Socket creation error";
+				LOG(ERROR) << "Socket creation error";
 			}
 
 			serv_addr.sin_family = AF_INET;
@@ -40,12 +42,13 @@ namespace mediapipe
 
 			if (inet_pton(AF_INET, IP, &serv_addr.sin_addr) <= 0)
 			{
-				LOG(INFO) << "Invalid address";
+				LOG(ERROR) << "Invalid address";
 			}
 
 			if ((client_fd = connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr))) < 0)
 			{
-				LOG(INFO) << "Connection Failed";
+				LOG(ERROR) << "Connection Failed";
+				reconnect();
 			}
 			LOG(INFO) << "Socket connected";
 		}
@@ -68,6 +71,16 @@ namespace mediapipe
 
 		int sock = 0, client_fd;
 		struct sockaddr_in serv_addr;
+
+		void reconnect()
+		{
+			while((client_fd = connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr))) < 0)
+			{
+				LOG(INFO) << "Reconecting...";
+				std::this_thread::sleep_for(std::chrono::seconds(1));
+			}
+			LOG(INFO) << "Socket connected";
+		}
 
 		float get_Euclidean_DistanceAB(float a_x, float a_y, float b_x, float b_y)
 		{
@@ -315,7 +328,11 @@ namespace mediapipe
 		buffer[0] |= static_cast<uint8_t>(0x80);
 		buffer[1] = static_cast<uint8_t>(size >> 7);
 		message->SerializeToArray(buffer + 2, size);
-		send(sock, buffer, size + 2, 0);
+		if(send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
+		{
+			LOG(ERROR) << "Broken connection";
+			reconnect();
+		}
 		delete[] buffer;
 
 		if (!firstFingerIsOpen && !secondFingerIsOpen && !thirdFingerIsOpen && !fourthFingerIsOpen)
@@ -356,7 +373,11 @@ namespace mediapipe
 			buffer[0] |= static_cast<uint8_t>(0x80);
 			buffer[1] = static_cast<uint8_t>(size >> 7);
 			message->SerializeToArray(buffer + 2, size);
-			send(sock, buffer, size + 2, 0);
+			if(send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
+			{
+				LOG(ERROR) << "Broken connection";
+				reconnect();
+			}
 			delete[] buffer;
 
 			last_gesture = detected_gesture;
