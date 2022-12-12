@@ -45,12 +45,7 @@ namespace mediapipe
 				LOG(ERROR) << "Invalid address";
 			}
 
-			if ((client_fd = connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr))) < 0)
-			{
-				LOG(ERROR) << "Connection Failed";
-				reconnect();
-			}
-			LOG(INFO) << "Socket connected";
+			reconnect(true);
 		}
 
 		static ::mediapipe::Status GetContract(CalculatorContract *cc);
@@ -66,20 +61,47 @@ namespace mediapipe
 		float previous_rectangle_height;
 
 		int last_gesture = 0;
-		const float thumb_index_distance_threshold = 0.1;
-		const float index_middle_distance_threshold = 0.4;
+		const float thumb_index_distance_threshold = 0.03;
+		const float index_middle_distance_threshold = 0.06;
 
 		int sock = 0, client_fd;
 		struct sockaddr_in serv_addr;
 
-		void reconnect()
+		using Time = std::chrono::steady_clock;
+		using float_sec = std::chrono::duration<float>;
+		using float_time_point = std::chrono::time_point<Time, float_sec>;
+
+		bool reconnecting = false;
+		float_time_point reconnect_start;
+
+		void reconnect(bool initial_connection = false)
 		{
-			while((client_fd = connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr))) < 0)
+			if (!reconnecting)
 			{
-				LOG(INFO) << "Reconecting...";
-				std::this_thread::sleep_for(std::chrono::seconds(1));
+				if (!initial_connection)
+				{
+					LOG(ERROR) << "Broken connection";
+				}
+				reconnecting = true;
+				reconnect_start = Time::now();
 			}
-			LOG(INFO) << "Socket connected";
+			else if (Time::now() - reconnect_start > float_sec(1))
+			{
+				reconnect_start = Time::now();
+			}
+			else
+			{
+				return;
+			}
+
+			close(sock);
+			sock = socket(AF_INET, SOCK_STREAM, 0);
+			LOG(INFO) << "Conecting...";
+			if ((client_fd = connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr))) == 0)
+			{
+				LOG(INFO) << "Socket connected";
+				reconnecting = false;
+			}
 		}
 
 		float get_Euclidean_DistanceAB(float a_x, float a_y, float b_x, float b_y)
@@ -148,9 +170,6 @@ namespace mediapipe
 		Counter *frameCounter = cc->GetCounter("HandGestureRecognitionCalculator");
 		frameCounter->Increment();
 
-		std::string *recognized_hand_movement_scrolling = new std::string("___");
-		std::string *recognized_hand_movement_zooming = new std::string("___");
-
 		const auto rect = &(cc->Inputs().Tag(normRectTag).Get<NormalizedRect>());
 		const float height = rect->height();
 		const float x_center = rect->x_center();
@@ -187,7 +206,7 @@ namespace mediapipe
 		{
 			const float movementDistance = this->get_Euclidean_DistanceAB(x_center, y_center, this->previous_x_center, this->previous_y_center);
 
-			const float movementDistanceFactor = 0.3; // movement threshold.
+			const float movementDistanceFactor = 0.15; // movement threshold.
 
 			const float movementDistanceThreshold = movementDistanceFactor * height;
 
@@ -196,22 +215,22 @@ namespace mediapipe
 				const float angle = this->radianToDegree(this->getAngleABC(x_center, y_center, this->previous_x_center, this->previous_y_center, this->previous_x_center + 0.1, this->previous_y_center));
 				if (angle >= -45 && angle < 45)
 				{
-					recognized_hand_movement_scrolling = new std::string("Scrolling right");
+					LOG(INFO) << "Scrolling right";
 					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_RIGHT);
 				}
 				else if (angle >= 45 && angle < 135)
 				{
-					recognized_hand_movement_scrolling = new std::string("Scrolling up");
+					LOG(INFO) << "Scrolling up";
 					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_UP);
 				}
 				else if (angle >= 135 || angle < -135)
 				{
-					recognized_hand_movement_scrolling = new std::string("Scrolling left");
+					LOG(INFO) << "Scrolling left";
 					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_LEFT);
 				}
 				else if (angle >= -135 && angle < -45)
 				{
-					recognized_hand_movement_scrolling = new std::string("Scrolling down");
+					LOG(INFO) << "Scrolling down";
 					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_DOWN);
 				}
 			}
@@ -328,9 +347,8 @@ namespace mediapipe
 		buffer[0] |= static_cast<uint8_t>(0x80);
 		buffer[1] = static_cast<uint8_t>(size >> 7);
 		message->SerializeToArray(buffer + 2, size);
-		if(send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
+		if (send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
 		{
-			LOG(ERROR) << "Broken connection";
 			reconnect();
 		}
 		delete[] buffer;
@@ -338,33 +356,33 @@ namespace mediapipe
 		if (!firstFingerIsOpen && !secondFingerIsOpen && !thirdFingerIsOpen && !fourthFingerIsOpen)
 		{
 			detected_gesture = 0;
-			LOG(INFO) << "Closed Hand";
 		}
 		else if (get_Euclidean_DistanceAB(landmarkList.landmark(4).x(), landmarkList.landmark(4).y(), landmarkList.landmark(8).x(), landmarkList.landmark(8).y()) <= thumb_index_distance_threshold &&
 				 get_Euclidean_DistanceAB(landmarkList.landmark(12).x(), landmarkList.landmark(12).y(), landmarkList.landmark(8).x(), landmarkList.landmark(8).y()) >= index_middle_distance_threshold)
 		{
 			detected_gesture = 1;
-			LOG(INFO) << "Pinch";
 		}
 		else
 		{
 			detected_gesture = 2;
-			LOG(INFO) << "Open Hand";
 		}
 
 		if (detected_gesture != last_gesture)
 		{
 			switch (detected_gesture)
 			{
-				case 0:
-					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_CLOSE_HAND);
-					break;
-				case 1:
-					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_PINCH);
-					break;
-				case 2:
-					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_OPEN_HAND);
-					break;
+			case 0:
+				LOG(INFO) << "Closed Hand";
+				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_CLOSE_HAND);
+				break;
+			case 1:
+				LOG(INFO) << "Pinch";
+				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_PINCH);
+				break;
+			case 2:
+				LOG(INFO) << "Open Hand";
+				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_OPEN_HAND);
+				break;
 			}
 
 			size_t size = message->ByteSizeLong();
@@ -373,9 +391,8 @@ namespace mediapipe
 			buffer[0] |= static_cast<uint8_t>(0x80);
 			buffer[1] = static_cast<uint8_t>(size >> 7);
 			message->SerializeToArray(buffer + 2, size);
-			if(send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
+			if (send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
 			{
-				LOG(ERROR) << "Broken connection";
 				reconnect();
 			}
 			delete[] buffer;
@@ -385,11 +402,11 @@ namespace mediapipe
 
 		delete message;
 
-		LOG(INFO) << recognized_hand_movement_scrolling->c_str();
 
+		// TODO: does this need to be here?
 		cc->Outputs()
 			.Tag(recognizedHandMouvementScrollingTag)
-			.Add(recognized_hand_movement_scrolling, cc->InputTimestamp());
+			.Add(new std::string("___"), cc->InputTimestamp());
 
 		return ::mediapipe::OkStatus();
 	}
