@@ -61,8 +61,13 @@ namespace mediapipe
 		float previous_rectangle_height;
 
 		int last_gesture = 0;
+
 		const float thumb_index_distance_threshold = 0.03;
 		const float index_middle_distance_threshold = 0.06;
+		const float movementDistanceFactor = 0.15; // movement threshold.
+		std::chrono::duration<double> max_frame_time_difference = std::chrono::milliseconds(100);
+
+		std::chrono::time_point<std::chrono::steady_clock> previous_frame_time;
 
 		int sock = 0, client_fd;
 		struct sockaddr_in serv_addr;
@@ -204,39 +209,41 @@ namespace mediapipe
 		// Scrolling
 		if (this->previous_x_center)
 		{
-			const float movementDistance = this->get_Euclidean_DistanceAB(x_center, y_center, this->previous_x_center, this->previous_y_center);
-
-			const float movementDistanceFactor = 0.15; // movement threshold.
-
-			const float movementDistanceThreshold = movementDistanceFactor * height;
-
-			if (movementDistance > movementDistanceThreshold)
+			std::chrono::duration<double> diff = std::chrono::steady_clock::now() - previous_frame_time;
+			if (diff < max_frame_time_difference)
 			{
-				const float angle = this->radianToDegree(this->getAngleABC(x_center, y_center, this->previous_x_center, this->previous_y_center, this->previous_x_center + 0.1, this->previous_y_center));
-				if (angle >= -45 && angle < 45)
+				const float movementDistance = this->get_Euclidean_DistanceAB(x_center, y_center, this->previous_x_center, this->previous_y_center);
+				const float movementDistanceThreshold = movementDistanceFactor * height;
+
+				if (movementDistance > movementDistanceThreshold)
 				{
-					LOG(INFO) << "Scrolling right";
-					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_RIGHT);
-				}
-				else if (angle >= 45 && angle < 135)
-				{
-					LOG(INFO) << "Scrolling up";
-					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_UP);
-				}
-				else if (angle >= 135 || angle < -135)
-				{
-					LOG(INFO) << "Scrolling left";
-					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_LEFT);
-				}
-				else if (angle >= -135 && angle < -45)
-				{
-					LOG(INFO) << "Scrolling down";
-					data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_DOWN);
+					const float angle = this->radianToDegree(this->getAngleABC(x_center, y_center, this->previous_x_center, this->previous_y_center, this->previous_x_center + 0.1, this->previous_y_center));
+					if (angle >= -45 && angle < 45)
+					{
+						LOG(INFO) << "Scrolling right";
+						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_RIGHT);
+					}
+					else if (angle >= 45 && angle < 135)
+					{
+						LOG(INFO) << "Scrolling up";
+						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_UP);
+					}
+					else if (angle >= 135 || angle < -135)
+					{
+						LOG(INFO) << "Scrolling left";
+						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_LEFT);
+					}
+					else if (angle >= -135 && angle < -45)
+					{
+						LOG(INFO) << "Scrolling down";
+						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_DOWN);
+					}
 				}
 			}
 		}
 		this->previous_x_center = x_center;
 		this->previous_y_center = y_center;
+		this->previous_frame_time = std::chrono::steady_clock::now();
 
 		// Finger state
 		bool thumbIsOpen = false;
@@ -401,7 +408,6 @@ namespace mediapipe
 		}
 
 		delete message;
-
 
 		// TODO: does this need to be here?
 		cc->Outputs()
