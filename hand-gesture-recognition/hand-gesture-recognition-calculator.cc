@@ -59,6 +59,8 @@ namespace mediapipe
 		float previous_angle;
 		float previous_rectangle_width;
 		float previous_rectangle_height;
+		float last_x;
+		float last_y;
 
 		int last_gesture = 0;
 
@@ -66,8 +68,10 @@ namespace mediapipe
 		const float index_middle_distance_threshold = 0.06;
 		const float movementDistanceFactor = 0.15; // movement threshold.
 		std::chrono::duration<double> max_frame_time_difference = std::chrono::milliseconds(100);
+		std::chrono::duration<double> min_gesture_time_difference = std::chrono::milliseconds(1000);
 
 		std::chrono::time_point<std::chrono::steady_clock> previous_frame_time;
+		std::chrono::time_point<std::chrono::steady_clock> previous_gesture_time;
 
 		int sock = 0, client_fd;
 		struct sockaddr_in serv_addr;
@@ -210,33 +214,42 @@ namespace mediapipe
 		if (this->previous_x_center)
 		{
 			std::chrono::duration<double> diff = std::chrono::steady_clock::now() - previous_frame_time;
-			if (diff < max_frame_time_difference)
+			std::chrono::duration<double> gestureDiff = std::chrono::steady_clock::now() - previous_gesture_time;
+			if (diff < max_frame_time_difference && gestureDiff > min_gesture_time_difference)
 			{
 				const float movementDistance = this->get_Euclidean_DistanceAB(x_center, y_center, this->previous_x_center, this->previous_y_center);
+				//const float movementDistance = this->get_Euclidean_DistanceAB(landmarks.landmark(12).x(), landmarks.landmark(12).y(), this->last_x, this->last_y);
+
 				const float movementDistanceThreshold = movementDistanceFactor * height;
 
 				if (movementDistance > movementDistanceThreshold)
 				{
 					const float angle = this->radianToDegree(this->getAngleABC(x_center, y_center, this->previous_x_center, this->previous_y_center, this->previous_x_center + 0.1, this->previous_y_center));
+					//const float angle = this->radianToDegree(this->getAngleABC(landmarks.landmark(12).x(), landmarks.landmark(12).x(), this->last_x, this->last_y, this->last_x + 0.1, this->last_y));
+					
 					if (angle >= -45 && angle < 45)
 					{
 						LOG(INFO) << "Scrolling right";
 						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_RIGHT);
+						previous_gesture_time = std::chrono::steady_clock::now();
 					}
 					else if (angle >= 45 && angle < 135)
 					{
 						LOG(INFO) << "Scrolling up";
 						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_UP);
+						previous_gesture_time = std::chrono::steady_clock::now();
 					}
 					else if (angle >= 135 || angle < -135)
 					{
 						LOG(INFO) << "Scrolling left";
 						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_LEFT);
+						previous_gesture_time = std::chrono::steady_clock::now();
 					}
 					else if (angle >= -135 && angle < -45)
 					{
 						LOG(INFO) << "Scrolling down";
 						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_DOWN);
+						previous_gesture_time = std::chrono::steady_clock::now();
 					}
 				}
 			}
@@ -244,6 +257,8 @@ namespace mediapipe
 		this->previous_x_center = x_center;
 		this->previous_y_center = y_center;
 		this->previous_frame_time = std::chrono::steady_clock::now();
+		this->last_x = landmarks.landmark(12).x();
+		this->last_y = landmarks.landmark(12).y();
 
 		// Finger state
 		bool thumbIsOpen = false;
