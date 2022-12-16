@@ -217,3 +217,13 @@ node {
   input_stream: "NORM_RECT:hand_rect"
   output_stream: "LANDMARKS:hand_world_landmarks"
 }
+
+
+
+node {
+  calculator: "HandGestureRecognitionCalculator"
+  input_stream: "NORM_LANDMARKS:hand_landmarks"
+  input_stream: "LANDMARKS:hand_world_landmarks"
+  input_stream: "NORM_RECT:hand_rect"
+  output_stream: "RECOGNIZED_HAND_GESTURE:recognized_hand_gesture"
+}
