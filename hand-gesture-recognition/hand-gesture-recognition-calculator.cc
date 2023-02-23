@@ -3,7 +3,8 @@
 #include "mediapipe/framework/formats/landmark.pb.h"
 #include "mediapipe/framework/formats/rect.pb.h"
 
-#include "protobuf/wrappers.pb.h"
+#include "protobuf/sensors.pb.h"
+#include "protobuf/discovery.pb.h"
 
 #include <arpa/inet.h>
 #include <stdio.h>
@@ -83,6 +84,63 @@ namespace mediapipe
 		bool reconnecting = false;
 		float_time_point reconnect_start;
 
+		void sendAllSensorDiscovery()
+		{
+			std::unordered_map<std::string, naki3d::common::protocol::DataType> typeMap =
+			{
+				{"center_position", naki3d::common::protocol::DataType::Vector3},
+
+				{"gestures/swipe_left", naki3d::common::protocol::DataType::Void},
+				{"gestures/swipe_right", naki3d::common::protocol::DataType::Void},
+				{"gestures/swipe_up", naki3d::common::protocol::DataType::Void},
+				{"gestures/swipe_down", naki3d::common::protocol::DataType::Void},
+				{"gestures/close_hand", naki3d::common::protocol::DataType::Void},
+				{"gestures/open_hand", naki3d::common::protocol::DataType::Void},
+				{"gestures/pinch", naki3d::common::protocol::DataType::Void},
+
+				{"fingers/thumb/closed", naki3d::common::protocol::DataType::Bool},
+				{"fingers/thumb/position", naki3d::common::protocol::DataType::Vector3},
+				{"fingers/index/closed", naki3d::common::protocol::DataType::Bool},
+				{"fingers/index/position", naki3d::common::protocol::DataType::Vector3},
+				{"fingers/middle/closed", naki3d::common::protocol::DataType::Bool},
+				{"fingers/middle/position", naki3d::common::protocol::DataType::Vector3},
+				{"fingers/ring/closed", naki3d::common::protocol::DataType::Bool},
+				{"fingers/ring/position", naki3d::common::protocol::DataType::Vector3},
+				{"fingers/pinky/closed", naki3d::common::protocol::DataType::Bool},
+				{"fingers/pinky/position", naki3d::common::protocol::DataType::Vector3},
+			}
+
+			for(auto & type : typeMap)
+			{
+				sendSensorDiscovery("mediapipe/handtracking/hand/left" + type.first, type.second);
+				sendSensorDiscovery("mediapipe/handtracking/hand/right" + type.first, type.second);
+			}
+			
+		}
+
+		void sendSensorDiscovery(std::string & path, naki3d::common::protocol::DataType type)
+		{
+			naki3d::common::protocol::SensorDescriptor *descriptor = new naki3d::common::protocol::SensorDescriptor();
+    		descriptor->set_path(path);
+    		descriptor->set_model("mediapipe v0.7");
+    		descriptor->set_data_type(type);
+
+			naki3d::common::protocol::SensorMessage *message = new naki3d::common::protocol::SensorMessage();
+			message->set_allocated_data(descriptor);
+
+			size_t size = message->ByteSizeLong();
+			char *buffer = new char[size + 2];
+			buffer[0] = static_cast<uint8_t>(size);
+			buffer[0] |= static_cast<uint8_t>(0x80);
+			buffer[1] = static_cast<uint8_t>(size >> 7);
+			message->SerializeToArray(buffer + 2, size);
+			if (send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
+			{
+				reconnect();
+			}
+			delete[] buffer;
+		}
+
 		void reconnect(bool initial_connection = false)
 		{
 			if (!reconnecting)
@@ -109,8 +167,28 @@ namespace mediapipe
 			if ((client_fd = connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr))) == 0)
 			{
 				LOG(INFO) << "Socket connected";
+				LOG(INFO) << "Sending discovery message";
+				sendAllSensorDiscovery();
 				reconnecting = false;
 			}
+		}
+
+		void sendMessage(naki3d::common::protocol::SensorDataMessage *data)
+		{
+			naki3d::common::protocol::SensorMessage *message = new naki3d::common::protocol::SensorMessage();
+			message->set_allocated_data(data);
+
+			size_t size = message->ByteSizeLong();
+			char *buffer = new char[size + 2];
+			buffer[0] = static_cast<uint8_t>(size);
+			buffer[0] |= static_cast<uint8_t>(0x80);
+			buffer[1] = static_cast<uint8_t>(size >> 7);
+			message->SerializeToArray(buffer + 2, size);
+			if (send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
+			{
+				reconnect();
+			}
+			delete[] buffer;
 		}
 
 		float get_Euclidean_DistanceAB(float a_x, float a_y, float b_x, float b_y)
@@ -199,16 +277,19 @@ namespace mediapipe
 									.Get<mediapipe::LandmarkList>();
 		RET_CHECK_GT(landmarks.landmark_size(), 0) << "Input landmark vector is empty.";
 
-		naki3d::common::protocol::Vector3 *position = new naki3d::common::protocol::Vector3();
+		naki3d::common::protocol::Vector3Data *position = new naki3d::common::protocol::Vector3Data();
 		position->set_y(y_center);
 		position->set_z(rect->width());
 		// position->set_z(landmarkList.landmark(0).z());
 		position->set_x(x_center);
 
-		naki3d::common::protocol::MediapipeHandTrackingData *data = new naki3d::common::protocol::MediapipeHandTrackingData();
-		data->set_side(naki3d::common::protocol::HandSide::RIGHT);
-		data->set_allocated_center_position(position);
-		data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_NONE);
+		naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    	data->set_path("mediapipe/handtracking/hand/right/center_position");
+    	const auto p1 = std::chrono::system_clock::now();
+		data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+   	 	data->set_allocated_vector3(position);
+
+		sendMessage(data);
 
 		// Scrolling
 		if (this->previous_x_center)
@@ -230,25 +311,44 @@ namespace mediapipe
 					if (angle >= -45 && angle < 45)
 					{
 						LOG(INFO) << "Scrolling right";
-						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_RIGHT);
+						naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    					data->set_path("mediapipe/handtracking/hand/right/gestures/swipe_right");
+    					const auto p1 = std::chrono::system_clock::now();
+						data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+						sendMessage(data);
+
 						previous_gesture_time = std::chrono::steady_clock::now();
 					}
 					else if (angle >= 45 && angle < 135)
 					{
 						LOG(INFO) << "Scrolling up";
-						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_UP);
+						naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    					data->set_path("mediapipe/handtracking/hand/right/gestures/swipe_up");
+    					const auto p1 = std::chrono::system_clock::now();
+						data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+						sendMessage(data);
+
 						previous_gesture_time = std::chrono::steady_clock::now();
 					}
 					else if (angle >= 135 || angle < -135)
 					{
 						LOG(INFO) << "Scrolling left";
-						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_LEFT);
+						naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    					data->set_path("mediapipe/handtracking/hand/right/gestures/swipe_left");
+    					const auto p1 = std::chrono::system_clock::now();
+						data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+						sendMessage(data);
+
 						previous_gesture_time = std::chrono::steady_clock::now();
 					}
 					else if (angle >= -135 && angle < -45)
 					{
 						LOG(INFO) << "Scrolling down";
-						data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_SWIPE_DOWN);
+						naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    					data->set_path("mediapipe/handtracking/hand/right/gestures/swipe_down");
+    					const auto p1 = std::chrono::system_clock::now();
+						data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+						sendMessage(data);
 						previous_gesture_time = std::chrono::steady_clock::now();
 					}
 				}
@@ -268,112 +368,126 @@ namespace mediapipe
 		bool fourthFingerIsOpen = false;
 		int detected_gesture = 0;
 
-		naki3d::common::protocol::Vector3 *thumbPosition = new naki3d::common::protocol::Vector3();
+		naki3d::common::protocol::Vector3Data *thumbPosition = new naki3d::common::protocol::Vector3Data();
 		thumbPosition->set_x(landmarks.landmark(4).x());
 		thumbPosition->set_y(landmarks.landmark(4).y());
 		thumbPosition->set_z(landmarks.landmark(4).z());
 
-		naki3d::common::protocol::FingerState *thumb = new naki3d::common::protocol::FingerState();
-		thumb->set_closed(true);
-		thumb->set_allocated_position(thumbPosition);
+		naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    	data->set_path("mediapipe/handtracking/hand/right/fingers/thumb/position");
+    	const auto p1 = std::chrono::system_clock::now();
+		data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+		data->set_allocated_vector3(thumbPosition);
+		sendMessage(data);
 
-		naki3d::common::protocol::Vector3 *indexPosition = new naki3d::common::protocol::Vector3();
+
+		naki3d::common::protocol::Vector3Data *indexPosition = new naki3d::common::protocol::Vector3Data();
 		indexPosition->set_x(landmarks.landmark(8).x());
 		indexPosition->set_y(landmarks.landmark(8).y());
 		indexPosition->set_z(landmarks.landmark(8).z());
 
-		naki3d::common::protocol::FingerState *index = new naki3d::common::protocol::FingerState();
-		index->set_closed(true);
-		index->set_allocated_position(indexPosition);
+		naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    	data->set_path("mediapipe/handtracking/hand/right/fingers/index/position");
+    	const auto p1 = std::chrono::system_clock::now();
+		data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+		data->set_allocated_vector3(indexPosition);
+		sendMessage(data);
 
-		naki3d::common::protocol::Vector3 *middlePosition = new naki3d::common::protocol::Vector3();
+		naki3d::common::protocol::Vector3Data *middlePosition = new naki3d::common::protocol::Vector3Data();
 		middlePosition->set_x(landmarks.landmark(12).x());
 		middlePosition->set_y(landmarks.landmark(12).y());
 		middlePosition->set_z(landmarks.landmark(12).z());
 
-		naki3d::common::protocol::FingerState *middle = new naki3d::common::protocol::FingerState();
-		middle->set_closed(true);
-		middle->set_allocated_position(middlePosition);
+		naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    	data->set_path("mediapipe/handtracking/hand/right/fingers/middle/position");
+    	const auto p1 = std::chrono::system_clock::now();
+		data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+		data->set_allocated_vector3(middlePosition);
+		sendMessage(data);
 
-		naki3d::common::protocol::Vector3 *ringPosition = new naki3d::common::protocol::Vector3();
+		naki3d::common::protocol::Vector3Data *ringPosition = new naki3d::common::protocol::Vector3Data();
 		ringPosition->set_x(landmarks.landmark(16).x());
 		ringPosition->set_y(landmarks.landmark(16).y());
 		ringPosition->set_z(landmarks.landmark(16).z());
 
-		naki3d::common::protocol::FingerState *ring = new naki3d::common::protocol::FingerState();
-		ring->set_closed(true);
-		ring->set_allocated_position(ringPosition);
+		naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    	data->set_path("mediapipe/handtracking/hand/right/fingers/ring/position");
+    	const auto p1 = std::chrono::system_clock::now();
+		data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+		data->set_allocated_vector3(ringPosition);
+		sendMessage(data);
 
-		naki3d::common::protocol::Vector3 *pinkyPosition = new naki3d::common::protocol::Vector3();
+		naki3d::common::protocol::Vector3Data *pinkyPosition = new naki3d::common::protocol::Vector3Data();
 		pinkyPosition->set_x(landmarks.landmark(20).x());
 		pinkyPosition->set_y(landmarks.landmark(20).y());
 		pinkyPosition->set_z(landmarks.landmark(20).z());
 
-		naki3d::common::protocol::FingerState *pinky = new naki3d::common::protocol::FingerState();
-		pinky->set_closed(true);
-		pinky->set_allocated_position(pinkyPosition);
+		naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    	data->set_path("mediapipe/handtracking/hand/right/fingers/pinky/position");
+    	const auto p1 = std::chrono::system_clock::now();
+		data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+		data->set_allocated_vector3(pinkyPosition);
+		sendMessage(data);
 
 		float pseudoFixKeyPoint = landmarkList.landmark(2).x();
 		if (landmarkList.landmark(3).x() < pseudoFixKeyPoint && landmarkList.landmark(4).x() < pseudoFixKeyPoint)
 		{
 			thumbIsOpen = true;
-			thumb->set_closed(false);
+			naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    		data->set_path("mediapipe/handtracking/hand/right/fingers/thumb/closed");
+    		const auto p1 = std::chrono::system_clock::now();
+			data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+			data->set_bool_(false);
+			sendMessage(data);
 		}
 
 		pseudoFixKeyPoint = landmarkList.landmark(6).y();
 		if (landmarkList.landmark(7).y() < pseudoFixKeyPoint && landmarkList.landmark(8).y() < pseudoFixKeyPoint)
 		{
 			firstFingerIsOpen = true;
-			index->set_closed(false);
+			naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    		data->set_path("mediapipe/handtracking/hand/right/fingers/index/closed");
+    		const auto p1 = std::chrono::system_clock::now();
+			data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+			data->set_bool_(false);
+			sendMessage(data);
 		}
 
 		pseudoFixKeyPoint = landmarkList.landmark(10).y();
 		if (landmarkList.landmark(11).y() < pseudoFixKeyPoint && landmarkList.landmark(12).y() < pseudoFixKeyPoint)
 		{
 			secondFingerIsOpen = true;
-			middle->set_closed(false);
+			naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    		data->set_path("mediapipe/handtracking/hand/right/fingers/middle/closed");
+    		const auto p1 = std::chrono::system_clock::now();
+			data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+			data->set_bool_(false);
+			sendMessage(data);
 		}
 
 		pseudoFixKeyPoint = landmarkList.landmark(14).y();
 		if (landmarkList.landmark(15).y() < pseudoFixKeyPoint && landmarkList.landmark(16).y() < pseudoFixKeyPoint)
 		{
 			thirdFingerIsOpen = true;
-			ring->set_closed(false);
+			naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    		data->set_path("mediapipe/handtracking/hand/right/fingers/ring/closed");
+    		const auto p1 = std::chrono::system_clock::now();
+			data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+			data->set_bool_(false);
+			sendMessage(data);
 		}
 
 		pseudoFixKeyPoint = landmarkList.landmark(18).y();
 		if (landmarkList.landmark(19).y() < pseudoFixKeyPoint && landmarkList.landmark(20).y() < pseudoFixKeyPoint)
 		{
 			fourthFingerIsOpen = true;
-			pinky->set_closed(false);
+			naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    		data->set_path("mediapipe/handtracking/hand/right/fingers/pinky/closed");
+    		const auto p1 = std::chrono::system_clock::now();
+			data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+			data->set_bool_(false);
+			sendMessage(data);
 		}
-
-		naki3d::common::protocol::HandFingerState *fingerState = new naki3d::common::protocol::HandFingerState();
-		fingerState->set_allocated_thumb(thumb);
-		fingerState->set_allocated_index(index);
-		fingerState->set_allocated_middle(middle);
-		fingerState->set_allocated_ring(ring);
-		fingerState->set_allocated_pinky(pinky);
-
-		data->set_allocated_finger_state(fingerState);
-
-		naki3d::common::protocol::SensorMessage *message = new naki3d::common::protocol::SensorMessage();
-		message->set_sensor_id("rpi-cammera");
-		const auto p1 = std::chrono::system_clock::now();
-		message->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
-		message->set_allocated_handtracking(data);
-
-		size_t size = message->ByteSizeLong();
-		char *buffer = new char[size + 2];
-		buffer[0] = static_cast<uint8_t>(size);
-		buffer[0] |= static_cast<uint8_t>(0x80);
-		buffer[1] = static_cast<uint8_t>(size >> 7);
-		message->SerializeToArray(buffer + 2, size);
-		if (send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
-		{
-			reconnect();
-		}
-		delete[] buffer;
 
 		if (!firstFingerIsOpen && !secondFingerIsOpen && !thirdFingerIsOpen && !fourthFingerIsOpen)
 		{
@@ -395,29 +509,29 @@ namespace mediapipe
 			{
 			case 0:
 				LOG(INFO) << "Closed Hand";
-				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_CLOSE_HAND);
+				naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    			data->set_path("mediapipe/handtracking/hand/right/gestures/close_hand");
+    			const auto p1 = std::chrono::system_clock::now();
+				data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+				sendMessage(data);
 				break;
 			case 1:
 				LOG(INFO) << "Pinch";
-				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_PINCH);
+				naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    			data->set_path("mediapipe/handtracking/hand/right/gestures/pinch");
+    			const auto p1 = std::chrono::system_clock::now();
+				data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+				sendMessage(data);
 				break;
 			case 2:
 				LOG(INFO) << "Open Hand";
-				data->set_gesture(naki3d::common::protocol::HandGestureType::GESTURE_OPEN_HAND);
+				naki3d::common::protocol::SensorDataMessage *data = new naki3d::common::protocol::SensorDataMessage();
+    			data->set_path("mediapipe/handtracking/hand/right/gestures/open_hand");
+    			const auto p1 = std::chrono::system_clock::now();
+				data->set_timestamp(std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count());
+				sendMessage(data);
 				break;
 			}
-
-			size_t size = message->ByteSizeLong();
-			char *buffer = new char[size + 2];
-			buffer[0] = static_cast<uint8_t>(size);
-			buffer[0] |= static_cast<uint8_t>(0x80);
-			buffer[1] = static_cast<uint8_t>(size >> 7);
-			message->SerializeToArray(buffer + 2, size);
-			if (send(sock, buffer, size + 2, MSG_NOSIGNAL) < 0)
-			{
-				reconnect();
-			}
-			delete[] buffer;
 
 			last_gesture = detected_gesture;
 		}
