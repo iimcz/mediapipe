@@ -112,8 +112,8 @@ namespace mediapipe
 
 			for(auto & type : typeMap)
 			{
-				sendSensorDiscovery("mediapipe/handtracking/hand/left" + type.first, type.second);
-				sendSensorDiscovery("mediapipe/handtracking/hand/right" + type.first, type.second);
+				sendSensorDiscovery("mediapipe/handtracking/hand/left/" + type.first, type.second);
+				sendSensorDiscovery("mediapipe/handtracking/hand/right/" + type.first, type.second);
 			}
 			
 		}
